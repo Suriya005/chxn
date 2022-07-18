@@ -1,0 +1,36 @@
+CRITICAL - 2022-07-08 23:19:40 --> Allowed fields must be specified for model: App\Services\CompanyInfoService
+#0 C:\xampp\htdocs\chxn\system\BaseModel.php(1138): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Services\\Co...')
+#1 C:\xampp\htdocs\chxn\system\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields(Array)
+#2 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#4 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(60): App\Services\CompanyInfoService->insertdata(Array)
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->insertcompany()
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-08 23:20:41 --> Allowed fields must be specified for model: App\Services\CompanyInfoService
+#0 C:\xampp\htdocs\chxn\system\BaseModel.php(1138): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Services\\Co...')
+#1 C:\xampp\htdocs\chxn\system\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields(Array)
+#2 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#4 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(60): App\Services\CompanyInfoService->insertdata(Array)
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->insertcompany()
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-08 23:20:46 --> Allowed fields must be specified for model: App\Services\CompanyInfoService
+#0 C:\xampp\htdocs\chxn\system\BaseModel.php(1138): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Services\\Co...')
+#1 C:\xampp\htdocs\chxn\system\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields(Array)
+#2 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#4 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(60): App\Services\CompanyInfoService->insertdata(Array)
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->insertcompany()
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

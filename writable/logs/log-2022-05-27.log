@@ -1,0 +1,40 @@
+CRITICAL - 2022-05-27 06:00:13 --> syntax error, unexpected identifier "assets", expecting ")"
+#0 C:\xampp\htdocs\chxn\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\chxn\system\Common.php(1089): CodeIgniter\View\View->render('/saleorder/sale...', Array, true)
+#2 C:\xampp\htdocs\chxn\app\Controllers\Home.php(108): view('/saleorder/sale...')
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\Home->saleorderstone()
+#4 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-27 06:00:48 --> syntax error, unexpected identifier "assets", expecting ")"
+#0 C:\xampp\htdocs\chxn\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\chxn\system\Common.php(1089): CodeIgniter\View\View->render('/saleorder/sale...', Array, true)
+#2 C:\xampp\htdocs\chxn\app\Controllers\Home.php(108): view('/saleorder/sale...')
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\Home->saleorderstone()
+#4 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-27 06:00:50 --> syntax error, unexpected identifier "assets", expecting ")"
+#0 C:\xampp\htdocs\chxn\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\chxn\system\Common.php(1089): CodeIgniter\View\View->render('/saleorder/sale...', Array, true)
+#2 C:\xampp\htdocs\chxn\app\Controllers\Home.php(108): view('/saleorder/sale...')
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\Home->saleorderstone()
+#4 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-27 23:55:39 --> Invalid file: /memo/memoreinjewelry.php
+#0 C:\xampp\htdocs\chxn\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/memo/memoreinj...')
+#1 C:\xampp\htdocs\chxn\system\Common.php(1089): CodeIgniter\View\View->render('/memo/memoreinj...', Array, true)
+#2 C:\xampp\htdocs\chxn\app\Controllers\Home.php(134): view('/memo/memoreinj...')
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\Home->memoinjewelry()
+#4 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}

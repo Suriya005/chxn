@@ -1,0 +1,323 @@
+CRITICAL - 2022-07-07 06:39:12 --> Allowed fields must be specified for model: App\Services\CompanyInfoService
+#0 C:\xampp\htdocs\chxn\system\BaseModel.php(1138): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Services\\Co...')
+#1 C:\xampp\htdocs\chxn\system\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields(Array)
+#2 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(15): CodeIgniter\Model->insert(Array)
+#4 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-07 06:44:41 --> Allowed fields must be specified for model: App\Services\CompanyInfoService
+#0 C:\xampp\htdocs\chxn\system\BaseModel.php(1138): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Services\\Co...')
+#1 C:\xampp\htdocs\chxn\system\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields(Array)
+#2 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(16): CodeIgniter\Model->insert(Array)
+#4 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-07-07 06:46:01 --> Column 'province' cannot be null
+CRITICAL - 2022-07-07 06:46:01 --> Column 'province' cannot be null
+#0 C:\xampp\htdocs\chxn\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\chxn\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\chxn\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\chxn\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#9 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#10 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#11 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2022-07-07 06:46:23 --> Column 'province' cannot be null
+CRITICAL - 2022-07-07 06:46:23 --> Column 'province' cannot be null
+#0 C:\xampp\htdocs\chxn\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\chxn\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\chxn\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\chxn\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#9 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#10 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#11 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2022-07-07 06:48:59 --> Duplicate entry '' for key 'company_name'
+CRITICAL - 2022-07-07 06:48:59 --> Duplicate entry '' for key 'company_name'
+#0 C:\xampp\htdocs\chxn\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\chxn\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\chxn\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\chxn\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#9 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#10 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#11 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2022-07-07 06:52:10 --> Duplicate entry '' for key 'company_name'
+CRITICAL - 2022-07-07 06:52:10 --> Duplicate entry '' for key 'company_name'
+#0 C:\xampp\htdocs\chxn\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\chxn\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\chxn\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\chxn\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#9 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#10 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#11 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+ERROR - 2022-07-07 06:55:32 --> Column 'province' cannot be null
+CRITICAL - 2022-07-07 06:55:32 --> Column 'province' cannot be null
+#0 C:\xampp\htdocs\chxn\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\chxn\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\chxn\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\chxn\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#9 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#10 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#11 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-07-07 07:06:02 --> Undefined property: App\Controllers\CompanyController::$db
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 33)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:07:26 --> Undefined property: App\Controllers\CompanyController::$db
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\xampp\\htdocs...', 33)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:10:05 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert()
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:10:42 --> CodeIgniter\Model::insert(): Argument #2 ($returnID) must be of type bool, array given, called in C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php on line 20
+#0 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(20): CodeIgniter\Model->insert('company_info', Array)
+#1 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#4 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-07-07 07:11:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''company_name ', 'email', 'company_register_id', 'line_id', '	company_registe...' at line 1
+CRITICAL - 2022-07-07 07:11:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''company_name ', 'email', 'company_register_id', 'line_id', '	company_registe...' at line 1
+#0 C:\xampp\htdocs\chxn\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO com...', 0)
+#1 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO com...')
+#2 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO com...')
+#3 C:\xampp\htdocs\chxn\system\Model.php(726): CodeIgniter\Database\BaseConnection->query('INSERT INTO com...', Array)
+#4 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(23): CodeIgniter\Model->__call('query', Array)
+#5 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#8 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-07-07 07:12:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''company_name') VALUES (:company_name)' at line 1
+CRITICAL - 2022-07-07 07:12:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''company_name') VALUES (:company_name)' at line 1
+#0 C:\xampp\htdocs\chxn\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO com...', 0)
+#1 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO com...')
+#2 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO com...')
+#3 C:\xampp\htdocs\chxn\system\Model.php(726): CodeIgniter\Database\BaseConnection->query('INSERT INTO com...', Array)
+#4 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(24): CodeIgniter\Model->__call('query', Array)
+#5 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#8 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-07-07 07:18:02 --> Attempt to read property "company_name" on array
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 33)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:18:26 --> Attempt to read property "company_name" on array
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 33)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:19:24 --> Attempt to read property "company_name" on array
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:21:05 --> Undefined variable $service
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 32)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:21:46 --> Undefined variable $service
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 31)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:22:09 --> Undefined variable $service
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 31)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:27:07 --> CodeIgniter\Model::insert(): Argument #2 ($returnID) must be of type bool, array given, called in C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php on line 20
+#0 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(20): CodeIgniter\Model->insert('company_info', Array)
+#1 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#4 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-07-07 07:27:31 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert()
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:29:31 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::insert()
+#0 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#1 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-07 07:30:45 --> Undefined variable $table
+#0 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 21)
+#1 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#4 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-07-07 07:31:13 --> Undefined variable $table
+#0 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\xampp\\htdocs...', 21)
+#1 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#2 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#3 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#4 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-07-07 07:31:51 --> Unknown column 'namecontrac' in 'field list'
+CRITICAL - 2022-07-07 07:31:51 --> Unknown column 'namecontrac' in 'field list'
+#0 C:\xampp\htdocs\chxn\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\chxn\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\chxn\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(21): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#8 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-07-07 07:35:32 --> Allowed fields must be specified for model: App\Services\CompanyInfoService
+#0 C:\xampp\htdocs\chxn\system\BaseModel.php(1138): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Services\\Co...')
+#1 C:\xampp\htdocs\chxn\system\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields(Array)
+#2 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#4 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-07 07:39:43 --> Allowed fields must be specified for model: App\Services\CompanyInfoService
+#0 C:\xampp\htdocs\chxn\system\BaseModel.php(1138): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Services\\Co...')
+#1 C:\xampp\htdocs\chxn\system\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields(Array)
+#2 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#4 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-07 07:44:17 --> Allowed fields must be specified for model: App\Services\CompanyInfoService
+#0 C:\xampp\htdocs\chxn\system\BaseModel.php(1138): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Services\\Co...')
+#1 C:\xampp\htdocs\chxn\system\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields(Array)
+#2 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#4 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-07 07:45:01 --> Allowed fields must be specified for model: App\Services\CompanyInfoService
+#0 C:\xampp\htdocs\chxn\system\BaseModel.php(1138): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Services\\Co...')
+#1 C:\xampp\htdocs\chxn\system\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields(Array)
+#2 C:\xampp\htdocs\chxn\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#3 C:\xampp\htdocs\chxn\app\Services\CompanyInfoService.php(19): CodeIgniter\Model->insert(Array)
+#4 C:\xampp\htdocs\chxn\app\Controllers\CompanyController.php(31): App\Services\CompanyInfoService->insertdata(Array)
+#5 C:\xampp\htdocs\chxn\system\CodeIgniter.php(832): App\Controllers\CompanyController->kuyrai()
+#6 C:\xampp\htdocs\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyController))
+#7 C:\xampp\htdocs\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
