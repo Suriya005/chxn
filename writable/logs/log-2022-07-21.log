@@ -1,0 +1,86 @@
+ERROR - 2022-07-21 05:41:50 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-07-21 05:41:50 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 E:\xampp\htdocs\chxn_git\app\Services\ProfileService.php(10): CodeIgniter\Database\BaseConnection->query('SELECT * FROM b...')
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\ProfileController.php(14): App\Services\ProfileService->select_bank_data()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\ProfileController->index()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-07-21 05:42:25 --> Undefined offset: 0
+#0 E:\xampp\htdocs\chxn_git\app\Views\profile.php(824): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'E:\\xampp\\htdocs...', 824, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\ProfileController.php(21): view('profile', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\ProfileController->index()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-21 05:43:17 --> Undefined offset: 0
+#0 E:\xampp\htdocs\chxn_git\app\Views\profile.php(824): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'E:\\xampp\\htdocs...', 824, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\ProfileController.php(21): view('profile', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\ProfileController->index()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-21 05:46:23 --> Undefined offset: 0
+#0 E:\xampp\htdocs\chxn_git\app\Views\profile.php(824): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'E:\\xampp\\htdocs...', 824, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\ProfileController.php(21): view('profile', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\ProfileController->index()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-21 05:46:26 --> Undefined offset: 0
+#0 E:\xampp\htdocs\chxn_git\app\Views\profile.php(824): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'E:\\xampp\\htdocs...', 824, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\ProfileController.php(21): view('profile', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\ProfileController->index()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-21 05:46:27 --> Undefined offset: 0
+#0 E:\xampp\htdocs\chxn_git\app\Views\profile.php(824): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'E:\\xampp\\htdocs...', 824, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\ProfileController.php(21): view('profile', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\ProfileController->index()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-21 05:47:17 --> Undefined offset: 0
+#0 E:\xampp\htdocs\chxn_git\app\Views\profile.php(824): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'E:\\xampp\\htdocs...', 824, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\ProfileController.php(21): view('profile', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\ProfileController->index()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}

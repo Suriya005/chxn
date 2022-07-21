@@ -821,7 +821,7 @@
     }
     function update_action(){
       let main_form = document.getElementById("main-form");
-      main_form.action = "test/test/update/<?= $company_info[0]->uid ?>";
+      main_form.action = "test/test/update/<?php if($company_info != null){ echo $company_info[0]->uid; }else{echo "0";} ?>";
     }
     function update_unlock(){
       document.getElementById("email").disabled = false;
