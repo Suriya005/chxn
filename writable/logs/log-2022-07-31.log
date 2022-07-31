@@ -49,3 +49,71 @@ CRITICAL - 2022-07-31 04:23:07 --> Undefined variable $employee
 #8 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
 #10 {main}
+CRITICAL - 2022-07-31 06:28:16 --> Call to undefined function App\Controllers\hash_password()
+#0 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-07-31 06:32:05 --> Undefined variable: rules
+#0 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\xampp\\htdocs...', 27, Array)
+#1 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-07-31 06:36:54 --> Undefined variable: employee
+#0 E:\xampp\htdocs\chxn_git\app\Views\empprofile.php(549): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\xampp\\htdocs...', 549, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('empprofile', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(53): view('empprofile')
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-07-31 06:37:56 --> Invalid file: http://localhost:8080/admin.php
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('http://localhos...')
+#1 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('http://localhos...', Array, true)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(53): view('http://localhos...')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-07-31 06:38:07 --> Invalid file: http://localhost:8080/admin.php
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('http://localhos...')
+#1 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('http://localhos...', Array, true)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(53): view('http://localhos...')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-07-31 06:43:04 --> Undefined index: id
+#0 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 41, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(22): App\Controllers\UserController->setUserSession(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-07-31 06:43:31 --> Undefined variable: employee
+#0 E:\xampp\htdocs\chxn_git\app\Views\empprofile.php(549): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\xampp\\htdocs...', 549, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('empprofile', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(35): view('empprofile')
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}

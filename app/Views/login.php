@@ -30,7 +30,8 @@
       <p>เข้าสู่ระบบเพื่อใช้งาน</p>
     </div>
   
-  <div class="login-detail">
+    <div class="login-detail">
+    <form action="<?= base_url('login') ?>" method="post">
       <img src="assets/image/ilog.png" style="width:25px; padding-bottom:5px;">
       <lebel>ชื่อผู้ใช้</lebel></br>
       <input type="text" name="username" id="username" placeholder="กรอกชื่อผู้ใช้" style="width:448px; height:55px;"></br>
@@ -39,7 +40,6 @@
       <input type="password" name="password" id="password" placeholder="กรอกรหัสผ่าน" style="width:448px; height:55px;"></br>
       <input type="checkbox" id="save" name="save" value="save">
       <label for="save"> บันทึกการใช้งาน</label><br>
-      <form action="<?php  echo base_url('profile'); ?>">
         <input class="primary btn" type="submit" value="เข้าสู่ระบบ" style="width:193px; height:45px;">
       </form>
     </div>

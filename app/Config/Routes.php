@@ -31,52 +31,67 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
 // $routes->get('/profile', 'Home::profile');
-$routes->get('/profile', 'ProfileController::index');
 // $routes->get('/empprofile', 'Home::empprofile');
-$routes->get('/cusprofile', 'Home::cusprofile');
-$routes->get('/partprofile', 'Home::partprofile');
-$routes->get('/master', 'Home::master');
-$routes->get('/masterproduct', 'Home::masterproduct');
-$routes->get('/mastercorrection', 'Home::mastercorrection');
-$routes->get('/mastersize', 'Home::mastersize');
-$routes->get('/mastermetalcolor', 'Home::mastermetalcolor');
-$routes->get('/mastermetalname', 'Home::mastermetalname');
-$routes->get('/masterstonegroup', 'Home::masterstonegroup');
-$routes->get('/masterstonename', 'Home::masterstonename');
-$routes->get('/masterstoneshape', 'Home::masterstoneshape');
-$routes->get('/mastergemcolor', 'Home::mastergemcolor');
-$routes->get('/masterclarity', 'Home::masterclarity');
-$routes->get('/mastercutting', 'Home::mastercutting');
-$routes->get('/masterquality', 'Home::masterquality');
-$routes->get('/mastergemsize', 'Home::mastergemsize');
-$routes->get('/productstone', 'Home::productstone');
-$routes->get('/productjewelry', 'Home::productjewelry');
-$routes->get('/saleorder/saleorderstone', 'Home::saleorderstone');
-$routes->get('/saleorder/saleorderjewelry', 'Home::saleorderjewelry');
-$routes->get('/purchase/purchasestone', 'Home::purchasestone');
-$routes->get('/purchase/purchasejewelry', 'Home::purchasejewelry');
-$routes->get('/memoin/memoinstone', 'Home::memoinstone');
-$routes->get('/memoin/memoinjewelry', 'Home::memoinjewelry');
-$routes->get('/memoreturn/memoreturnstone', 'Home::memoreturnstone');
-$routes->get('/memoreturn/memoreturnjewelry', 'Home::memoreturnjewelry');
-$routes->get('/inventory/purchasejewelry', 'Home::inventorypurchasejewelry');
-$routes->get('/inventory/purchasestone', 'Home::inventorypurchasestone');
-$routes->get('/inventory/serviceorder', 'Home::inventoryserviceorder');
-$routes->get('/inventory/servicerepair', 'Home::inventoryservicerepair');
-$routes->get('/inventory/servicemounting', 'Home::inventoryservicemounting');
 
-$routes->get('/saving/savingstone', 'Home::savingstone');
-$routes->get('/saving/savingjewelry', 'Home::savingjewelry');
-$routes->get('/saving/savingmounting', 'Home::savingmounting');
-$routes->get('/memo/memojewelry', 'Home::memojewelry');
-$routes->get('/memo/memostone', 'Home::memostone');
-$routes->post('/test/test/(:any)/(:num)', 'CompanyController::insertcompany/$1/$2');
+
+
+$routes->match(['get', 'post'], 'login', 'UserController::login', ["filter" => "noauth"]);
+// Admin routes
+$routes->group("admin", ["filter" => "auth"], function ($routes) {
+    $routes->get("/", "AdminController::index");
+});
+// Editor routes
+$routes->group("editor", ["filter" => "auth"], function ($routes) {
+    $routes->get("/", "EditorController::index");
+});
+$routes->get('logout', 'UserController::logout');
+
+////////////////////////////////////////////////////////////////
+// $routes->get('/', 'Home::index');
+// $routes->get('/profile', 'ProfileController::index');
+// $routes->get('/cusprofile', 'Home::cusprofile');
+// $routes->get('/partprofile', 'Home::partprofile');
+// $routes->get('/master', 'Home::master');
+// $routes->get('/masterproduct', 'Home::masterproduct');
+// $routes->get('/mastercorrection', 'Home::mastercorrection');
+// $routes->get('/mastersize', 'Home::mastersize');
+// $routes->get('/mastermetalcolor', 'Home::mastermetalcolor');
+// $routes->get('/mastermetalname', 'Home::mastermetalname');
+// $routes->get('/masterstonegroup', 'Home::masterstonegroup');
+// $routes->get('/masterstonename', 'Home::masterstonename');
+// $routes->get('/masterstoneshape', 'Home::masterstoneshape');
+// $routes->get('/mastergemcolor', 'Home::mastergemcolor');
+// $routes->get('/masterclarity', 'Home::masterclarity');
+// $routes->get('/mastercutting', 'Home::mastercutting');
+// $routes->get('/masterquality', 'Home::masterquality');
+// $routes->get('/mastergemsize', 'Home::mastergemsize');
+// $routes->get('/productstone', 'Home::productstone');
+// $routes->get('/productjewelry', 'Home::productjewelry');
+// $routes->get('/saleorder/saleorderstone', 'Home::saleorderstone');
+// $routes->get('/saleorder/saleorderjewelry', 'Home::saleorderjewelry');
+// $routes->get('/purchase/purchasestone', 'Home::purchasestone');
+// $routes->get('/purchase/purchasejewelry', 'Home::purchasejewelry');
+// $routes->get('/memoin/memoinstone', 'Home::memoinstone');
+// $routes->get('/memoin/memoinjewelry', 'Home::memoinjewelry');
+// $routes->get('/memoreturn/memoreturnstone', 'Home::memoreturnstone');
+// $routes->get('/memoreturn/memoreturnjewelry', 'Home::memoreturnjewelry');
+// $routes->get('/inventory/purchasejewelry', 'Home::inventorypurchasejewelry');
+// $routes->get('/inventory/purchasestone', 'Home::inventorypurchasestone');
+// $routes->get('/inventory/serviceorder', 'Home::inventoryserviceorder');
+// $routes->get('/inventory/servicerepair', 'Home::inventoryservicerepair');
+// $routes->get('/inventory/servicemounting', 'Home::inventoryservicemounting');
+
+// $routes->get('/saving/savingstone', 'Home::savingstone');
+// $routes->get('/saving/savingjewelry', 'Home::savingjewelry');
+// $routes->get('/saving/savingmounting', 'Home::savingmounting');
+// $routes->get('/memo/memojewelry', 'Home::memojewelry');
+// $routes->get('/memo/memostone', 'Home::memostone');
+// $routes->post('/test/test/(:any)/(:num)', 'CompanyController::insertcompany/$1/$2');
 
 $routes->get('/empprofile', 'EmpProfileController::index');
 $routes->post('/emp_profile_form/insert', 'EmpProfileController::insert');
-$routes->post('/emp_profile_form/update/(:num)', 'EmpProfileController::update/$1');
+// $routes->post('/emp_profile_form/update/(:num)', 'EmpProfileController::update/$1');
 
 /*
  * --------------------------------------------------------------------
