@@ -362,83 +362,92 @@
               <textarea class="form-control" id="company_register_address" name="company_register_address" style="width:599px; height:90px;" disabled>'. $company_info[0]->company_register_address.'</textarea>
               <div class="row">
                 <div id="select_edit" style="display: none; box-sizing: border-box;">
-                <div class="col-6" style="padding:0;">
-                  <label>จังหวัด</label></br>
-                  <select class="form-select" id="province-select" >
-                    <option value="'. $company_info[0]->province.'" selected >'. $company_info[0]->province.'</option>
-                    <option value="ชลบุรี">ชลบุรี</option>
-                    <option value="กรุงเทพ">กรุงเทพมหานคร</option>
-                    <option>นครสวรรค์</option>
-                    <option>นครปฐม</option>
-                  </select>
-                  <!-- <input type="text" class="form-control"></br> -->
-                  <label>อำเภอ/เขต</label></br>
-                  <select class="form-select" name="distric" id="distric-select">
-                    <option value="'. $company_info[0]->district.'" selected>'. $company_info[0]->district.'</option>
-                    <option value="บึง">บึง</option>
-                    <option>test</option>
-                    <option>test</option>
-                    <option>test</option>
-                  </select>
+                <div class="row">
+                <div class="col-6" style="max-width: 49%; " >  
+                <label>จังหวัด</label></br>
+                <select class="form-select" id="province-select"  style="width: 294px;height: 45px;">
+                  <option value="'. $company_info[0]->province.'" selected >'. $company_info[0]->province.'</option>
+                  <option value="ชลบุรี">ชลบุรี</option>
+                  <option value="กรุงเทพ">กรุงเทพมหานคร</option>
+                  <option>นครสวรรค์</option>
+                  <option>นครปฐม</option>
+                </select>
+                <!-- <input type="text" class="form-control"></br> -->
+                <label>อำเภอ/เขต</label></br>
+                <select class="form-select" name="distric" id="distric-select" style="width: 294px;height: 45px;">
+                  <option value="'. $company_info[0]->district.'" selected>'. $company_info[0]->district.'</option>
+                  <option value="บึง">บึง</option>
+                  <option>test</option>
+                  <option>test</option>
+                  <option>test</option>
+                </select> 
+
                 </div>
-                <div class="col-6" style="padding:0;">
-                  <label>ตำบล/แขวง</label></br>
-                  <select class="form-select" name="sub_distric" id="sub_distric-select">
-                  <option value="'. $company_info[0]->sub_district.'" selected>'. $company_info[0]->sub_district.'</option>
-                    <option value="ศรีราชา">ศรีราชา</option>
-                    <option>test</option>
-                    <option>test</option>
-                    <option>test</option>
-                  </select>
-                  <label>รหัสไปรษณีย์</label></br>
-                  <select class="form-select" name="posnum" id="posnum-select">
-                  <option value="'. $company_info[0]->poscode.'" selected>'. $company_info[0]->poscode.'</option>
-                    <option value="20230">20230</option>
-                    <option>test</option>
-                    <option>test</option>
-                    <option>test</option>
-                  </select>
+                <div class="col-6" style="padding:0;" >   
+                <label>ตำบล/แขวง</label></br>
+                <select class="form-select" name="sub_distric" id="sub_distric-select" style="width: 294px;height: 45px;">
+                <option value="'. $company_info[0]->sub_district.'" selected>'. $company_info[0]->sub_district.'</option>
+                  <option value="ศรีราชา">ศรีราชา</option>
+                  <option>test</option>
+                  <option>test</option>
+                  <option>test</option>
+                </select>
+                <label>รหัสไปรษณีย์</label></br>
+                <select class="form-select" name="posnum" id="posnum-select" style="width: 294px;height: 45px;">
+                <option value="'. $company_info[0]->poscode.'" selected>'. $company_info[0]->poscode.'</option>
+                  <option value="20230">20230</option>
+                  <option>test</option>
+                  <option>test</option>
+                  <option>test</option>
+                </select>
                 </div>
                 </div>
 
+
+               
+                </div>
+
                 <div id="select_readonly" display: block; box-sizing: border-box;>
-                <div class="col-6" style="padding:0;">
-                  <label>จังหวัด</label></br>
-                  <select class="form-select" id="province-select" disabled>
-                    <option value="'. $company_info[0]->province.'" selected >'. $company_info[0]->province.'</option>
-                    <option value="ชลบุรี">ชลบุรี</option>
-                    <option value="กรุงเทพ">กรุงเทพมหานคร</option>
-                    <option>นครสวรรค์</option>
-                    <option>นครปฐม</option>
-                  </select>
-                  <!-- <input type="text" class="form-control"></br> -->
-                  <label>อำเภอ/เขต</label></br>
-                  <select class="form-select" id="distric-select" disabled>
-                    <option value="'. $company_info[0]->district.'" selected>'. $company_info[0]->district.'</option>
-                    <option value="บึง">บึง</option>
-                    <option>test</option>
-                    <option>test</option>
-                    <option>test</option>
-                  </select>
+                <div class="row">
+                <div class="col-6" style="max-width: 49%; ">
+                <label>จังหวัด</label></br>
+                <select class="form-select" id="province-select" style="width: 294px;height: 45px;" disabled>
+                  <option value="'. $company_info[0]->province.'" selected >'. $company_info[0]->province.'</option>
+                  <option value="ชลบุรี">ชลบุรี</option>
+                  <option value="กรุงเทพ">กรุงเทพมหานคร</option>
+                  <option>นครสวรรค์</option>
+                  <option>นครปฐม</option>
+                </select>
+                <!-- <input type="text" class="form-control"></br> -->
+                <label>อำเภอ/เขต</label></br>
+                <select class="form-select" id="distric-select" style="width: 294px;height: 45px;" disabled>
+                  <option value="'. $company_info[0]->district.'" selected>'. $company_info[0]->district.'</option>
+                  <option value="บึง">บึง</option>
+                  <option>test</option>
+                  <option>test</option>
+                  <option>test</option>
+                </select>
                 </div>
                 <div class="col-6" style="padding:0;">
-                  <label>ตำบล/แขวง</label></br>
-                  <select class="form-select" id="sub_distric-select" disabled>
-                  <option value="'. $company_info[0]->sub_district.'" selected>'. $company_info[0]->sub_district.'</option>
-                    <option value="ศรีราชา">ศรีราชา</option>
-                    <option>test</option>
-                    <option>test</option>
-                    <option>test</option>
-                  </select>
-                  <label>รหัสไปรษณีย์</label></br>
-                  <select class="form-select" id="posnum-select" disabled>
-                  <option value="'. $company_info[0]->poscode.'" selected>'. $company_info[0]->poscode.'</option>
-                    <option value="20230">20230</option>
-                    <option>test</option>
-                    <option>test</option>
-                    <option>test</option>
-                  </select>
+                <label>ตำบล/แขวง</label></br>
+                <select class="form-select" id="sub_distric-select" style="width: 294px;height: 45px;" disabled>
+                <option value="'. $company_info[0]->sub_district.'" selected>'. $company_info[0]->sub_district.'</option>
+                  <option value="ศรีราชา">ศรีราชา</option>
+                  <option>test</option>
+                  <option>test</option>
+                  <option>test</option>
+                </select>
+                <label>รหัสไปรษณีย์</label></br>
+                <select class="form-select" id="posnum-select" style="width: 294px;height: 45px;" disabled>
+                <option value="'. $company_info[0]->poscode.'" selected>'. $company_info[0]->poscode.'</option>
+                  <option value="20230">20230</option>
+                  <option>test</option>
+                  <option>test</option>
+                  <option>test</option>
+                </select>
                 </div>
+                </div>
+           
                 </div>
 
               </div>
