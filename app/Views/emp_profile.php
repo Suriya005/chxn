@@ -39,7 +39,7 @@
             <div class="hrs"></div>
             <div class="circular"> <img src="assets/image/chxprofile.jpg" alt=""></div>
             <div><a style="margin-bottom:0px;">สวัสดี โรเซ่</a></br>
-                <span>Admin</span>
+                <span>Test</span>
             </div>
             <div class="top-drops"><a href="#"><img src="assets/image/icon/Dropdown.png" alt=""></a></div>
 
