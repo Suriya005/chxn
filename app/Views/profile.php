@@ -22,7 +22,7 @@
 
 </head>
 
-<body style="background-color: white;">
+<body style="background-color: white;" onload="closebutton()" >
 
 
   <div class="nav-div">
@@ -323,11 +323,29 @@
   <div class="main" style="margin-top: 108px;">
     <div>
       <div class="main-head">
-        <a class="alignleft" style="font-size:25px;font-weight: 500;color: #2A2A2A;">ข้อมูลบริษัท</a>
-        <div align="right"><button type="button" class="btnchxcan" style="margin-right:20px; width:150px; ">ยกเลิก</button>
-        <button type="button" onclick="insert_action()" id="submit-action" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal">บันทึก</button></div>
+        <div class="row">
+          <div class="col-9"> <a class="alignleft" style="font-size:25px;font-weight: 500;color: #2A2A2A;">ข้อมูลบริษัท</a></div>
+          <div class="col-3">
+            <div class="row">
+              <div class="col-3" style="    max-width: 40%;">
+              <button type="button"  onclick="canclebutton()"class="btnchxcan" id="cancle-btn"  style="margin-right:20px; width:150px; ">ยกเลิก</button>
+              </div>
+              <div class="col-3">
+              <button type="button" onclick="insert_action()" id="submit-action" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal">บันทึก</button>
+              </div>
+              <div class="col-2">
+              <button type="button" onclick="update_unlock()" id="update_unlock" class="btnchxnext" style="width:150px;">แก้ไข</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <!-- <div align="right"><button type="button" class="btnchxcan" id="cancle-btn" style="margin-right:20px; width:150px; ">ยกเลิก</button>
+        <button type="button" onclick="insert_action()" id="submit-action" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal">บันทึก</button>
+        <button type="button" onclick="update_unlock()" id="update_unlock" class="btnchxnext" style="width:150px;">แก้ไข</button>
+      </div> -->
         <!-- แก้ไข -->
-        <button type="button" onclick="update_unlock()" id="update_unlock" class="btnchxsave" style="width:150px;">แก้ไข</button></div>
+       </div>
 
 
       </div>
@@ -816,6 +834,7 @@
     }
 
     $(document).ready(function() {
+      
       $("input").keydown(function() {
         $(".btnchxsave").addClass('btnchxsaves');
         $(".btnchxsave").removeClass('btnchxsave');
@@ -848,11 +867,47 @@
       let submit_action = document.getElementById("submit-action");
       // change onclick function
       submit_action.setAttribute("onclick","update_action()");
+      document.getElementById("cancle-btn").style.display = "block";
+      document.getElementById("submit-action").style.display = "block";
+      document.getElementById("update_unlock").style.display = "none";
 
+      
     }
 
 
     // ------ change btn --------- //
+    
+    function closebutton(){
+      let company_name = document.getElementById("company_name");
+       if(company_name.value != ""){
+        document.getElementById("cancle-btn").style.display = "none";
+        document.getElementById("submit-action").style.display = "none";
+      }
+    }
+     function canclebutton(){
+        document.getElementById("cancle-btn").style.display = "none";
+        document.getElementById("submit-action").style.display = "none";
+        document.getElementById("update_unlock").style.display = "block";
+        document.getElementById("select_readonly").style.display = "none";
+        let select_readonly = document.getElementById("select_readonly");
+        select_readonly.style.display = "block";
+        let select_edit = document.getElementById("select_edit");
+        select_edit.style.display = "none";
+        document.getElementById("email").disabled = true;
+      document.getElementById("lindid").disabled = true;
+      document.getElementById("namecontrac").disabled = true;
+      document.getElementById("tel").disabled = true;
+      document.getElementById("company_name").disabled = true;
+      document.getElementById("company_number").disabled = true;
+      document.getElementById("company_register_address").disabled = true;
+       }
+     
+
+
+    
+    
+  
+ 
 
     //if id addbank onclick then alert
   </script>
