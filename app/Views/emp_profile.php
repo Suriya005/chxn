@@ -447,7 +447,7 @@
             <div class="detail-grid" style=" padding-left:15px; padding-top:20px; ">
 
                 <div class="detail-grid-item">
-                    <p>รูปภาพ</p>
+                    <p>รูปภาพ แก้ไข</p>
                     <div id="circle2" style="margin-bottom:15px;"></div>
                     <div style="margin-left: 40px; font-size:20px;"><button class="upload-btn">อัพโหลด</button></div>
                 </div>
