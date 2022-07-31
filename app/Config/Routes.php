@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 // $routes->get('/profile', 'Home::profile');
 $routes->get('/profile', 'ProfileController::index');
-$routes->get('/empprofile', 'Home::empprofile');
+// $routes->get('/empprofile', 'Home::empprofile');
 $routes->get('/cusprofile', 'Home::cusprofile');
 $routes->get('/partprofile', 'Home::partprofile');
 $routes->get('/master', 'Home::master');
@@ -74,7 +74,7 @@ $routes->get('/memo/memojewelry', 'Home::memojewelry');
 $routes->get('/memo/memostone', 'Home::memostone');
 $routes->post('/test/test/(:any)/(:num)', 'CompanyController::insertcompany/$1/$2');
 
-$routes->get('/emp_profile', 'EmpProfileController::index');
+$routes->get('/empprofile', 'EmpProfileController::index');
 $routes->post('/emp_profile_form/insert', 'EmpProfileController::insert');
 $routes->post('/emp_profile_form/update/(:num)', 'EmpProfileController::update/$1');
 

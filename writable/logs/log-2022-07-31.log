@@ -13,3 +13,39 @@ Main connection [MySQLi]: No connection could be made because the target machine
 #9 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #10 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
 #11 {main}
+CRITICAL - 2022-07-31 04:20:43 --> Undefined variable $employee
+#0 C:\Users\theso\Documents\GitHub\chxn\app\Views\emp_profile.php(549): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\theso\\...', 549)
+#1 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(210): include('C:\\Users\\theso\\...')
+#2 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\theso\Documents\GitHub\chxn\system\Common.php(1089): CodeIgniter\View\View->render('emp_profile', Array, true)
+#4 C:\Users\theso\Documents\GitHub\chxn\app\Controllers\Home.php(17): view('emp_profile')
+#5 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\Home->empprofile()
+#6 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#10 {main}
+CRITICAL - 2022-07-31 04:20:50 --> Undefined variable $employee
+#0 C:\Users\theso\Documents\GitHub\chxn\app\Views\emp_profile.php(549): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\theso\\...', 549)
+#1 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(210): include('C:\\Users\\theso\\...')
+#2 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\theso\Documents\GitHub\chxn\system\Common.php(1089): CodeIgniter\View\View->render('emp_profile', Array, true)
+#4 C:\Users\theso\Documents\GitHub\chxn\app\Controllers\Home.php(17): view('emp_profile')
+#5 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\Home->empprofile()
+#6 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#10 {main}
+CRITICAL - 2022-07-31 04:23:07 --> Undefined variable $employee
+#0 C:\Users\theso\Documents\GitHub\chxn\app\Views\emp_profile.php(549): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\theso\\...', 549)
+#1 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(210): include('C:\\Users\\theso\\...')
+#2 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\theso\Documents\GitHub\chxn\system\Common.php(1089): CodeIgniter\View\View->render('emp_profile', Array, true)
+#4 C:\Users\theso\Documents\GitHub\chxn\app\Controllers\Home.php(17): view('emp_profile')
+#5 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\Home->empprofile()
+#6 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#10 {main}

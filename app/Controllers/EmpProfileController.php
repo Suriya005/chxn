@@ -12,7 +12,7 @@ class EmpProfileController extends BaseController
         $data = [];
         $empProfileService = new EmpProfileService();
         $data['employee'] = $empProfileService->getData();
-        return view('emp_profile', $data);
+        return view('empprofile', $data);
       
     }
     public function insert()
@@ -31,7 +31,7 @@ class EmpProfileController extends BaseController
         ];
         $empProfileService = new EmpProfileService();
         $empProfileService->insertData($data);
-        return redirect()->to(base_url('/emp_profile'));
+        return redirect()->to(base_url('/empprofile'));
       
     }
 
@@ -51,7 +51,7 @@ class EmpProfileController extends BaseController
         ];
         $empProfileService = new EmpProfileService();
         $empProfileService->updateData($uid, $data);
-        return redirect()->to(base_url('/emp_profile'));
+        return redirect()->to(base_url('/empprofile'));
       
     }
 }
