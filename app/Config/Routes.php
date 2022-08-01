@@ -40,10 +40,14 @@ $routes->match(['get', 'post'], 'login', 'UserController::login', ["filter" => "
 // Admin routes
 $routes->group("admin", ["filter" => "auth"], function ($routes) {
     $routes->get("/", "AdminController::index");
+    $routes->get('empprofile', 'EmpProfileController::index');
+    $routes->post('emp_profile_form/insert', 'EmpProfileController::insert');
+    $routes->post('emp_profile_form/update/(:num)', 'EmpProfileController::update/$1');
+    $routes->get('profile', 'ProfileController::index');
 });
-// Editor routes
-$routes->group("editor", ["filter" => "auth"], function ($routes) {
-    $routes->get("/", "EditorController::index");
+// Employee routes
+$routes->group("employee", ["filter" => "auth"], function ($routes) {
+    $routes->get("/", "EmployeeController::index");
 });
 $routes->get('logout', 'UserController::logout');
 
@@ -91,7 +95,7 @@ $routes->get('logout', 'UserController::logout');
 
 $routes->get('/empprofile', 'EmpProfileController::index');
 $routes->post('/emp_profile_form/insert', 'EmpProfileController::insert');
-// $routes->post('/emp_profile_form/update/(:num)', 'EmpProfileController::update/$1');
+$routes->post('/emp_profile_form/update/(:num)', 'EmpProfileController::update/$1');
 
 /*
  * --------------------------------------------------------------------

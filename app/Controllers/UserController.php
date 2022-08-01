@@ -28,11 +28,17 @@ class UserController extends BaseController
 
                 }elseif($user['role_id'] == "1"){
 
-                    return redirect()->to(base_url('editor'));
+                    return redirect()->to(base_url('employee'));
                 }
             
         }
-        // return view('empprofile');
+        if(session()->get('role') == "1"){
+            return view("employee/index");
+        }else if(session()->get('role') == "2"){
+            return view("admin/index");
+        }else{
+            return view("login");
+        }
     }
 
     private function setUserSession($user)
