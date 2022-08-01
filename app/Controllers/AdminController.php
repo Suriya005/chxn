@@ -10,6 +10,7 @@ class AdminController extends BaseController
     {
         if (session()->get('role') != "2") {
             echo 'Access denied';
+            echo '<a href="'.base_url('/').'">Login</a>';
             exit;
         }
     }

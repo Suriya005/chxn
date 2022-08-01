@@ -150,3 +150,50 @@ CRITICAL - 2022-08-01 04:25:45 --> include_once(E:\xampp\htdocs\chxn_git\app\Vie
 #9 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #10 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
 #11 {main}
+CRITICAL - 2022-08-01 04:44:28 --> Undefined index: menu_master
+#0 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 53, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(22): App\Controllers\UserController->setUserSession(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-01 06:23:19 --> Undefined variable: permission
+#0 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\xampp\\htdocs...', 71, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(34): App\Controllers\UserController->setUserSession(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-01 06:24:42 --> Undefined variable: permission
+#0 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\xampp\\htdocs...', 71, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(34): App\Controllers\UserController->setUserSession(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-01 06:24:52 --> Undefined variable: permission
+#0 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\xampp\\htdocs...', 71, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(34): App\Controllers\UserController->setUserSession(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-01 06:46:43 --> syntax error, unexpected 'assets' (T_STRING), expecting ';' or ','
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('admin/index', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\AdminController.php(19): view('admin/index')
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\AdminController->index()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}

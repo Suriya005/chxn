@@ -1,5 +1,5 @@
 <?php
-    include_once 'header.php';
+    include_once APPPATH . 'Views/header.php';
 ?>
 
 
@@ -247,5 +247,5 @@
     </script>
 
 <?php
-include('footer.php');
+include_once APPPATH . 'Views/footer.php';
 ?>

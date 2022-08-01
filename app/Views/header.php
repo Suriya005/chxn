@@ -31,13 +31,12 @@
 <body style="background-color: #EBEEF0;">
 
     <div class="nav-div">
-        <img src="assets/image/chxlogo.png" alt="" style="width:199px;height:50px; margin-top:20px;margin-left:15px;">
+        <img src="../assets/image/chxlogo.png" alt="" style="width:199px;height:50px; margin-top:20px;margin-left:15px;">
 
         <div class="nav-rights flex-div">
-            <p>พฤ. 24 ก.พ. 2022</p>
-            <p>10:10:40</p>
+            <p id="current_datetime"></p>
             <div class="hrs"></div>
-            <div class="circular"> <img src="assets/image/chxprofile.jpg" alt=""></div>
+            <div class="circular"> <img src="../assets/image/chxprofile.jpg" alt=""></div>
             <div><a style="margin-bottom:0px;">สวัสดี โรเซ่</a></br>
                 <span>Test</span>
             </div>
@@ -48,11 +47,18 @@
 
     <div class="sidebar">
         <ul>
-            <li>
-                <a href="#" class="dropbtn"><img src="<?php echo base_url('assets/image/icon/graph-2.png'); ?>"
+            <!-- รายงานภาพรวม -->
+            <?php
+               if (session()->get('overview') == "1"){
+                echo '<li>
+                <a href="#" class="dropbtn"><img src="'.base_url('assets/image/icon/graph-2.png').'"
                         style="margin-right:10px;" class="sidebarimg">รายงานภาพรวม</a>
-            </li>
-            <?php if (session()->get('role') == "2") { 
+            </li>';
+               }
+            ?>
+
+            <!-- โปรไฟล์ -->
+            <?php if (session()->get('profile') == "1") { 
                 echo '<li>
                 <div class="dropdown">
                     <a class="dropbtn"><img src="'. base_url('assets/image/icon/business-and-trade-4.png') .'"
@@ -97,146 +103,171 @@
             </li>';
              }?>
 
-            <li>
-                <div class="dropdown">
-                    <a class="dropbtn"><img src="<?php echo base_url('assets/image/icon/crown.png'); ?>"
-                            style="margin-right:10px;" class="sidebarimg">มาสเตอร์<img
-                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt="" class="rightimg"
-                            align="right"></a>
-                    <div class="dropdown-content">
-                        <ul>
-
-                            <li>
-                                <div class="dropdown-sub">
-                                    <a class="dropbtn">ไอเทม<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>'); ?>" alt=""
-                                            class="rightimg" align="right"></a>
-                                    <div class="dropdown-sub-content">
-                                        <ul>
-                                            <li><a href="<?php echo base_url('master'); ?>"
-                                                    class="dropbtn">ประเภทสินค้า</a></li>
-                                            <li><a href="<?php echo base_url('mastercorrection'); ?>"
-                                                    class="dropbtn">คอลเลคชั่น</a></li>
-                                            <li><a href="<?php echo base_url('mastersize'); ?>"
-                                                    class="dropbtn">ขนาดสินค้า</a></li>
-                                        </ul>
-                                    </div>
-                            </li>
-
-                            <li>
-                                <div class="dropdown-sub">
-                                    <a class="dropbtn">โลหะ<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>'); ?>" alt=""
-                                            class="rightimg" align="right"></a>
-                                    <div class="dropdown-sub-content">
-                                        <ul>
-                                            <li><a href="<?php echo base_url('mastermetalcolor'); ?>"
-                                                    class="dropbtn">สีโลหะ</a></li>
-                                            <li><a href="<?php echo base_url('mastermetalname'); ?>"
-                                                    class="dropbtn">ชื่อโลหะ</a></li>
-                                        </ul>
-                                    </div>
-                            </li>
-
-                            <li>
-                                <div class="dropdown-sub">
-                                    <a class="dropbtn">อัญมณี<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>'); ?>" alt=""
-                                            class="rightimg" align="right"></a>
-                                    <div class="dropdown-sub-content">
-                                        <ul>
-                                            <li><a href="<?php echo base_url('masterstonegroup'); ?>"
-                                                    class="dropbtn">กลุ่มอัญมณี</a></li>
-                                            <li><a href="<?php echo base_url('masterstonename'); ?>"
-                                                    class="dropbtn">ชื่ออัญมณี/เพชร</a></li>
-                                            <li><a href="<?php echo base_url('masterstoneshape'); ?>"
-                                                    class="dropbtn">รูปทรง</a></li>
-                                            <li><a href="<?php echo base_url('mastergemcolor'); ?>"
-                                                    class="dropbtn">สีอัญมณี</a></li>
-                                            <li><a href="<?php echo base_url('masterclarity'); ?>"
-                                                    class="dropbtn">Clarity</a></li>
-                                            <li><a href="<?php echo base_url('mastercutting'); ?>"
-                                                    class="dropbtn">Cutting</a></li>
-                                            <li><a href="<?php echo base_url('masterquality'); ?>"
-                                                    class="dropbtn">คุณภาพ</a></li>
-                                            <li><a href="<?php echo base_url('mastergemsize'); ?>"
-                                                    class="dropbtn">ขนาดอัญมณี</a></li>
-                                        </ul>
-                                    </div>
-                            </li>
-
-                            <li>
-                                <div class="dropdown-sub">
-                                    <a class="dropbtn">อื่นๆ<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>'); ?>" alt=""
-                                            class="rightimg" align="right"></a>
-                                    <div class="dropdown-sub-content">
-                                        <ul>
-                                            <li><a href="#" class="dropbtn">คลัง</a></li>
-                                            <li><a href="#" class="dropbtn">อื่นๆ</a></li>
-                                        </ul>
-                                    </div>
-                            </li>
-
-                        </ul>
+<!-- มาสเตอร์ -->
+            <?php 
+                if(session()->get('master') == "1"){
+                    echo '<li>
+                    <div class="dropdown">
+                        <a class="dropbtn"><img src="'.base_url('assets/image/icon/crown.png').'"
+                                style="margin-right:10px;" class="sidebarimg">มาสเตอร์<img
+                                src="'.base_url('assets/image/icon/next.png').'" alt="" class="rightimg"
+                                align="right"></a>
+                        <div class="dropdown-content">
+                            <ul>
+    
+                                <li>
+                                    <div class="dropdown-sub">
+                                        <a class="dropbtn">ไอเทม<img
+                                                src="'.base_url('assets/image/icon/next.png').'" alt=""
+                                                class="rightimg" align="right"></a>
+                                        <div class="dropdown-sub-content">
+                                            <ul>
+                                                <li><a href="'.base_url('master').'"
+                                                        class="dropbtn">ประเภทสินค้า</a></li>
+                                                <li><a href="'.base_url('mastercorrection').'"
+                                                        class="dropbtn">คอลเลคชั่น</a></li>
+                                                <li><a href="'.base_url('mastersize').'"
+                                                        class="dropbtn">ขนาดสินค้า</a></li>
+                                            </ul>
+                                        </div>
+                                </li>
+    
+                                <li>
+                                    <div class="dropdown-sub">
+                                        <a class="dropbtn">โลหะ<img
+                                                src="'.base_url('assets/image/icon/next.png').'" alt=""
+                                                class="rightimg" align="right"></a>
+                                        <div class="dropdown-sub-content">
+                                            <ul>
+                                                <li><a href="'.base_url('mastermetalcolor').'"
+                                                        class="dropbtn">สีโลหะ</a></li>
+                                                <li><a href="'.base_url('mastermetalname').'"
+                                                        class="dropbtn">ชื่อโลหะ</a></li>
+                                            </ul>
+                                        </div>
+                                </li>
+    
+                                <li>
+                                    <div class="dropdown-sub">
+                                        <a class="dropbtn">อัญมณี<img
+                                                src="'.base_url('assets/image/icon/next.png').'" alt=""
+                                                class="rightimg" align="right"></a>
+                                        <div class="dropdown-sub-content">
+                                            <ul>
+                                                <li><a href="'.base_url('masterstonegroup').'"
+                                                        class="dropbtn">กลุ่มอัญมณี</a></li>
+                                                <li><a href="'.base_url('masterstonename').'"
+                                                        class="dropbtn">ชื่ออัญมณี/เพชร</a></li>
+                                                <li><a href="'.base_url('masterstoneshape').'"
+                                                        class="dropbtn">รูปทรง</a></li>
+                                                <li><a href="'.base_url('mastergemcolor').'"
+                                                        class="dropbtn">สีอัญมณี</a></li>
+                                                <li><a href="'.base_url('masterclarity').'"
+                                                        class="dropbtn">Clarity</a></li>
+                                                <li><a href="'.base_url('mastercutting').'"
+                                                        class="dropbtn">Cutting</a></li>
+                                                <li><a href="'.base_url('masterquality').'"
+                                                        class="dropbtn">คุณภาพ</a></li>
+                                                <li><a href="'.base_url('mastergemsize').'"
+                                                        class="dropbtn">ขนาดอัญมณี</a></li>
+                                            </ul>
+                                        </div>
+                                </li>
+    
+                                <li>
+                                    <div class="dropdown-sub">
+                                        <a class="dropbtn">อื่นๆ<img
+                                                src="'.base_url('assets/image/icon/next.png').'" alt=""
+                                                class="rightimg" align="right"></a>
+                                        <div class="dropdown-sub-content">
+                                            <ul>
+                                                <li><a href="#" class="dropbtn">คลัง</a></li>
+                                                <li><a href="#" class="dropbtn">อื่นๆ</a></li>
+                                            </ul>
+                                        </div>
+                                </li>
+    
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>';
+                }
+            ?>
 
-            <li>
-                <div class="dropdown">
-                    <a class="dropbtn"><img src="<?php echo base_url('assets/image/icon/rings.png'); ?>"
-                            style="margin-right:10px;" class="sidebarimg">ข้อมูลสินค้า<img
-                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt="" class="rightimg"
-                            align="right"></a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="<?php echo base_url('productstone'); ?>" class="dropbtn">อัญมณี/เพชร</a></li>
-                            <li><a href="<?php echo base_url('productjewelry'); ?>" class="dropbtn">จิวเวลรี่</a></li>
-                        </ul>
+<!-- ข้อมูลสินค้า -->
+            <?php
+                if(session()->get('product') == "1"){
+                    echo '<li>
+                    <div class="dropdown">
+                        <a class="dropbtn"><img src="'.base_url('assets/image/icon/rings.png').'"
+                                style="margin-right:10px;" class="sidebarimg">ข้อมูลสินค้า<img
+                                src="'.base_url('assets/image/icon/next.png').'" alt="" class="rightimg"
+                                align="right"></a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li><a href="'.base_url('productstone').'" class="dropbtn">อัญมณี/เพชร</a></li>
+                                <li><a href="'.base_url('productjewelry').'" class="dropbtn">จิวเวลรี่</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>';
+                ?>
+                
+    
+                <!-- คำสั่งขาย -->
+                <?php 
+                 if(session()->get('sell_order') == "1"){
+                     echo '<li>
+                         <div class="dropdown">
+                             <a class="dropbtn"><img src="'.base_url('assets/image/icon/check-list-3.png').'"
+                                     style="margin-right:10px;" class="sidebarimg">คำสั่งขาย<img
+                                     src="'.base_url('assets/image/icon/next.png').'" alt="" class="rightimg"
+                                     align="right"></a>
+                             <div class="dropdown-content">
+                                 <ul>
+                                     <li><a href="'.base_url('/saleorder/saleorderstone').'"
+                                             class="dropbtn">อัญมณี/เพชร</a></li>
+                                     <li><a href="'.base_url('/saleorder/saleorderjewelry').'"
+                                             class="dropbtn">จิวเวลรี่</a></li>
+                                     <li><a href="#" class="dropbtn">รายงาน</a></li>
+                                 </ul>
+                             </div>
+                         </div>
+                     </li>';
+                 }
+                }
+            ?>
 
-            <li>
-                <div class="dropdown">
-                    <a class="dropbtn"><img src="<?php echo base_url('assets/image/icon/check-list-3.png'); ?>"
-                            style="margin-right:10px;" class="sidebarimg">คำสั่งขาย<img
-                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt="" class="rightimg"
-                            align="right"></a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="<?php echo base_url('/saleorder/saleorderstone'); ?>"
-                                    class="dropbtn">อัญมณี/เพชร</a></li>
-                            <li><a href="<?php echo base_url('/saleorder/saleorderjewelry'); ?>"
-                                    class="dropbtn">จิวเวลรี่</a></li>
-                            <li><a href="#" class="dropbtn">รายงาน</a></li>
-                        </ul>
+<!-- เซอร์วิสออเดอร์ -->
+            <?php
+                if(session()->get('service_order') == "1"){
+                    echo '<li>
+                    <div class="dropdown">
+                        <a class="dropbtn"><img src="'.base_url('assets/image/icon/support-3.png').'"
+                                style="margin-right:10px;" class="sidebarimg">เซอร์วิสออเดอร์<img
+                                src="'.base_url('assets/image/icon/next.png').'" alt="" class="rightimg"
+                                align="right"></a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li><a href="#" class="dropbtn">ออเดอร์ผลิต</a></li>
+                                <li><a href="#" class="dropbtn">ออเดอร์ซ่อม</a></li>
+                                <li><a href="#" class="dropbtn">รายงาน</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>';
+                }
+            ?>
 
+<!-- การออม -->
+<?php
+    if(session()->get('saving') == "1"){
+        echo '
             <li>
                 <div class="dropdown">
-                    <a class="dropbtn"><img src="<?php echo base_url('assets/image/icon/support-3.png'); ?>"
-                            style="margin-right:10px;" class="sidebarimg">เซอร์วิสออเดอร์<img
-                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt="" class="rightimg"
-                            align="right"></a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="#" class="dropbtn">ออเดอร์ผลิต</a></li>
-                            <li><a href="#" class="dropbtn">ออเดอร์ซ่อม</a></li>
-                            <li><a href="#" class="dropbtn">รายงาน</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="dropdown">
-                    <a class="dropbtn"><img src="<?php echo base_url('assets/image/icon/pay-day-3.png'); ?>"
+                    <a class="dropbtn"><img src="'.base_url('assets/image/icon/pay-day-3.png').'"
                             style="margin-right:10px;" class="sidebarimg">การออม<img
-                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt="" class="rightimg"
+                            src="'.base_url('assets/image/icon/next.png').'" alt="" class="rightimg"
                             align="right"></a>
                     <div class="dropdown-content">
                         <ul>
@@ -247,13 +278,17 @@
                         </ul>
                     </div>
                 </div>
-            </li>
+            </li>';
+    } ?>
 
+<!-- การขาย -->
+        <?php if(session()->get('seller') == "1"){
+        echo '
             <li>
                 <div class="dropdown">
-                    <a class="dropbtn"><img src="<?php echo base_url('assets/image/icon/coin-2.png'); ?>"
+                    <a class="dropbtn"><img src="'.base_url('assets/image/icon/coin-2.png').'"
                             style="margin-right:10px;" class="sidebarimg">การขาย<img
-                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt="" class="rightimg"
+                            src="'.base_url('assets/image/icon/next.png').'" alt="" class="rightimg"
                             align="right"></a>
                     <div class="dropdown-content">
                         <ul>
@@ -264,26 +299,30 @@
                         </ul>
                     </div>
                 </div>
-            </li>
+            </li>';
+        } ?>
 
+<!-- การจัดซื้อ -->
+        <?php if(session()->get('purchase') == "1"){
+            echo '
             <li>
                 <div class="dropdown">
-                    <a class="dropbtn"><img src="<?php echo base_url('assets/image/icon/cargo-3.png'); ?>"
+                    <a class="dropbtn"><img src="'.base_url('assets/image/icon/cargo-3.png').'"
                             style="margin-right:10px;" class="sidebarimg">การจัดซื้อ<img
-                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt="" class="rightimg"
+                            src="'.base_url('assets/image/icon/next.png').'" alt="" class="rightimg"
                             align="right"></a>
                     <div class="dropdown-content">
                         <ul>
                             <li>
                                 <div class="dropdown-sub">
                                     <a class="dropbtn">จัดซื้อ(Purchase)<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt=""
+                                            src="'.base_url('assets/image/icon/next.png').'" alt=""
                                             class="rightimg" align="right"></a>
                                     <div class="dropdown-sub-content">
                                         <ul>
-                                            <li><a href="<?php echo base_url('/purchase/purchasestone'); ?>"
+                                            <li><a href="'.base_url('/purchase/purchasestone').'"
                                                     class="dropbtn">อัญมณี / เพชร</a></li>
-                                            <li><a href="<?php echo base_url('/purchase/purchasejewelry'); ?>"
+                                            <li><a href="'.base_url('/purchase/purchasejewelry').'"
                                                     class="dropbtn">จิวเวลรี่</a></li>
                                         </ul>
                                     </div>
@@ -292,13 +331,13 @@
                             <li>
                                 <div class="dropdown-sub">
                                     <a class="dropbtn">MEMO In<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt=""
+                                            src="'.base_url('assets/image/icon/next.png').'" alt=""
                                             class="rightimg" align="right"></a>
                                     <div class="dropdown-sub-content">
                                         <ul>
-                                            <li><a href="<?php echo base_url('/memoin/memoinstone'); ?>"
+                                            <li><a href="'.base_url('/memoin/memoinstone').'"
                                                     class="dropbtn">อัญมณี / เพชร</a></li>
-                                            <li><a href="<?php echo base_url('/memoin/memoinjewelry'); ?>"
+                                            <li><a href="'.base_url('/memoin/memoinjewelry').'"
                                                     class="dropbtn">จิวเวลรี่</a></li>
                                         </ul>
                                     </div>
@@ -306,13 +345,13 @@
                             <li>
                                 <div class="dropdown-sub">
                                     <a class="dropbtn">MEMO Return<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt=""
+                                            src="'.base_url('assets/image/icon/next.png').'" alt=""
                                             class="rightimg" align="right"></a>
                                     <div class="dropdown-sub-content">
                                         <ul>
-                                            <li><a href="<?php echo base_url('/memoreturn/memoreturnstone'); ?>"
+                                            <li><a href="'.base_url('/memoreturn/memoreturnstone').'"
                                                     class="dropbtn">อัญมณี / เพชร</a></li>
-                                            <li><a href="<?php echo base_url('/memoreturn/memoreturnjewelry'); ?>"
+                                            <li><a href="'.base_url('/memoreturn/memoreturnjewelry').'"
                                                     class="dropbtn">จิวเวลรี่</a></li>
                                         </ul>
                                     </div>
@@ -321,26 +360,31 @@
                         </ul>
                     </div>
                 </div>
-            </li>
+            </li>';
+} ?>
 
+
+<!-- คลังสินค้า -->
+        <?php if(session()->get('stock') == "1"){
+            echo '
             <li>
                 <div class="dropdown">
-                    <a class="dropbtn"><img src="<?php echo base_url('assets/image/icon/warehouse.png'); ?>"
+                    <a class="dropbtn"><img src="'.base_url('assets/image/icon/warehouse.png').'"
                             style="margin-right:10px;" class="sidebarimg">คลังสินค้า<img
-                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt="" class="rightimg"
+                            src="'.base_url('assets/image/icon/next.png').'" alt="" class="rightimg"
                             align="right"></a>
                     <div class="dropdown-content">
                         <ul>
                             <li>
                                 <div class="dropdown-sub">
                                     <a class="dropbtn">การจัดซื้อ(Purchase)<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt=""
+                                            src="'.base_url('assets/image/icon/next.png').'" alt=""
                                             class="rightimg" align="right"></a>
                                     <div class="dropdown-sub-content">
                                         <ul>
-                                            <li><a href="<?php echo base_url('/inventory/purchasestone'); ?>"
+                                            <li><a href="'.base_url('/inventory/purchasestone').'"
                                                     class="dropbtn">อัญมณี / เพชร</a></li>
-                                            <li><a href="<?php echo base_url('/inventory/purchasejewelry'); ?>"
+                                            <li><a href="'.base_url('/inventory/purchasejewelry').'"
                                                     class="dropbtn">จิวเวลรี่</a></li>
                                         </ul>
                                     </div>
@@ -349,13 +393,13 @@
                             <li>
                                 <div class="dropdown-sub">
                                     <a class="dropbtn">คลัง MEMO<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt=""
+                                            src="'.base_url('assets/image/icon/next.png').'" alt=""
                                             class="rightimg" align="right"></a>
                                     <div class="dropdown-sub-content">
                                         <ul>
-                                            <li><a href="<?php echo base_url('/memo/memostone'); ?>"
+                                            <li><a href="'.base_url('/memo/memostone').'"
                                                     class="dropbtn">อัญมณี / เพชร</a></li>
-                                            <li><a href="<?php echo base_url('/memo/memojewelry'); ?>"
+                                            <li><a href="'.base_url('/memo/memojewelry').'"
                                                     class="dropbtn">จิวเวลรี่</a></li>
                                         </ul>
                                     </div>
@@ -364,15 +408,15 @@
                             <li>
                                 <div class="dropdown-sub">
                                     <a class="dropbtn">คลังเซอร์วิสออเดอร์<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt=""
+                                            src="'.base_url('assets/image/icon/next.png').'" alt=""
                                             class="rightimg" align="right"></a>
                                     <div class="dropdown-sub-content">
                                         <ul>
-                                            <li><a href="<?php echo base_url('/inventory/serviceorder'); ?>"
+                                            <li><a href="'.base_url('/inventory/serviceorder').'"
                                                     class="dropbtn">ออเดอร์ผลิต</a></li>
-                                            <li><a href="<?php echo base_url('/inventory/servicerepair'); ?>"
+                                            <li><a href="'.base_url('/inventory/servicerepair').'"
                                                     class="dropbtn">ออเดอร์ซ่อม</a></li>
-                                            <li><a href="<?php echo base_url('/inventory/servicemounting'); ?>"
+                                            <li><a href="'.base_url('/inventory/servicemounting').'"
                                                     class="dropbtn">ออเดอร์ตัวเรือน</a></li>
                                         </ul>
                                     </div>
@@ -381,20 +425,24 @@
                         </ul>
                     </div>
                 </div>
-            </li>
+            </li>';
+        } ?>
 
+<!-- การเงิน -->
+        <?php if(session()->get('finance') == "1"){
+            echo '
             <li>
                 <div class="dropdown">
-                    <a class="dropbtn"><img src="<?php echo base_url('assets/image/icon/profit.png'); ?>"
+                    <a class="dropbtn"><img src="'.base_url('assets/image/icon/profit.png').'"
                             style="margin-right:10px;" class="sidebarimg">การเงิน<img
-                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt="" class="rightimg"
+                            src="'.base_url('assets/image/icon/next.png').'" alt="" class="rightimg"
                             align="right"></a>
                     <div class="dropdown-content">
                         <ul>
                             <li>
                                 <div class="dropdown-sub">
                                     <a class="dropbtn">ใบการเงิน<img
-                                            src="<?php echo base_url('assets/image/icon/next.png'); ?>" alt=""
+                                            src="'.base_url('assets/image/icon/next.png').'" alt=""
                                             class="rightimg" align="right"></a>
                                     <div class="dropdown-sub-content">
                                         <ul>
@@ -409,6 +457,7 @@
                         </ul>
                     </div>
                 </div>
-            </li>
+            </li>';
+        } ?>
         </ul>
     </div>

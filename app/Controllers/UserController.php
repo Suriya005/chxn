@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\UserModel;
+use App\Models\Permission;
 
 class UserController extends BaseController
 {
@@ -17,11 +18,20 @@ class UserController extends BaseController
                 $model = new UserModel();
                 $user = $model->where('system_name', $this->request->getVar('username'))
                     ->first();
+                if ($user) {
+                    if($user['role_id'] == 1){
+                        $user_status = 'employee';
+                    }elseif($user['role_id'] == 2){
+                        $user_status = 'admin';
+                    }else{
+                        $user_status = 'none';
+                    }
+                $permission_tb = new Permission();
+                // get all permission 
+                $permission = $permission_tb->where('user_status', $user_status)->findAll();
+                print_r($permission);
 
-                // Stroing session values
-                $this->setUserSession($user);
-                print_r($user);
-                // Redirecting to dashboard after login
+                $this->setUserSession($user, $permission);
                 if($user['role_id'] == "2"){
 
                     return redirect()->to(base_url('admin'));
@@ -30,6 +40,12 @@ class UserController extends BaseController
 
                     return redirect()->to(base_url('employee'));
                 }
+                } else {
+                    $data['error'] = 'Username not found';
+                    return view('login', $data);
+                }
+
+                
             
         }
         if(session()->get('role') == "1"){
@@ -41,7 +57,8 @@ class UserController extends BaseController
         }
     }
 
-    private function setUserSession($user)
+    private function setUserSession($user, $permission)
+
     {
         $data = [
             'id' => $user['uid'],
@@ -51,6 +68,11 @@ class UserController extends BaseController
             'isLoggedIn' => true,
             "role" => $user['role_id'],
         ];
+
+        foreach($permission as $permission){
+            $data[$permission['menu']] = $permission['menu_status'];
+        }
+        
 
         session()->set($data);
         return true;

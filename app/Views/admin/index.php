@@ -3,6 +3,8 @@
     include_once APPPATH . 'Views/header.php';
 ?>
     <h1>hello admin</h1>
+    
+
 
     <?php
     // include footer from app\Views\admin\footer.php

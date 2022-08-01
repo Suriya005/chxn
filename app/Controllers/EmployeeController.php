@@ -10,6 +10,7 @@ class EmployeeController extends BaseController
     {
         if (session()->get('role') != "1") {
             echo 'Access denied';
+            echo '<a href="'.base_url('/').'">Login</a>';
             exit;
         }
     }
