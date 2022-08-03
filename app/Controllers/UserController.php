@@ -29,7 +29,6 @@ class UserController extends BaseController
                 $permission_tb = new Permission();
                 // get all permission 
                 $permission = $permission_tb->where('user_status', $user_status)->findAll();
-                print_r($permission);
 
                 $this->setUserSession($user, $permission);
                 if($user['role_id'] == "2"){
