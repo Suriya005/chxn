@@ -96,6 +96,8 @@ $routes->get('logout', 'UserController::logout');
 $routes->get('/empprofile', 'EmpProfileController::index');
 $routes->post('/emp_profile_form/insert', 'EmpProfileController::insert');
 $routes->post('/emp_profile_form/update/(:num)', 'EmpProfileController::update/$1');
+$routes->get('/permission', 'PermissionController::index');
+$routes->post('/permission/edit', 'PermissionController::edit');
 
 /*
  * --------------------------------------------------------------------
