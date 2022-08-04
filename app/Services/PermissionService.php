@@ -25,6 +25,30 @@ use CodeIgniter\Model;
             return true;
           }
 
+          public function add($role)
+          {
+            $menu = [
+              'overview' => '1',
+              'profile' => '1',
+              'master' => '1',
+              'product' => '1',
+              'sell_order' => '1',
+              'service_order' => '1',
+              'saving' => '1',
+              'seller' => '1',
+              'purchase' => '1',
+              'stock' => '1',
+              'finance' => '1',
+            ];
+            foreach($menu as $key => $value){
+              $this->insert([
+                'user_status' => $role,
+                'menu' => $key,
+                'menu_status' => $value,
+              ]);
+            }
+          }
+
   
       }
 

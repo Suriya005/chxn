@@ -24,6 +24,8 @@
         <?php
         print_r($allpermission);
 
+        
+
         foreach ($allpermission as $status => $detail_status) {
         ?>
             <form action="<?= base_url('permission/edit') ?>" method="post">
@@ -33,14 +35,8 @@
                 foreach ($detail_status as $menu => $menu_status) {
                     echo $menu . ':';
                 ?>
-                    <select name="<?= $menu_status['pid']  ?>">
-                        <option value="1" <?php if ($menu_status['menu_status']  == 1) {
-                                                echo 'selected';
-                                            } ?>>เปิด</option>
-                        <option value="0" <?php if ($menu_status['menu_status']  == 0) {
-                                                echo 'selected';
-                                            } ?>>ปิด</option>
-                    </select>
+                    <input type="radio" name="<?= $menu_status['pid'] ?>" value="1" <?php if ($menu_status['menu_status'] == 1) {echo 'checked';} ?>>on
+                    <input type="radio" name="<?= $menu_status['pid'] ?>" value="0" <?php if ($menu_status['menu_status'] == 0) {echo 'checked';} ?>>off
                     <br>
 
 
@@ -49,10 +45,18 @@
                 ?>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-
         <?php
         }
         ?>
+
+        <!-- add permission -->
+        <form action="<?= base_url('permission/add') ?>" method="post">
+        <label for="">สถานะ</label>
+        <input type="text" name="role">
+
+        <!-- submit -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
 
 
 

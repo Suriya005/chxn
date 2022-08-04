@@ -98,6 +98,7 @@ $routes->post('/emp_profile_form/insert', 'EmpProfileController::insert');
 $routes->post('/emp_profile_form/update/(:num)', 'EmpProfileController::update/$1');
 $routes->get('/permission', 'PermissionController::index');
 $routes->post('/permission/edit', 'PermissionController::edit');
+$routes->post('/permission/add', 'PermissionController::add');
 
 /*
  * --------------------------------------------------------------------

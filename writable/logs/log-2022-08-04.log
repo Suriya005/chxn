@@ -432,3 +432,35 @@ CRITICAL - 2022-08-04 03:57:40 --> There is no data to update.
 #8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
 #10 {main}
+CRITICAL - 2022-08-04 11:23:54 --> syntax error, unexpected '?>'
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('permission', Array, true)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\PermissionController.php(26): view('permission', Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\PermissionController->index()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermissionController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-04 11:24:31 --> syntax error, unexpected '}', expecting end of file
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('permission', Array, true)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\PermissionController.php(26): view('permission', Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\PermissionController->index()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermissionController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-04 12:27:53 --> Illegal string offset 'pid'
+#0 E:\xampp\htdocs\chxn_git\app\Views\permission.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'E:\\xampp\\htdocs...', 37, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('permission', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\PermissionController.php(26): view('permission', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\PermissionController->index()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PermissionController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}

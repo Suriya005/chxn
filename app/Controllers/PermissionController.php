@@ -34,5 +34,13 @@ class PermissionController extends BaseController
         $service->edit($data);
         return redirect()->to(base_url('permission'));
     }
+
+    public function add()
+    {
+        $data = $this->request->getPost();
+        $service = new PermissionService();
+        $service->add($data['role']);
+        return redirect()->to(base_url('permission'));
+    }
 }
 ?>
