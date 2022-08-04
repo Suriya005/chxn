@@ -38,8 +38,6 @@
                     <input type="radio" name="<?= $menu_status['pid'] ?>" value="1" <?php if ($menu_status['menu_status'] == 1) {echo 'checked';} ?>>on
                     <input type="radio" name="<?= $menu_status['pid'] ?>" value="0" <?php if ($menu_status['menu_status'] == 0) {echo 'checked';} ?>>off
                     <br>
-
-
                 <?php
                 }
                 ?>
