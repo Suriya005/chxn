@@ -21,10 +21,7 @@ class PermissionController extends BaseController
             
             ];
         }
-        
-        
         return view('permission', $data);
-      
     }
 
     public function edit()

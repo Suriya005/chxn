@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\UserModel;
-use App\Models\PermissionModel;
+use App\Models\Permission;
 
 class UserController extends BaseController
 {
@@ -26,7 +26,7 @@ class UserController extends BaseController
                     }else{
                         $user_status = 'none';
                     }
-                $permission_tb = new PermissionModel();
+                $permission_tb = new Permission();
                 // get all permission 
                 $permission = $permission_tb->where('user_status', $user_status)->findAll();
 
