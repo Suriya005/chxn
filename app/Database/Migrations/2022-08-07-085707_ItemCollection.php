@@ -4,45 +4,39 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Permission extends Migration
+class ItemCollection extends Migration
 {
     public function up()
     {
-
         $this->forge->addField([
-            'pid' => [
+            'uid' => [
                 'type'           => 'INT',
                 'constraint'     => 5,
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'user_status' => [
-                'type'       => 'VARCHAR',
-                'constraint' => '20',
-                'null'       => true,
-            ],
-            'menu' => [
+            'master_code' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '30',
                 'null'       => true,
             ],
-            'menu_status' => [
-                'type' => 'BOOLEAN',
+            'master_name' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '200',
+                'null'       => true,
+            ],
+            'master_detail' => [
+                'type' => 'text',
                 'default' => false,
             ],
-            
-          
-            
-            
+
             ]);
-        $this->forge->addKey('pid', true);
-        $this->forge->createTable('permission');
+        $this->forge->addKey('uid', true);
+        $this->forge->createTable('item_collection');
     }
 
     public function down()
     {
-        $this->forge->dropTable('permission');
+        $this->forge->dropTable('item_collection');
     }
 }
-
-

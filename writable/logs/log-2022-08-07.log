@@ -1,0 +1,80 @@
+ERROR - 2022-08-07 04:00:23 --> Table 'item_collection' already exists
+ERROR - 2022-08-07 05:25:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':master_code, :master_name, :master_detail)' at line 1
+ERROR - 2022-08-07 05:26:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':master_code, :master_name, :master_detail)' at line 1
+CRITICAL - 2022-08-07 05:26:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':master_code, :master_name, :master_detail)' at line 1
+#0 E:\xampp\htdocs\chxn_git\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO ite...', 0)
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO ite...')
+#2 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO ite...')
+#3 E:\xampp\htdocs\chxn_git\app\Services\MasterService.php(22): CodeIgniter\Database\BaseConnection->query('INSERT INTO ite...', Array)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(26): App\Services\MasterService->insert_itemProductType(Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->insert_itemProductType()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-08-07 05:28:07 --> Unknown column 'dawdaw' in 'field list'
+CRITICAL - 2022-08-07 05:28:07 --> Unknown column 'dawdaw' in 'field list'
+#0 E:\xampp\htdocs\chxn_git\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO ite...', 0)
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO ite...')
+#2 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO ite...')
+#3 E:\xampp\htdocs\chxn_git\app\Services\MasterService.php(23): CodeIgniter\Database\BaseConnection->query('INSERT INTO ite...')
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(26): App\Services\MasterService->insert_itemProductType(Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->insert_itemProductType()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-08-07 05:29:04 --> Unknown column 'dawdaw' in 'field list'
+CRITICAL - 2022-08-07 05:29:04 --> Unknown column 'dawdaw' in 'field list'
+#0 E:\xampp\htdocs\chxn_git\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO ite...', 0)
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO ite...')
+#2 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO ite...')
+#3 E:\xampp\htdocs\chxn_git\app\Services\MasterService.php(23): CodeIgniter\Database\BaseConnection->query('INSERT INTO ite...')
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(26): App\Services\MasterService->insert_itemProductType(Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->insert_itemProductType()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-08-07 05:29:17 --> Unknown column 'dawdawwadw' in 'field list'
+CRITICAL - 2022-08-07 05:29:17 --> Unknown column 'dawdawwadw' in 'field list'
+#0 E:\xampp\htdocs\chxn_git\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO ite...', 0)
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO ite...')
+#2 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO ite...')
+#3 E:\xampp\htdocs\chxn_git\app\Services\MasterService.php(23): CodeIgniter\Database\BaseConnection->query('INSERT INTO ite...')
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(26): App\Services\MasterService->insert_itemProductType(Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->insert_itemProductType()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-08-07 05:30:53 --> Unknown column 'dwadw' in 'field list'
+CRITICAL - 2022-08-07 05:30:53 --> Unknown column 'dwadw' in 'field list'
+#0 E:\xampp\htdocs\chxn_git\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO ite...', 0)
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO ite...')
+#2 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO ite...')
+#3 E:\xampp\htdocs\chxn_git\app\Services\MasterService.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO ite...')
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(26): App\Services\MasterService->insert_itemProductType(Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->insert_itemProductType()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-08-07 05:31:36 --> Unknown column 'a001' in 'field list'
+CRITICAL - 2022-08-07 05:31:36 --> Unknown column 'a001' in 'field list'
+#0 E:\xampp\htdocs\chxn_git\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO ite...', 0)
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO ite...')
+#2 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO ite...')
+#3 E:\xampp\htdocs\chxn_git\app\Services\MasterService.php(24): CodeIgniter\Database\BaseConnection->query('INSERT INTO ite...')
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(26): App\Services\MasterService->insert_itemProductType(Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->insert_itemProductType()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}

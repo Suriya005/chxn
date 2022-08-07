@@ -9,6 +9,7 @@
         var year = dateobj.getFullYear();
         var month = ("0" + (dateobj.getMonth() + 1)).slice(-2);
         var date = ("0" + dateobj.getDate()).slice(-2);
+        var date_number = dateobj.getDate();
         var hours = ("0" + dateobj.getHours()).slice(-2);
         var minutes = ("0" + dateobj.getMinutes()).slice(-2);
         var seconds = ("0" + dateobj.getSeconds()).slice(-2);
@@ -25,7 +26,7 @@
                 converted_date = year + "-" + month + "-" + date;
                 break;
             case "YYYY-MMM-DD DDD":
-                converted_date = days[day] + " " + day + " " + months[parseInt(month) - 1] + " " +
+                converted_date = days[day] + " " + date_number  + " " + months[parseInt(month) - 1] + " " +
                     year + "  " + hours + ":" + minutes + ":" + seconds;
                 break;
         }
