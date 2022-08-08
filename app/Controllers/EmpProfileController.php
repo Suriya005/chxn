@@ -17,7 +17,9 @@ class EmpProfileController extends BaseController
     }
     public function insert()
     {
-        // print_r("insert");
+
+     
+
         $data = [
             'fullname' => $this->request->getPost('fullname'),
             'tel' => $this->request->getPost('tel'),
@@ -27,7 +29,7 @@ class EmpProfileController extends BaseController
             'role_id' => $this->request->getPost('role_id'),
             'status' => '1',
             'last_update' => date('Y-m-d H:i:s'),
-            'image_url' => 'image_url',
+            'image_url' => $this->request->getPost('image_url'),
         ];
         $empProfileService = new EmpProfileService();
         $empProfileService->insertData($data);
@@ -47,7 +49,7 @@ class EmpProfileController extends BaseController
             'role_id' => $this->request->getPost('role_id'),
             'status' => '1',
             'last_update' => date('Y-m-d H:i:s'),
-            'image_url' => 'image_url',
+            'image_url' => $this->request->getPost('image_url'),
         ];
         $empProfileService = new EmpProfileService();
         $empProfileService->updateData($uid, $data);

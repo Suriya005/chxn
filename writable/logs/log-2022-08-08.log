@@ -203,3 +203,38 @@ CRITICAL - 2022-08-08 11:48:01 --> Object of class stdClass could not be convert
 #7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
 #9 {main}
+CRITICAL - 2022-08-08 13:26:52 --> Call to a member function isValid() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
+CRITICAL - 2022-08-08 13:28:31 --> Call to a member function isValid() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
+CRITICAL - 2022-08-08 13:29:30 --> Call to a member function isValid() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
+CRITICAL - 2022-08-08 13:30:28 --> Call to a member function isValid() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
+CRITICAL - 2022-08-08 13:41:11 --> Call to a member function move() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
