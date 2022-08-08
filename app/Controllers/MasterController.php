@@ -128,23 +128,7 @@ class MasterController extends BaseController
         }
 
 
-        // print_r($data);
-        // if (isset($getPost['earring']) && $getPost['earring'] == "on") {
-        //     $data['type']['earring'] = "earring";
-        // }
-        // if (isset($getPost['necklace']) && $getPost['necklace'] == "on") {
-        //     $data['type']['necklace'] = "necklace";
-        // }
-        // if (isset($getPost['ring']) && $getPost['ring'] == "on") {
-        //     $data['type']['ring'] = "ring";
-        // }
-        // if (isset($getPost['bangle']) && $getPost['bangle'] == "on") {
-        //     $data['type']['bangle'] = "bangle";
-        // }
-        // if (isset($getPost['anklet']) && $getPost['anklet'] == "on") {
-        //     $data['type']['anklet'] = "anklet";
-        // }
-        // print_r($data);
+
         $masterService->insert_itemProductSize($data);
         return redirect()->to(base_url('/master'));
     }
