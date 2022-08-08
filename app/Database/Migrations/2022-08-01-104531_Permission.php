@@ -19,7 +19,7 @@ class Permission extends Migration
             'user_status' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '20',
-                'null'       => true,
+                // 'null'       => true,
             ],
             'menu' => [
                 'type'       => 'VARCHAR',

@@ -21,6 +21,7 @@ class MasterProduct extends Migration
             'master_type' => [
                 'type'       => 'ENUM',
                 'constraint' => ['item_product_type', 'item_collection_type','item_product_size','metal_color','metal_name','gem_group','gem_name','gem_shape','gem_color','gem_clarity','gem_cutting','gem_quality','gem_size','other_inventory','other_general'], 
+                'null' => true,
             ], 
             'master_code' => [
                 'type'       => 'VARCHAR',

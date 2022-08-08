@@ -43,13 +43,30 @@ class MasterController extends BaseController
     public function item_ProductSize(){
         $masterService = new MasterService();
         $getPost = $this->request->getPost();
+        
         $data = [
             'master_code' => $getPost['code'],
             'master_name' => $getPost['name'],
-            'master_detail' => $getPost['detail']
+            'master_detail' => $getPost['detail'],
         ];
-        
-        $masterService->insert_itemCollection($data);
+
+        if($getPost['earring'] == "on"){
+            $data['type']['earring'] = "earring";
+        }
+        if($getPost['necklace'] == "on"){
+            $data['type']['necklace'] = "necklace";
+        }
+        if($getPost['ring'] == "on"){
+            $data['type']['ring'] = "ring";
+        }
+        if($getPost['bangle'] == "on"){
+            $data['type']['bangle'] = "bangle";
+        }
+        if($getPost['anklet'] == "on"){
+            $data['type']['anklet'] = "anklet";
+        }
+        print_r($data);
+        $masterService->insert_itemProductSize($data);
         return redirect()->to(base_url('/master'));
     }
 

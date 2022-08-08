@@ -13,7 +13,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "INSERT INTO item_product_type (master_code, master_name, master_detail) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]')";
+            $sql = "INSERT INTO master_product (master_code, master_name, master_detail, master_type, parent_id) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]', 'item_product_type', '0')";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -25,7 +25,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "INSERT INTO item_collection (master_code, master_name, master_detail) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]')";
+            $sql = "INSERT INTO master_product (master_code, master_name, master_detail, master_type, parent_id) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]', 'item_collection_type', '0')";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -36,8 +36,9 @@ class MasterService extends Model
     public function insert_itemProductSize($data)
     {
         try {
+            $parent_id = json_encode($data['type']);
             $db = db_connect();
-            $sql = "INSERT INTO item_product_size (master_code, master_name, master_detail) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]')";
+            $sql = "INSERT INTO master_product (master_code, master_name, master_detail, master_type, parent_id) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]', 'item_product_size', '$parent_id')";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
