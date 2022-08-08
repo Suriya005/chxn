@@ -20,7 +20,7 @@
                     <div align="center">
                         <p>บันทึก ?</p>
                     </div>
-                    <div align="center"><span>ต้องการบันทึกข้อมูล </span></div>
+                    <div align="center"><span>ต้องการบันทึกข้อมูล ใช่หรือไม่</span></div>
                     <div align="center" class="popuphr"></div>
                     <div class="row" align="center" style="margin-top:18px;">
                         <div class="col-6" align="right"><button type="button" class="popupbtncancle"
