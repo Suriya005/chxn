@@ -7,7 +7,10 @@ include_once APPPATH . 'Views/header.php';
 
 <div class="row " style="padding-left:250px; margin-bottom:15px; margin-top:100px; font-size:25px;">
   <div class="col-9"><a style="font-size:25px;font-weight: 500;color: #2A2A2A;">มาสเตอร์ ขนาดสินค้า</a></div>
-  <div class="col-3"><button type="button" class="btnchxcan" style="margin-right:20px; width:150px; ">ยกเลิก</button><button type="button" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled>บันทึก</button></div>
+  <div class="col-3"><button type="button" class="btnchxcan" style="margin-right:20px; width:150px; ">ยกเลิก</button>
+  <button type="button" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="insert_form()" disabled>บันทึก</button>
+  <button type="button" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="edit_form()">แก้ไข</button>
+</div>
 </div>
 
 <!-- Modal -->
@@ -33,13 +36,13 @@ include_once APPPATH . 'Views/header.php';
     <div class="row" style="padding-top:20px; ">
       <div class="col-4">
         <p>ข้อมูลทั่วไป</p>
-        <form action="<?= base_url('master/itemproductsize/insert') ?>" method="post" id="form_item_product_size">
+        <form  method="post" id="form_item_product_size">
           <lebel>รหัส Code <a style="color:red;">*</a></lebel></br>
           <input type="text" id="code" name="code" class="form-control " placeholder="รหัส Code">
           <lebel>ชื่อ</lebel></br>
           <input type="text" id="name" name="name" class="form-control " placeholder="ชื่อ">
           <lebel>รายละเอียด</lebel></br>
-          <textarea class="form-control" name="detail" placeholder="รายละเอียด" style="width:477px; height:128px;"></textarea>
+          <textarea class="form-control" id="detail" name="detail" placeholder="รายละเอียด" style="width:477px; height:128px;"></textarea>
       </div>
       <div class="col-8" id="size-border" style="height: 455px;">
         <p>ประเภทสินค้า</p>
@@ -149,7 +152,60 @@ include_once APPPATH . 'Views/header.php';
         <th scope="col">คำสั่ง</th>
       </tr>
 
-      <tr>
+      <?php
+      foreach ($getData as $row) {
+        // print_r($row['master_code']);
+        $parent_id = json_decode($row->parent_id);
+        if (isset($parent_id->earring)) {
+          $parent_earring = "on";
+        } else {
+          $parent_earring = "off";
+        }
+        if (isset($parent_id->necklace)) {
+          $parent_necklace = "on";
+        } else {
+          $parent_necklace = "off";
+        }
+        if (isset($parent_id->ring)) {
+          $parent_ring = "on";
+        } else {
+          $parent_ring = "off";
+        }
+        if (isset($parent_id->bangle)) {
+          $parent_bangle = "on";
+        } else {
+          $parent_bangle = "off";
+        }
+        if (isset($parent_id->anklet)) {
+          $parent_anklet = "on";
+        } else {
+          $parent_anklet = "off";
+        }
+        $parameter = '`' . $row->master_code . '`' . ',' . '`' . $row->master_name . '`' . ',' . '`' . $row->master_detail . '`' . ',' . '`' . $parent_earring . '`' . ',' . '`' . $parent_necklace . '`' . ',' . '`' . $parent_ring . '`' . ',' . '`' . $parent_bangle . '`' . ',' . '`' . $parent_anklet . '`' . ',' . $row->uid;
+      ?>
+        <tr onclick="edit_data(<?php echo $parameter; ?> )">
+          <td scope="row">
+            <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">
+              <input type="checkbox" name="checkbox[]" value="<?= $row->uid ?>">
+              <span class="checkmarks"></span>
+            </label>
+          </td>
+          <td><?php echo $row->master_code; ?></td>
+          <td><?php echo $row->master_name; ?></td>
+          <td><?php echo $row->master_detail; ?></td>
+          <td>
+            <?php echo $row->parent_id; ?></td>
+          </td>
+          <td><label class="switch" style="margin-top:0;">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </td>
+          <td onclick="delect_item(<?= $row->uid ?>)"><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>
+        </tr>
+      <?php } ?>
+
+      <!-- <tr>
         <td scope="row">
           <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">1
             <input type="checkbox">
@@ -165,65 +221,9 @@ include_once APPPATH . 'Views/header.php';
             <span class="slider round"></span>
           </label></td>
         <td><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>
-      </tr>
+      </tr> -->
 
-      <tr>
-        <td scope="row">
-          <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">2
-            <input type="checkbox">
-            <span class="checkmarks"></span>
-          </label>
-        </td>
-        <td>BG-01</td>
-        <td>กำไลข้อมือ</td>
-        <td>กำไลสวมข้อมือ</td>
-        <td>24/04/2565</td>
-        <td><label class="switch" style="margin-top:0;">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label></td>
-        <td><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>
-      </tr>
-
-      <tr>
-        <td scope="row">
-          <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">3
-            <input type="checkbox">
-            <span class="checkmarks"></span>
-          </label>
-        </td>
-        <td>BG-01</td>
-        <td>กำไลข้อมือ</td>
-        <td>กำไลสวมข้อมือ</td>
-        <td>24/04/2565</td>
-        <td><label class="switch" style="margin-top:0;">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label></td>
-        <td><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>
-      </tr>
-
-      <tr>
-        <td scope="row">
-          <div class="row">
-            <div class="col-1">
-              <input class="red-input" type="checkbox" />
-            </div>
-            <div class="col-1">
-              <a>1</a>
-            </div>
-          </div>
-        </td>
-        <td>BG-01</td>
-        <td>กำไลข้อมือ</td>
-        <td>กำไลสวมข้อมือ</td>
-        <td>24/04/2565</td>
-        <td><label class="switch" style="margin-top:0;">
-            <input type="checkbox">
-            <span class="slider round"></span>
-          </label></td>
-        <td><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>
-      </tr>
+      
     </table>
 
   </div>
@@ -236,6 +236,40 @@ include_once APPPATH . 'Views/header.php';
 
 
 <script>
+  function edit_data(code, name, detail, earring, necklace, ring, bangle, anklet, uid) {
+
+    document.getElementById('code').value = code;
+    document.getElementById('name').value = name;
+    document.getElementById('detail').value = detail;
+    if (earring == "on") {
+      document.getElementById('earring').checked = true;
+    } else {
+      document.getElementById('earring').checked = false;
+    }
+    if (necklace == "on") {
+      document.getElementById('necklace').checked = true;
+    } else {
+      document.getElementById('necklace').checked = false;
+    }
+    if (ring == "on") {
+      document.getElementById('ring').checked = true;
+    } else {
+      document.getElementById('ring').checked = false;
+    }
+    if (bangle == "on") {
+      document.getElementById('bangle').checked = true;
+    } else {
+      document.getElementById('bangle').checked = false;
+    }
+    if (anklet == "on") {
+      document.getElementById('anklet').checked = true;
+    } else {
+      document.getElementById('anklet').checked = false;
+    }
+    let form_item_product_size = document.getElementById('form_item_product_size');
+  form_item_product_size.action = `master/itemproductsize/edit/${uid}`;
+  }
+
   function all_btn() {
     const select_all = document.getElementById('select_all')
     if (document.getElementById('select_all').checked) {
@@ -254,9 +288,24 @@ include_once APPPATH . 'Views/header.php';
     }
   }
 
+function delect_item(uid) {
+  if (confirm('ต้องการลบข้อมูลหรือไม่ ?')) {
+    // window.location.href = `master/itemproductsize/delete/${uid}`;
+    // method delete
+    const form_item_product_size = document.getElementById('form_item_product_size');
+    form_item_product_size.action = `master/itemproductsize/delete/${uid}`;
+    form_item_product_size.submit();
+  }
+}
 
+function insert_form(){
+  let form_item_product_size = document.getElementById('form_item_product_size');
+  form_item_product_size.action = "<?= base_url('master/itemproductsize/insert') ?>";
+}
 
-
+function edit_form(){
+  
+}
 
 
   function form_submit() {

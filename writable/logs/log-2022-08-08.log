@@ -4,3 +4,202 @@ ERROR - 2022-08-08 07:39:12 --> Unknown table 'chix.master_product'
 ERROR - 2022-08-08 09:19:52 --> Table 'chix.item_collection' doesn't exist
 ERROR - 2022-08-08 10:23:45 --> Table 'chix.item_collection' doesn't exist
 ERROR - 2022-08-08 10:28:33 --> Table 'chix.item_collection' doesn't exist
+CRITICAL - 2022-08-08 10:34:25 --> Undefined index: earring
+#0 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 53, Array)
+#1 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->item_ProductSize()
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-08-08 10:58:19 --> Array to string conversion
+#0 E:\xampp\htdocs\chxn_git\app\Views\mastersize.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'E:\\xampp\\htdocs...', 36, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(77): view('mastersize', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-08-08 10:59:17 --> Undefined variable: data
+#0 E:\xampp\htdocs\chxn_git\app\Views\mastersize.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\xampp\\htdocs...', 36, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-08-08 10:59:32 --> Array to string conversion
+#0 E:\xampp\htdocs\chxn_git\app\Views\mastersize.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'E:\\xampp\\htdocs...', 36, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-08-08 11:06:08 --> Undefined variable: detail
+#0 E:\xampp\htdocs\chxn_git\app\Views\mastersize.php(36): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\xampp\\htdocs...', 36, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-08-08 11:06:21 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:06:55 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:07:17 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:08:01 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:08:05 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:09:59 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:10:42 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:11:26 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:11:28 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:11:29 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:37:03 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:37:32 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 11:48:01 --> Object of class stdClass could not be converted to string
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(79): view('mastersize', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}

@@ -57,12 +57,37 @@ $routes->get('logout', 'UserController::logout');
 // $routes->get('/cusprofile', 'Home::cusprofile');
 // $routes->get('/partprofile', 'Home::partprofile');
 $routes->get('/master', 'Home::master');
+// itemproducttype
 $routes->post('/master/itemproducttype/insert', 'MasterController::insert_itemProductType');
+$routes->get('/master/itemproducttype/get', 'MasterController::get_itemProductType');
+$routes->post('/master/itemproducttype/edit/(:num)', 'MasterController::edit_itemProductType/$1');
+$routes->post('/master/itemproducttype/delete/(:num)', 'MasterController::delete_itemProductType/$1');
+// itemcollection
 $routes->post('/master/itemcollection/insert', 'MasterController::insert_itemCollection');
-$routes->post('/master/itemproductsize/insert', 'MasterController::item_ProductSize');
+$routes->get('/master/itemcollection/get', 'MasterController::get_itemCollection');
+$routes->post('/master/itemcollection/edit/(:num)', 'MasterController::edit_itemCollection/$1');
+$routes->post('/master/itemcollection/delete/(:num)', 'MasterController::delete_itemCollection/$1');
+// itemproductsize clear
+$routes->post('/master/itemproductsize/insert', 'MasterController::insert_itemProductSize');
+$routes->get('/master/itemproductsize/get', 'MasterController::get_itemProductSize');
+$routes->post('/master/itemproductsize/edit/(:num)', 'MasterController::edit_itemProductSize/$1');
+$routes->post('/master/itemproductsize/delete/(:num)', 'MasterController::delete_itemProductSize/$1');
+
+// metal_color
+$routes->post('/master/metal_color/insert', 'MasterController::insert_metal_color');
+$routes->get('/master/metal_color/get', 'MasterController::get_metal_color');
+$routes->post('/master/metal_color/edit/(:num)', 'MasterController::edit_metal_color/$1');
+$routes->post('/master/metal_color/delete/(:num)', 'MasterController::delete_metal_color/$1');
+
+// metal_name
+$routes->post('/master/metal_name/insert', 'MasterController::insert_metal_name');
+$routes->get('/master/metal_name/get', 'MasterController::get_metal_name');
+$routes->post('/master/metal_name/edit/(:num)', 'MasterController::edit_metal_name/$1');
+$routes->post('/master/metal_name/delete/(:num)', 'MasterController::delete_metal_name/$1');
+
 $routes->get('/masterproduct', 'Home::masterproduct');
 $routes->get('/mastercorrection', 'Home::mastercorrection');
-$routes->get('/mastersize', 'Home::mastersize');
+$routes->get('/mastersize', 'MasterController::get_itemProductSize');
 $routes->get('/mastermetalcolor', 'Home::mastermetalcolor');
 $routes->get('/mastermetalname', 'Home::mastermetalname');
 $routes->get('/masterstonegroup', 'Home::masterstonegroup');
