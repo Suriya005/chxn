@@ -140,7 +140,7 @@
                                             <ul>
                                                 <li><a href="'.base_url('master').'"
                                                         class="dropbtn">ประเภทสินค้า</a></li>
-                                                <li><a href="'.base_url('mastercorrection').'"
+                                                <li><a href="'.base_url('mastercollection').'"
                                                         class="dropbtn">คอลเลคชั่น</a></li>
                                                 <li><a href="'.base_url('mastersize').'"
                                                         class="dropbtn">ขนาดสินค้า</a></li>
