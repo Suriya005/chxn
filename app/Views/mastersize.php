@@ -8,9 +8,9 @@ include_once APPPATH . 'Views/header.php';
 <div class="row " style="padding-left:250px; margin-bottom:15px; margin-top:100px; font-size:25px;">
   <div class="col-9"><a style="font-size:25px;font-weight: 500;color: #2A2A2A;">มาสเตอร์ ขนาดสินค้า</a></div>
   <div class="col-3"><button type="button" class="btnchxcan" style="margin-right:20px; width:150px; ">ยกเลิก</button>
-  <button type="button" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="insert_form()" disabled>บันทึก</button>
-  <button type="button" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="edit_form()">แก้ไข</button>
-</div>
+    <button type="button" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="insert_form()" disabled>บันทึก</button>
+
+  </div>
 </div>
 
 <!-- Modal -->
@@ -36,7 +36,7 @@ include_once APPPATH . 'Views/header.php';
     <div class="row" style="padding-top:20px; ">
       <div class="col-4">
         <p>ข้อมูลทั่วไป</p>
-        <form  method="post" id="form_item_product_size">
+        <form method="post" id="form_item_product_size">
           <lebel>รหัส Code <a style="color:red;">*</a></lebel></br>
           <input type="text" id="code" name="code" class="form-control " placeholder="รหัส Code">
           <lebel>ชื่อ</lebel></br>
@@ -49,73 +49,40 @@ include_once APPPATH . 'Views/header.php';
         <div class="form-check">
           <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">เลือกทั้งหมด
             <input type="checkbox" id="select_all" onclick="all_btn()">
+            <input type="hidden" id="group_lenght" name="group_lenght" value="<?php echo count($data_group); ?>">
             <span class="checkmarks"></span>
           </label>
         </div>
-<<<<<<< Updated upstream
-        
+
+
         <div class="form-check">
-=======
-        <!-- input hiden -->
-        <input type="hidden" id="group_lenght" name="group_lenght" value="<?php echo count($data_group); ?>">
-        <?php 
-        
-        foreach ($data_group as $key => $item ) {
-          ?>
-          <div class="form-check">
-            <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">
-            
-              <input type="checkbox" id="checkbox<?=$key?>" name="checkbox<?=$key?>" value="<?php echo $item->master_name; ?>">
-              <span class="checkmarks"></span>
-              <?php echo $item->master_name; ?>
-            </label>
-          </div>
+
+          <!-- input hiden -->
+
           <?php
-        }
 
-        ?>
+          foreach ($data_group as $key => $item) {
+          ?>
+            <div class="form-check">
+              <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">
 
-        <!-- <div class="form-check">
->>>>>>> Stashed changes
-          <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">ต่างหู
-            <input type="checkbox" name="earring" id="earring">
-            <span class="checkmarks"></span>
-          </label>
+                <input type="checkbox" id="checkbox<?= $key ?>" name="checkbox<?= $key ?>" value="<?php echo $item->master_name; ?>">
+                <span class="checkmarks"></span>
+                <?php echo $item->master_name; ?>
+              </label>
+            </div>
+          <?php
+          }
+
+          ?>
+
+
+
+          </form>
+
         </div>
-
-        <div class="form-check">
-          <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">สร้อย
-            <input type="checkbox" name="necklace" id="necklace">
-            <span class="checkmarks"></span>
-          </label>
-        </div>
-
-        <div class="form-check">
-          <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">แหวน
-            <input type="checkbox" name="ring" id="ring">
-            <span class="checkmarks"></span>
-          </label>
-        </div>
-
-        <div class="form-check">
-          <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">กำไลข้อมือ
-            <input type="checkbox" name="bangle" id="bangle">
-            <span class="checkmarks"></span>
-          </label>
-        </div>
-
-        <div class="form-check">
-          <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">กำไลข้อเท้า
-            <input type="checkbox" name="anklet" id="anklet">
-            <span class="checkmarks"></span>
-          </label>
-        </div> -->
-
-        </form>
-
       </div>
     </div>
-
   </div>
 </div>
 
@@ -170,7 +137,7 @@ include_once APPPATH . 'Views/header.php';
         <th scope="col">รหัส Code</th>
         <th scope="col">ชื่อ</th>
         <th scope="col">รายละเอียด</th>
-        <th scope="col">วันที่แก้ไขล่าสุด</th>
+
         <th scope="col">สถานะ</th>
         <th scope="col">คำสั่ง</th>
       </tr>
@@ -216,9 +183,7 @@ include_once APPPATH . 'Views/header.php';
           <td><?php echo $row->master_code; ?></td>
           <td><?php echo $row->master_name; ?></td>
           <td><?php echo $row->master_detail; ?></td>
-          <td>
-            <?php echo $row->parent_id; ?></td>
-          </td>
+
           <td><label class="switch" style="margin-top:0;">
               <input type="checkbox">
               <span class="slider round"></span>
@@ -246,7 +211,7 @@ include_once APPPATH . 'Views/header.php';
         <td><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>
       </tr> -->
 
-      
+
     </table>
 
   </div>
@@ -290,7 +255,7 @@ include_once APPPATH . 'Views/header.php';
       document.getElementById('anklet').checked = false;
     }
     let form_item_product_size = document.getElementById('form_item_product_size');
-  form_item_product_size.action = `master/itemproductsize/edit/${uid}`;
+    form_item_product_size.action = `master/itemproductsize/edit/${uid}`;
   }
 
   function all_btn() {
@@ -311,24 +276,24 @@ include_once APPPATH . 'Views/header.php';
     }
   }
 
-function delect_item(uid) {
-  if (confirm('ต้องการลบข้อมูลหรือไม่ ?')) {
-    // window.location.href = `master/itemproductsize/delete/${uid}`;
-    // method delete
-    const form_item_product_size = document.getElementById('form_item_product_size');
-    form_item_product_size.action = `master/itemproductsize/delete/${uid}`;
-    form_item_product_size.submit();
+  function delect_item(uid) {
+    if (confirm('ต้องการลบข้อมูลหรือไม่ ?')) {
+      // window.location.href = `master/itemproductsize/delete/${uid}`;
+      // method delete
+      const form_item_product_size = document.getElementById('form_item_product_size');
+      form_item_product_size.action = `master/itemproductsize/delete/${uid}`;
+      form_item_product_size.submit();
+    }
   }
-}
 
-function insert_form(){
-  let form_item_product_size = document.getElementById('form_item_product_size');
-  form_item_product_size.action = "<?= base_url('master/itemproductsize/insert') ?>";
-}
+  function insert_form() {
+    let form_item_product_size = document.getElementById('form_item_product_size');
+    form_item_product_size.action = "<?= base_url('master/itemproductsize/insert') ?>";
+  }
 
-function edit_form(){
-  
-}
+  function edit_form() {
+
+  }
 
 
   function form_submit() {
