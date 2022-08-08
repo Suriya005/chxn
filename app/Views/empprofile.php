@@ -38,9 +38,16 @@
             <div class="detail-grid" style=" padding-left:15px; padding-top:20px; ">
 
                 <div class="detail-grid-item">
-                    <p>รูปภาพ แก้ไข</p>
-                    <div id="circle2" style="margin-bottom:15px;"></div>
-                    <div style="margin-left: 40px; font-size:20px;"><button class="upload-btn">อัพโหลด</button></div>
+                     <p>รูปภาพ แก้ไข</p>
+                     <img id="output"/>
+                     <div class="inputfilediv">
+                        <input type="file" name="file" id="file" accept="image/*" onchange="loadFile(event)"/>
+                    </div>
+                    <!-- <div id="circle2" style="margin-bottom:15px;"></div>
+                    <div style="margin-left: 40px; font-size:20px;"><button class="upload-btn" onchange="loadFile(event)">อัพโหลด</button></div>
+                    <input type="file"  accept="image/*" onchange="loadFile(event)">
+                     -->
+
                 </div>
 
                 <div class="detail-grid-item">
@@ -243,6 +250,18 @@
         emp_form.action = `emp_profile_form/update/${id}`;
         emp_form.method = "post";
     }
+
+
+
+
+    var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output');
+      output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
 
     </script>
 

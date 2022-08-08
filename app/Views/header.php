@@ -29,7 +29,10 @@
 </head>
 
 <body style="background-color: #EBEEF0;">
-
+<?php
+    $fullname = session()->get('name');
+    $role = session()->get('role');
+?>
     <div class="nav-div">
         <img src="../assets/image/chxlogo.png" alt="" style="width:199px;height:50px; margin-top:20px;margin-left:15px;">
 
@@ -37,10 +40,20 @@
             <p id="current_datetime"></p>
             <div class="hrs"></div>
             <div class="circular"> <img src="../assets/image/chxprofile.jpg" alt=""></div>
-            <div><a style="margin-bottom:0px;">สวัสดี โรเซ่</a></br>
-                <span>Test</span>
+
+
+            <div><a style="margin-bottom:0px;">สวัสดี <?php echo $fullname?></a></br>
+                <span><?php echo $role?></span>
             </div>
-            <div class="top-drops"><a href="#"><img src="assets/image/icon/Dropdown.png" alt=""></a></div>
+
+            <div class="headdropdown">
+            <div class="headdropbtn"><a href="#"><img src="assets/image/icon/Dropdown.png" alt="" style="width:80%;margin-top: 7px;"></a></div>
+                <div class="headdropdown-content">
+                     <a href="#">Log Out</a>
+                  
+                 </div>
+            </div>
+           
 
         </div>
     </div>
