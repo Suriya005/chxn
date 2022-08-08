@@ -52,7 +52,7 @@ include_once APPPATH . 'Views/header.php';
             <span class="checkmarks"></span>
           </label>
         </div>
-
+        
         <div class="form-check">
           <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">ต่างหู
             <input type="checkbox" name="earring" id="earring">

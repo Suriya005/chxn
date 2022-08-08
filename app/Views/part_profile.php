@@ -4,10 +4,12 @@
 
 
 <!-- ---------------------ข้อมูลทั่วไป--------------------------------- -->
-<div class="row "style="padding-left:250px; margin-bottom:15px; margin-top:100px; font-size:25px;">
-<div class="col-10"><a style="font-size:25px;font-weight: 500;color: #2A2A2A;">ข้อมูล คู่ค้า</a></div>
-<div class="col-1"><button type="button" class="btnsaves" style="width:150px;margin-left:50px;" data-bs-toggle="modal" data-bs-target="#exampleModal" >บันทึก</button></div>
-</div>
+<div class="row " style="padding-left:250px; margin-bottom:15px; margin-top:100px; font-size:25px;">
+        <div class="col-9"><a style="font-size:25px;font-weight: 500;color: #2A2A2A;">ข้อมูล คู่ค้า</a></div>
+        <div class="col-1" style="margin-right:30px;margin-left:30px;"><button type="button" class="btnchxcan"
+                style="width:150px;">ยกเลิก</button></div>
+        <div class="col-1"><button  type="button" class="btnchxsave" style="width:150px;"  data-bs-toggle="modal" data-bs-target="#exampleModal">บันทึก</button></div>
+    </div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -32,6 +34,7 @@
         <div class="row" >
                     <div class="col-4" style="max-width: 27%;">
                         <p>ข้อมูลทั่วไป</p>
+                        <input type="hidden" id="hiddentap" value="บุคคลทั่วไป">
                     </div>
                     <div class="col-4">
                     <label class="container" style="margin-top: 0px;padding-left: 18px;">ข้อมูลทั่วไป
@@ -69,9 +72,9 @@
               <label>ชื่อ<a style="color:red;">*</a></label></br>
               <input type="text" id="large-inputv2" class="form-control " placeholder="ชื่อ-นามสกุล" >
               <div class="row">
-                  <div class="col-4" style="max-width: 29.5%;">
+              <div class="col-4" style="max-width: 29.5%;">
                     <label>วันเกิด</label></br><img src="assets/image/icon/calendar-5.png" class="iconcarenda">
-                    <input type="text" name="datefilter" class="form-control mb-2 " style="padding-left:40px;background-color: white;" value="กรุณาเลือก"  READONLY/>
+                    <input type="date"  class="form-control mb-2 " style="padding-left:35px;background-color: white;"  name="date" >
                   </div>
                   <div class="col-4" style="max-width: 29.5%;">
                     <label>อายุ</label></br>
@@ -293,7 +296,7 @@
   </div>
 </div>
 
-<table >
+<table id="maintable">
   <tr>
       <th scope="col"><label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">#
               <input type="checkbox" >
@@ -426,10 +429,14 @@ function myFunction() {
   if (niticheck.checked == true){
     tapniti.style.display = "block";
     tapnormal.style.display = "none";
+    var hidden = document.getElementById("hiddentap");
+    hidden.value="นิติบุคคล"
   }
   else if(normalcheck.checked == true){
     tapniti.style.display = "none";
     tapnormal.style.display = "block";
+    var hidden = document.getElementById("hiddentap");
+    hidden.value="บุคคลทั่วไป";
   }
 }
 

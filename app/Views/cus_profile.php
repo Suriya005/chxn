@@ -314,11 +314,12 @@
 
 
 <!-- ---------------------ข้อมูลทั่วไป--------------------------------- -->
-<div class="row "style="padding-left:250px; margin-bottom:15px; margin-top:100px; font-size:25px;">
-<div class="col-9"><a style="font-size:25px;font-weight: 500;color: #2A2A2A;">ข้อมูลลูกค้า</a></div>
-<div class="col-1" style="margin-right:30px;margin-left:30px;"><button type="button" class="btnchxcan" style="width:150px;" >ยกเลิก</button></div>
-<div class="col-1"><button type="button" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal" disabled>บันทึก</button></div>
-</div>
+<div class="row " style="padding-left:250px; margin-bottom:15px; margin-top:100px; font-size:25px;">
+        <div class="col-9"><a style="font-size:25px;font-weight: 500;color: #2A2A2A;">ข้อมูล ลูกค้า</a></div>
+        <div class="col-1" style="margin-right:30px;margin-left:30px;"><button type="button" class="btnchxcan"
+                style="width:150px;">ยกเลิก</button></div>
+        <div class="col-1"><button  type="button" class="btnchxsave" style="width:150px;"  data-bs-toggle="modal" data-bs-target="#exampleModal">บันทึก</button></div>
+    </div>
 
 
 <!-- Modal -->
@@ -381,10 +382,9 @@
               <label>ชื่อ<a style="color:red;">*</a></label></br>
               <input type="text" id="large-inputv2" class="form-control " placeholder="ชื่อ-นามสกุล" >
               <div class="row">
-                  <div class="col-4" style="max-width: 29.5%;">
+              <div class="col-4" style="max-width: 29.5%;">
                     <label>วันเกิด</label></br><img src="assets/image/icon/calendar-5.png" class="iconcarenda">
-                    <input type="date"  class="form-control mb-2 " style="padding-left:40px;background-color: white;" >
-                    <!-- <input type="date" class="form-control mb-2 " name="daterange" placeholder="วันเกิด"> -->
+                    <input type="date"  class="form-control mb-2 " style="padding-left:35px;background-color: white;"  name="date" >
                   </div>
                   <div class="col-4" style="max-width: 29.5%;">
                     <label>อายุ</label></br>
@@ -770,6 +770,7 @@ $('input[name="datefilter"]').on('cancel.daterangepicker', function(ev, picker) 
 });
 
 });
+
 
 $(document).ready(function(){
   $("input").keydown(function(){

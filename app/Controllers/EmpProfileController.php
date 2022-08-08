@@ -17,9 +17,7 @@ class EmpProfileController extends BaseController
     }
     public function insert()
     {
-
-     
-
+        
         $data = [
             'fullname' => $this->request->getPost('fullname'),
             'tel' => $this->request->getPost('tel'),

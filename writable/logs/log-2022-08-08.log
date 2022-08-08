@@ -238,3 +238,61 @@ CRITICAL - 2022-08-08 13:41:11 --> Call to a member function move() on null
 #3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
 #5 {main}
+CRITICAL - 2022-08-08 14:01:12 --> Call to a member function isValid() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
+CRITICAL - 2022-08-08 14:02:28 --> Call to a member function isValid() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
+CRITICAL - 2022-08-08 14:03:01 --> Call to a member function hasMoved() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
+CRITICAL - 2022-08-08 14:03:45 --> Call to a member function getRandomName() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
+CRITICAL - 2022-08-08 14:04:16 --> Call to a member function getRandomName() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
+CRITICAL - 2022-08-08 14:04:50 --> Call to a member function move() on null
+#0 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#5 {main}
+CRITICAL - 2022-08-08 14:22:13 --> Undefined property: App\Controllers\EmpProfileController::$load
+#0 C:\Users\theso\Documents\GitHub\chxn\app\Controllers\EmpProfileController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\theso\\...', 25)
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#3 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#6 {main}
+CRITICAL - 2022-08-08 14:54:22 --> Undefined property: App\Controllers\EmpProfileController::$load
+#0 C:\Users\theso\Documents\GitHub\chxn\app\Controllers\EmpProfileController.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'C:\\Users\\theso\\...', 22)
+#1 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->insert()
+#2 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#3 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#6 {main}

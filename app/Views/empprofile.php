@@ -12,7 +12,7 @@
     </div>
 
     <!-- Modal -->
-    <form id="emp_form">
+    <form id="emp_form" enctype="multipart/form-data">
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -41,7 +41,7 @@
                      <p>รูปภาพ แก้ไข</p>
                      <img id="output"/>
                      <div class="inputfilediv">
-                        <input type="file" name="image_url" id="file" accept="image/*" onchange="loadFile(event)"/>
+                        <input type="file" name="image_url" id="file"  onchange="loadFile(event)"/>
                     </div>
                     <!-- <div id="circle2" style="margin-bottom:15px;"></div>
                     <div style="margin-left: 40px; font-size:20px;"><button class="upload-btn" onchange="loadFile(event)">อัพโหลด</button></div>

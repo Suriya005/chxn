@@ -54,8 +54,8 @@ $routes->get('logout', 'UserController::logout');
 ////////////////////////////////////////////////////////////////
 // $routes->get('/', 'Home::index');
  $routes->get('/profile', 'ProfileController::index');
-//$routes->get('/cusprofile', 'Home::cusprofile');
-//$routes->get('/partprofile', 'Home::partprofile');
+$routes->get('/cusprofile', 'Home::cusprofile');
+$routes->get('/partprofile', 'Home::partprofile');
 $routes->get('/master', 'Home::master');
 // itemproducttype
 $routes->post('/master/itemproducttype/insert', 'MasterController::insert_itemProductType');
