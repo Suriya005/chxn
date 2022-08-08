@@ -33,7 +33,7 @@ include_once APPPATH . 'Views/header.php';
     <div class="row" style="padding-top:20px; ">
       <div class="col-4">
         <p>ข้อมูลทั่วไป</p>
-        <form action="<?= base_url('master/itemproducttype/insert') ?>" method="post" id="form_item_product_type">
+        <form  method="post" id="form_item_product_type">
           <label>รหัส Code <a style="color:red;">*</a></label></br>
           <input type="text" id="code" name="code" class="form-control" placeholder="รหัส Code">
           <label>ชื่อ</label></br>
