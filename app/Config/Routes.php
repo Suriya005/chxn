@@ -60,79 +60,81 @@ $routes->get('/', 'Home::index');
 $routes->get('/profile', 'ProfileController::index');
 $routes->get('/cusprofile', 'Home::cusprofile');
 $routes->get('/partprofile', 'Home::partprofile');
-$routes->get('/master', 'Home::master');
 
 
-// itemproducttype
+
+// itemproducttype clear
+$routes->get('/master', 'MasterController::index');
 $routes->post('/master/itemproducttype/insert', 'MasterController::insert_itemProductType');
-$routes->get('/master/itemproducttype/get', 'MasterController::get_itemProductType');
 $routes->post('/master/itemproducttype/edit/(:num)', 'MasterController::edit_itemProductType/$1');
 $routes->post('/master/itemproducttype/delete/(:num)', 'MasterController::delete_itemProductType/$1');
-// itemcollection
+// itemcollection clear
+$routes->get('/mastercollection', 'MasterController::get_itemCollection');
 $routes->post('/master/itemcollection/insert', 'MasterController::insert_itemCollection');
 $routes->get('/master/itemcollection/get', 'MasterController::get_itemCollection');
 $routes->post('/master/itemcollection/edit/(:num)', 'MasterController::edit_itemCollection/$1');
 $routes->post('/master/itemcollection/delete/(:num)', 'MasterController::delete_itemCollection/$1');
 // itemproductsize clear
+$routes->get('/mastersize', 'MasterController::get_itemProductSize');
 $routes->post('/master/itemproductsize/insert', 'MasterController::insert_itemProductSize');
-$routes->get('/master/itemproductsize/get', 'MasterController::get_itemProductSize');
 $routes->post('/master/itemproductsize/edit/(:num)', 'MasterController::edit_itemProductSize/$1');
 $routes->post('/master/itemproductsize/delete/(:num)', 'MasterController::delete_itemProductSize/$1');
 
-// metal_color
-$routes->post('/master/metal_color/insert', 'MasterController::insert_metal_color');
-$routes->get('/master/metal_color/get', 'MasterController::get_metal_color');
-$routes->post('/master/metal_color/edit/(:num)', 'MasterController::edit_metal_color/$1');
-$routes->post('/master/metal_color/delete/(:num)', 'MasterController::delete_metal_color/$1');
-
-// metal_name
-$routes->post('/master/metal_name/insert', 'MasterController::insert_metal_name');
-$routes->get('/master/metal_name/get', 'MasterController::get_metal_name');
-$routes->post('/master/metal_name/edit/(:num)', 'MasterController::edit_metal_name/$1');
-$routes->post('/master/metal_name/delete/(:num)', 'MasterController::delete_metal_name/$1');
-
-// gem_group
-$routes->post('/master/gem_group/insert', 'MasterController::insert_gem_group');
-$routes->get('/master/gem_group/get', 'MasterController::get_gem_group');
-$routes->post('/master/gem_group/edit/(:num)', 'MasterController::edit_gem_group/$1');
-$routes->post('/master/gem_group/delete/(:num)', 'MasterController::delete_gem_group/$1');
-
-// gem_name
-$routes->post('/master/gem_name/insert', 'MasterController::insert_gem_name');
-$routes->get('/master/gem_name/get', 'MasterController::get_gem_name');
-$routes->post('/master/gem_name/edit/(:num)', 'MasterController::edit_gem_name/$1');
-$routes->post('/master/gem_name/delete/(:num)', 'MasterController::delete_gem_name/$1');
-
-// gem_shape
-$routes->post('/master/gem_shape/insert', 'MasterController::insert_gem_shape');
-$routes->get('/master/gem_shape/get', 'MasterController::get_gem_shape');
-$routes->post('/master/gem_shape/edit/(:num)', 'MasterController::edit_gem_shape/$1');
-$routes->post('/master/gem_shape/delete/(:num)', 'MasterController::delete_gem_shape/$1');
-
-// gem_color
-$routes->post('/master/gem_color/insert', 'MasterController::insert_gem_color');
-$routes->get('/master/gem_color/get', 'MasterController::get_gem_color');
-$routes->post('/master/gem_color/edit/(:num)', 'MasterController::edit_gem_color/$1');
-$routes->post('/master/gem_color/delete/(:num)', 'MasterController::delete_gem_color/$1');
-
-// gem_clarity
-$routes->post('/master/gem_clarity/insert', 'MasterController::insert_gem_clarity');
-$routes->get('/master/gem_clarity/get', 'MasterController::get_gem_clarity');
-$routes->post('/master/gem_clarity/edit/(:num)', 'MasterController::edit_gem_clarity/$1');
-$routes->post('/master/gem_clarity/delete/(:num)', 'MasterController::delete_gem_clarity/$1');
+// metal_color clear
+$routes->get('/mastermetalcolor', 'MasterController::get_metalColor');
+$routes->post('/master/metal_color/insert', 'MasterController::insert_metalColor');
+$routes->post('/master/metal_color/edit/(:num)', 'MasterController::edit_metalColor/$1');
+$routes->post('/master/metal_color/delete/(:num)', 'MasterController::delete_metalColor/$1');
 
 
-// gem_cutting
-$routes->post('/master/gem_cutting/insert', 'MasterController::insert_gem_cutting');
-$routes->get('/master/gem_cutting/get', 'MasterController::get_gem_cutting');
-$routes->post('/master/gem_cutting/edit/(:num)', 'MasterController::edit_gem_cutting/$1');
-$routes->post('/master/gem_cutting/delete/(:num)', 'MasterController::delete_gem_cutting/$1');
+// metal_name clear
+$routes->post('/master/metal_name/insert', 'MasterController::insert_metalName');
+$routes->get('/mastermetalname', 'MasterController::get_metalName');
+$routes->post('/master/metal_name/edit/(:num)', 'MasterController::edit_metalName/$1');
+$routes->post('/master/metal_name/delete/(:num)', 'MasterController::delete_metalName/$1');
+
+// gem_group clear
+$routes->post('/master/gem_group/insert', 'MasterController::insert_gemGroup');
+$routes->get('/masterstonegroup', 'MasterController::get_gemGroup');
+$routes->post('/master/gem_group/edit/(:num)', 'MasterController::edit_gemGroup/$1');
+$routes->post('/master/gem_group/delete/(:num)', 'MasterController::delete_gemGroup/$1');
+
+// gem_name clear
+$routes->post('/master/gem_name/insert', 'MasterController::insert_gemName');
+$routes->get('/masterstonename', 'MasterController::get_gemName');
+$routes->post('/master/gem_name/edit/(:num)', 'MasterController::edit_gemName/$1');
+$routes->post('/master/gem_name/delete/(:num)', 'MasterController::delete_gemName/$1');
+
+// gem_shape clear
+$routes->post('/master/gem_shape/insert', 'MasterController::insert_gemShape');
+$routes->get('masterstoneshape', 'MasterController::get_gemShape');
+$routes->post('/master/gem_shape/edit/(:num)', 'MasterController::edit_gemShape/$1');
+$routes->post('/master/gem_shape/delete/(:num)', 'MasterController::delete_gemShape/$1');
+
+// gem_color clear
+$routes->post('/master/gem_color/insert', 'MasterController::insert_gemColor');
+$routes->get('/mastergemcolor', 'MasterController::get_gemColor');
+$routes->post('/master/gem_color/edit/(:num)', 'MasterController::edit_gemColor/$1');
+$routes->post('/master/gem_color/delete/(:num)', 'MasterController::delete_gemColor/$1');
+
+// gem_clarity clear
+$routes->post('/master/gem_clarity/insert', 'MasterController::insert_gemClarity');
+$routes->get('/masterclarity', 'MasterController::get_gemClarity');
+$routes->post('/master/gem_clarity/edit/(:num)', 'MasterController::edit_gemClarity/$1');
+$routes->post('/master/gem_clarity/delete/(:num)', 'MasterController::delete_gemClarity/$1');
+
+
+// gem_cutting  clear
+$routes->post('/master/gem_cutting/insert', 'MasterController::insert_gemCutting');
+$routes->get('/mastercutting', 'MasterController::get_gemCutting');
+$routes->post('/master/gem_cutting/edit/(:num)', 'MasterController::edit_gemCutting/$1');
+$routes->post('/master/gem_cutting/delete/(:num)', 'MasterController::delete_gemCutting/$1');
 
 // gem_quality
-$routes->post('/master/gem_quality/insert', 'MasterController::insert_gem_quality');
-$routes->get('/master/gem_quality/get', 'MasterController::get_gem_quality');
-$routes->post('/master/gem_quality/edit/(:num)', 'MasterController::edit_gem_quality/$1');
-$routes->post('/master/gem_quality/delete/(:num)', 'MasterController::delete_gem_quality/$1');
+$routes->post('/master/gem_quality/insert', 'MasterController::insert_gemQuality');
+$routes->get('/masterquality', 'MasterController::get_gemQuality');
+$routes->post('/master/gem_quality/edit/(:num)', 'MasterController::edit_gemQuality/$1');
+$routes->post('/master/gem_quality/delete/(:num)', 'MasterController::delete_gemQuality/$1');
 
 // gem_size
 $routes->post('/master/gem_size/insert', 'MasterController::insert_gem_size');
@@ -162,17 +164,14 @@ $routes->post('/master/other_general/delete/(:num)', 'MasterController::delete_o
 
 
 $routes->get('/masterproduct', 'Home::masterproduct');
-$routes->get('/mastercorrection', 'Home::mastercorrection');
-$routes->get('/mastersize', 'MasterController::get_itemProductSize');
-$routes->get('/mastermetalcolor', 'Home::mastermetalcolor');
-$routes->get('/mastermetalname', 'Home::mastermetalname');
-$routes->get('/masterstonegroup', 'Home::masterstonegroup');
-$routes->get('/masterstonename', 'Home::masterstonename');
-$routes->get('/masterstoneshape', 'Home::masterstoneshape');
-$routes->get('/mastergemcolor', 'Home::mastergemcolor');
-$routes->get('/masterclarity', 'Home::masterclarity');
-$routes->get('/mastercutting', 'Home::mastercutting');
-$routes->get('/masterquality', 'Home::masterquality');
+
+
+
+
+
+
+
+
 $routes->get('/mastergemsize', 'Home::mastergemsize');
 $routes->get('/productstone', 'Home::productstone');
 $routes->get('/productjewelry', 'Home::productjewelry');

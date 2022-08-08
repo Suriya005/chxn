@@ -8,18 +8,15 @@ use App\Services\MasterService;
 
 class MasterController extends BaseController
 {
+
+    // itemProductType
     public function index()
     {
-
-        return view('master');
-    }
-    // itemProductType
-    public function get_itemProductType()
-    {
-        $db = db_connect();
-        $sql = "SELECT * FROM master_product WHERE master_type = 'item_product_type'";
-        $query = $db->query($sql);
-        return $query->getResult();
+        $model = new MasterService();
+        $data = [
+            'getData' => $model->get_itemProductType(),
+        ];
+        return view('master', $data);
     }
 
 
@@ -59,6 +56,14 @@ class MasterController extends BaseController
 
 
     // itemCollection
+    public function get_itemCollection()
+    {
+        $model = new MasterService();
+        $data = [
+            'getData' => $model->get_itemCollection(),
+        ];
+        return view('mastercollection', $data);
+    }
     public function insert_itemCollection()
     {
         $masterService = new MasterService();
@@ -70,6 +75,24 @@ class MasterController extends BaseController
         ];
 
         $masterService->insert_itemCollection($data);
+        return redirect()->to(base_url('/master'));
+    }
+    public function edit_itemCollection($uid)
+    {
+        $masterservice = new MasterService();
+       $getPost = $this->request->getPost();
+        $data = [
+            'master_code' => $getPost['code'],
+            'master_name' => $getPost['name'],
+            'master_detail' => $getPost['detail']
+        ];
+        $masterservice->edit_itemCollection($uid, $data);
+        return redirect()->to(base_url('/master'));
+    }
+    public function delete_itemCollection($uid)
+    {
+        $masterService = new MasterService();
+        $masterService->delete_itemCollection($uid);
         return redirect()->to(base_url('/master'));
     }
 
@@ -161,7 +184,7 @@ class MasterController extends BaseController
         $data = [
             'getData' => $masterService->get_metalColor()
         ];
-        return view('metalcolor', $data);
+        return view('mastermetalcolor', $data);
     }
     public function insert_metalColor()
     {
@@ -173,7 +196,7 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->insert_metalColor($data);
-        return redirect()->to(base_url('/metalcolor'));
+        return redirect()->to(base_url('/mastermetalcolor'));
     }
     public function edit_metalColor($uid)
     {
@@ -186,13 +209,13 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->edit_metalColor($data);
-        return redirect()->to(base_url('/metalcolor'));
+        return redirect()->to(base_url('/mastermetalcolor'));
     }
     public function delete_metalColor($uid)
     {
         $masterService = new MasterService();
         $masterService->delete_metalColor($uid);
-        return redirect()->to(base_url('/metalcolor'));
+        return redirect()->to(base_url('/mastermetalcolor'));
     }
     // metal_name
     public function get_metalName()
@@ -201,7 +224,7 @@ class MasterController extends BaseController
         $data = [
             'getData' => $masterService->get_metalName()
         ];
-        return view('metalname', $data);
+        return view('mastermetalname', $data);
     }
     public function insert_metalName()
     {
@@ -213,7 +236,7 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->insert_metalName($data);
-        return redirect()->to(base_url('/metalname'));
+        return redirect()->to(base_url('/mastermetalname'));
     }
     public function edit_metalName($uid)
     {
@@ -226,13 +249,13 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->edit_metalName($data);
-        return redirect()->to(base_url('/metalname'));
+        return redirect()->to(base_url('/mastermetalname'));
     }
     public function delete_metalName($uid)
     {
         $masterService = new MasterService();
         $masterService->delete_metalName($uid);
-        return redirect()->to(base_url('/metalname'));
+        return redirect()->to(base_url('/mastermetalname'));
     }
 
     // gem_group
@@ -242,7 +265,7 @@ class MasterController extends BaseController
         $data = [
             'getData' => $masterService->get_gemGroup()
         ];
-        return view('gemgroup', $data);
+        return view('masterstonegroup', $data);
     }
     public function insert_gemGroup()
     {
@@ -254,7 +277,7 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->insert_gemGroup($data);
-        return redirect()->to(base_url('/gemgroup'));
+        return redirect()->to(base_url('/masterstonegroup'));
     }
     public function edit_gemGroup($uid)
     {
@@ -267,13 +290,13 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->edit_gemGroup($data);
-        return redirect()->to(base_url('/gemgroup'));
+        return redirect()->to(base_url('/masterstonegroup'));
     }
     public function delete_gemGroup($uid)
     {
         $masterService = new MasterService();
         $masterService->delete_gemGroup($uid);
-        return redirect()->to(base_url('/gemgroup'));
+        return redirect()->to(base_url('/masterstonegroup'));
     }
 
     // gem_name
@@ -283,7 +306,7 @@ class MasterController extends BaseController
         $data = [
             'getData' => $masterService->get_gemName()
         ];
-        return view('gemname', $data);
+        return view('masterstonename', $data);
     }
     public function insert_gemName()
     {
@@ -295,7 +318,7 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->insert_gemName($data);
-        return redirect()->to(base_url('/gemname'));
+        return redirect()->to(base_url('/masterstonename'));
     }
     public function edit_gemName($uid)
     {
@@ -308,13 +331,13 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->edit_gemName($data);
-        return redirect()->to(base_url('/gemname'));
+        return redirect()->to(base_url('/masterstonename'));
     }
     public function delete_gemName($uid)
     {
         $masterService = new MasterService();
         $masterService->delete_gemName($uid);
-        return redirect()->to(base_url('/gemname'));
+        return redirect()->to(base_url('/masterstonename'));
     }
 
 
@@ -325,7 +348,7 @@ class MasterController extends BaseController
         $data = [
             'getData' => $masterService->get_gemShape()
         ];
-        return view('gemshape', $data);
+        return view('masterstoneshape', $data);
     }
     public function insert_gemShape()
     {
@@ -337,7 +360,7 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->insert_gemShape($data);
-        return redirect()->to(base_url('/gemshape'));
+        return redirect()->to(base_url('/masterstoneshape'));
     }
     public function edit_gemShape($uid)
     {
@@ -350,13 +373,13 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->edit_gemShape($data);
-        return redirect()->to(base_url('/gemshape'));
+        return redirect()->to(base_url('/masterstoneshape'));
     }
     public function delete_gemShape($uid)
     {
         $masterService = new MasterService();
         $masterService->delete_gemShape($uid);
-        return redirect()->to(base_url('/gemshape'));
+        return redirect()->to(base_url('/masterstoneshape'));
     }
 
     // gem_color
@@ -366,7 +389,7 @@ class MasterController extends BaseController
         $data = [
             'getData' => $masterService->get_gemColor()
         ];
-        return view('gemcolor', $data);
+        return view('mastergemcolor', $data);
     }
     public function insert_gemColor()
     {
@@ -378,7 +401,7 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->insert_gemColor($data);
-        return redirect()->to(base_url('/gemcolor'));
+        return redirect()->to(base_url('/mastergemcolor'));
     }
     public function edit_gemColor($uid)
     {
@@ -391,13 +414,13 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->edit_gemColor($data);
-        return redirect()->to(base_url('/gemcolor'));
+        return redirect()->to(base_url('/mastergemcolor'));
     }
     public function delete_gemColor($uid)
     {
         $masterService = new MasterService();
         $masterService->delete_gemColor($uid);
-        return redirect()->to(base_url('/gemcolor'));
+        return redirect()->to(base_url('/mastergemcolor'));
     }
 
     // gem_clarity
@@ -407,7 +430,7 @@ class MasterController extends BaseController
         $data = [
             'getData' => $masterService->get_gemClarity()
         ];
-        return view('gemclarity', $data);
+        return view('masterclarity', $data);
     }
     public function insert_gemClarity()
     {
@@ -419,7 +442,7 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->insert_gemClarity($data);
-        return redirect()->to(base_url('/gemclarity'));
+        return redirect()->to(base_url('/masterclarity'));
     }
     public function edit_gemClarity($uid)
     {
@@ -432,23 +455,23 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->edit_gemClarity($data);
-        return redirect()->to(base_url('/gemclarity'));
+        return redirect()->to(base_url('/masterclarity'));
     }
     public function delete_gemClarity($uid)
     {
         $masterService = new MasterService();
         $masterService->delete_gemClarity($uid);
-        return redirect()->to(base_url('/gemclarity'));
+        return redirect()->to(base_url('/masterclarity'));
     }
 
-    // gem_cutting
+    // gem_cutting clear
     public function get_gemCutting()
     {
         $masterService = new MasterService();
         $data = [
             'getData' => $masterService->get_gemCutting()
         ];
-        return view('gemcutting', $data);
+        return view('mastercutting', $data);
     }
     public function insert_gemCutting()
     {
@@ -460,7 +483,7 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->insert_gemCutting($data);
-        return redirect()->to(base_url('/gemcutting'));
+        return redirect()->to(base_url('/mastercutting'));
     }
     public function edit_gemCutting($uid)
     {
@@ -473,13 +496,13 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->edit_gemCutting($data);
-        return redirect()->to(base_url('/gemcutting'));
+        return redirect()->to(base_url('/mastercutting'));
     }
     public function delete_gemCutting($uid)
     {
         $masterService = new MasterService();
         $masterService->delete_gemCutting($uid);
-        return redirect()->to(base_url('/gemcutting'));
+        return redirect()->to(base_url('/mastercutting'));
     }
 
     // gem_quality
@@ -489,7 +512,7 @@ class MasterController extends BaseController
         $data = [
             'getData' => $masterService->get_gemQuality()
         ];
-        return view('gemquality', $data);
+        return view('masterquality', $data);
     }
     public function insert_gemQuality()
     {
@@ -501,7 +524,7 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->insert_gemQuality($data);
-        return redirect()->to(base_url('/gemquality'));
+        return redirect()->to(base_url('/masterquality'));
     }
     public function edit_gemQuality($uid)
     {
@@ -514,13 +537,13 @@ class MasterController extends BaseController
             'master_detail' => $getPost['detail'],
         ];
         $masterService->edit_gemQuality($data);
-        return redirect()->to(base_url('/gemquality'));
+        return redirect()->to(base_url('/masterquality'));
     }
     public function delete_gemQuality($uid)
     {
         $masterService = new MasterService();
         $masterService->delete_gemQuality($uid);
-        return redirect()->to(base_url('/gemquality'));
+        return redirect()->to(base_url('/masterquality'));
     }
 
     // gem_size

@@ -34,7 +34,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "UPDATE master_product SET master_code = '$data[master_code]', master_name = '$data[master_name]', master_detail = '$data[master_detail]' WHERE master_id = '$uid'";
+            $sql = "UPDATE master_product SET master_code = '$data[master_code]', master_name = '$data[master_name]', master_detail = '$data[master_detail]' WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -46,7 +46,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -81,7 +81,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "UPDATE master_product SET master_code = '$data[master_code]', master_name = '$data[master_name]', master_detail = '$data[master_detail]' WHERE master_id = '$uid'";
+            $sql = "UPDATE master_product SET master_code = '$data[master_code]', master_name = '$data[master_name]', master_detail = '$data[master_detail]' WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -93,7 +93,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -184,7 +184,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -226,7 +226,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -268,7 +268,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -311,7 +311,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -354,7 +354,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -396,7 +396,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -438,7 +438,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -480,7 +480,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -522,7 +522,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -564,7 +564,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -606,7 +606,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -647,7 +647,7 @@ class MasterService extends Model
     {
         try {
             $db = db_connect();
-            $sql = "DELETE FROM master_product WHERE master_id = '$uid'";
+            $sql = "DELETE FROM master_product WHERE uid = '$uid'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {

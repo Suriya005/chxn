@@ -238,3 +238,77 @@ CRITICAL - 2022-08-08 13:41:11 --> Call to a member function move() on null
 #3 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #4 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
 #5 {main}
+CRITICAL - 2022-08-08 14:10:13 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('master', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(19): view('master', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductType()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-08 14:11:26 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('master', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(19): view('master', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductType()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2022-08-08 14:28:59 --> Unknown column 'master_id' in 'where clause'
+ERROR - 2022-08-08 14:37:02 --> Unknown column 'master_id' in 'where clause'
+CRITICAL - 2022-08-08 15:11:41 --> Invalid file: metalname.php
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('metalname.php')
+#1 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('metalname', Array, true)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(227): view('metalname', Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_metalName()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-08 15:17:05 --> Invalid file: gemgroup.php
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('gemgroup.php')
+#1 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('gemgroup', Array, true)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(268): view('gemgroup', Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_gemGroup()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-08 15:20:17 --> Invalid file: gemname.php
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('gemname.php')
+#1 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('gemname', Array, true)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(309): view('gemname', Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_gemName()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-08 15:23:17 --> Invalid file: gemshape.php
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('gemshape.php')
+#1 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('gemshape', Array, true)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(351): view('gemshape', Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_gemShape()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-08 15:25:54 --> Invalid file: gemcolor.php
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('gemcolor.php')
+#1 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('gemcolor', Array, true)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(392): view('gemcolor', Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_gemColor()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
