@@ -121,7 +121,10 @@ class MasterController extends BaseController
         ];
 
         for($i = 0; $i < $getPost['group_lenght']; $i++) {
-            $data['product_type'][$getPost['checkbox' . $i]] = $getPost['checkbox' . $i];
+            if(isset($getPost['checkbox' . $i])){
+                $data['product_type'][$getPost['checkbox' . $i]] = $getPost['checkbox' . $i];
+            }
+            
         }
 
 
