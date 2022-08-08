@@ -121,27 +121,14 @@ class MasterController extends BaseController
         ];
 
         for($i = 0; $i < $getPost['group_lenght']; $i++) {
-            $data['product_type'][$getPost['checkbox' . $i]] = $getPost['checkbox' . $i];
+            if(isset($getPost['checkbox' . $i])){
+                $data['product_type'][$getPost['checkbox' . $i]] = $getPost['checkbox' . $i];
+            }
+            
         }
 
 
-        // print_r($data);
-        // if (isset($getPost['earring']) && $getPost['earring'] == "on") {
-        //     $data['type']['earring'] = "earring";
-        // }
-        // if (isset($getPost['necklace']) && $getPost['necklace'] == "on") {
-        //     $data['type']['necklace'] = "necklace";
-        // }
-        // if (isset($getPost['ring']) && $getPost['ring'] == "on") {
-        //     $data['type']['ring'] = "ring";
-        // }
-        // if (isset($getPost['bangle']) && $getPost['bangle'] == "on") {
-        //     $data['type']['bangle'] = "bangle";
-        // }
-        // if (isset($getPost['anklet']) && $getPost['anklet'] == "on") {
-        //     $data['type']['anklet'] = "anklet";
-        // }
-        // print_r($data);
+
         $masterService->insert_itemProductSize($data);
         return redirect()->to(base_url('/master'));
     }
