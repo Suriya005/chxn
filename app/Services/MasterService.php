@@ -114,7 +114,7 @@ class MasterService extends Model
     public function insert_itemProductSize($data)
     {
         try {
-            $parent_id = json_encode($data['type']);
+            $parent_id = json_encode($data['product_type'], JSON_UNESCAPED_UNICODE);
             $db = db_connect();
             $sql = "INSERT INTO master_product (master_code, master_name, master_detail, master_type, parent_id) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]', 'item_product_size', '$parent_id')";
             $db->query($sql);
@@ -122,6 +122,11 @@ class MasterService extends Model
         } catch (\Exception $e) {
             return false;
         }
+        // $parent_id = json_encode($data['product_type']);
+        // print_r($parent_id);
+        // $db = db_connect();
+        // $sql = "INSERT INTO master_product (master_code, master_name, master_detail, master_type, parent_id) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]', 'item_product_size', '$parent_id')";
+        // $db->query($sql);
     }
 
     public function edit_itemProductSize($data)
@@ -654,6 +659,16 @@ class MasterService extends Model
             return false;
         }
     }
+
+    // other
+
+    public function get_product_type_by_group(){
+        $db = db_connect();
+        $sql = "SELECT * FROM `master_product` WHERE master_type = 'item_product_type' GROUP by master_name";
+        $query = $db->query($sql);
+        return $query->getResult();
+    }
+    
     
 
     

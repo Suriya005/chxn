@@ -52,8 +52,31 @@ include_once APPPATH . 'Views/header.php';
             <span class="checkmarks"></span>
           </label>
         </div>
+<<<<<<< Updated upstream
         
         <div class="form-check">
+=======
+        <!-- input hiden -->
+        <input type="hidden" id="group_lenght" name="group_lenght" value="<?php echo count($data_group); ?>">
+        <?php 
+        
+        foreach ($data_group as $key => $item ) {
+          ?>
+          <div class="form-check">
+            <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">
+            
+              <input type="checkbox" id="checkbox<?=$key?>" name="checkbox<?=$key?>" value="<?php echo $item->master_name; ?>">
+              <span class="checkmarks"></span>
+              <?php echo $item->master_name; ?>
+            </label>
+          </div>
+          <?php
+        }
+
+        ?>
+
+        <!-- <div class="form-check">
+>>>>>>> Stashed changes
           <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">ต่างหู
             <input type="checkbox" name="earring" id="earring">
             <span class="checkmarks"></span>
@@ -86,7 +109,7 @@ include_once APPPATH . 'Views/header.php';
             <input type="checkbox" name="anklet" id="anklet">
             <span class="checkmarks"></span>
           </label>
-        </div>
+        </div> -->
 
         </form>
 
