@@ -160,3 +160,91 @@ CRITICAL - 2022-08-09 02:44:33 --> Undefined index: address_deliver_product
 #5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
 #7 {main}
+CRITICAL - 2022-08-09 03:10:24 --> Undefined index: district
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 11, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(26): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-09 03:11:58 --> syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting ']'
+#0 E:\xampp\htdocs\chxn_git\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('E:\\xampp\\htdocs...')
+#1 E:\xampp\htdocs\chxn_git\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Services\\Co...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Services\\Co...')
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(20): spl_autoload_call('App\\Services\\Co...')
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-09 03:12:23 --> Undefined index: poscode
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 11, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(26): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-09 03:18:45 --> Undefined index: age
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 18, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(47): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(24): App\Services\CompanyCustomerService->insert_niti(Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-09 03:19:17 --> Undefined index: age
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 18, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(47): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(24): App\Services\CompanyCustomerService->insert_niti(Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-09 03:19:22 --> Undefined index: age
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 18, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(47): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(24): App\Services\CompanyCustomerService->insert_niti(Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-09 03:19:34 --> Undefined index: age
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 18, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(47): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(24): App\Services\CompanyCustomerService->insert_niti(Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-09 03:19:42 --> Undefined index: age
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 18, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(47): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(24): App\Services\CompanyCustomerService->insert_niti(Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-08-09 03:20:12 --> Undefined index: gender
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 28, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(24): App\Services\CompanyCustomerService->insertNiti(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}

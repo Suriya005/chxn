@@ -19,9 +19,9 @@ class CompanyCustomerController extends BaseController
     {
         $companycustomerservice = new CompanyCustomerService();
         $getPost = $this->request->getPost();
-        print_r($getPost);
+        // print_r($getPost);
         if($getPost['customer_type'] == 'นิติบุคคล'){
-            print_r('นิติบุคคล');
+            $companycustomerservice->insertNiti($getPost);
         }elseif($getPost['customer_type'] == 'บุคคลทั่วไป'){
             $companycustomerservice->insert_nomal($getPost);
             

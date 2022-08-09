@@ -297,7 +297,7 @@
             <div class="additionalcheck2" id="additionalcheck2" style="display:none;">
             <label>ที่อยู่</label></br>
             <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="ที่อยู่" name="address" style="width:477px;"></textarea>
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-6" style="max-width: 43%; ">
               <label >จังหวัด</label></br>
                     <select  class="form-select" name="province" id="small-inputv2">
@@ -334,7 +334,7 @@
                         
                     </select>
               </div>
-            </div>
+            </div> -->
             </div>
             <label>อื่นๆ</label></br>
             <input type="text" id="large-inputv2" class="form-control " placeholder="กรอกรายละเอียด">
