@@ -61,7 +61,9 @@ class UserController extends BaseController
     {
         $data = [
             'id' => $user['uid'],
+            'system_name' => $user['system_name'],
             'name' => $user['fullname'],
+            'system_name' => $user['system_name'],
             'phone_no' => $user['tel'],
             'email' => $user['email'],
             'isLoggedIn' => true,

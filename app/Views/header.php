@@ -24,12 +24,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+
+<link rel="stylesheet" href="/dist/mc-calendar.min.css" />
     </script>
+    <script src="/dist/mc-calendar.min.js"></script>
 
 </head>
 
 <body style="background-color: #EBEEF0;">
-
+<?php
+    $fullname = session()->get('name');
+    $role = session()->get('role');
+?>
     <div class="nav-div">
         <img src="../assets/image/chxlogo.png" alt="" style="width:199px;height:50px; margin-top:20px;margin-left:15px;">
 
@@ -37,10 +43,20 @@
             <p id="current_datetime"></p>
             <div class="hrs"></div>
             <div class="circular"> <img src="../assets/image/chxprofile.jpg" alt=""></div>
-            <div><a style="margin-bottom:0px;">สวัสดี โรเซ่</a></br>
-                <span>Test</span>
+
+
+            <div><a style="margin-bottom:0px;">สวัสดี <?php echo $fullname?></a></br>
+                <span><?php echo $role?></span>
             </div>
-            <div class="top-drops"><a href="#"><img src="assets/image/icon/Dropdown.png" alt=""></a></div>
+
+            <div class="headdropdown">
+            <div class="headdropbtn"><a href="#"><img src="assets/image/icon/Dropdown.png" alt="" style="width:80%;margin-top: 7px;"></a></div>
+                <div class="headdropdown-content">
+                     <a href="#">Log Out</a>
+                  
+                 </div>
+            </div>
+           
 
         </div>
     </div>
@@ -124,7 +140,7 @@
                                             <ul>
                                                 <li><a href="'.base_url('master').'"
                                                         class="dropbtn">ประเภทสินค้า</a></li>
-                                                <li><a href="'.base_url('mastercorrection').'"
+                                                <li><a href="'.base_url('mastercollection').'"
                                                         class="dropbtn">คอลเลคชั่น</a></li>
                                                 <li><a href="'.base_url('mastersize').'"
                                                         class="dropbtn">ขนาดสินค้า</a></li>

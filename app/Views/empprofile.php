@@ -12,7 +12,7 @@
     </div>
 
     <!-- Modal -->
-    <form id="emp_form">
+    <form id="emp_form" enctype="multipart/form-data">
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -20,7 +20,7 @@
                     <div align="center">
                         <p>บันทึก ?</p>
                     </div>
-                    <div align="center"><span>ต้องการบันทึกข้อมูล ใช่หรือไม่</span></div>
+                    <div align="center"><span>ต้องการบันทึกข้อมูล php </span></div>
                     <div align="center" class="popuphr"></div>
                     <div class="row" align="center" style="margin-top:18px;">
                         <div class="col-6" align="right"><button type="button" class="popupbtncancle"
@@ -38,9 +38,16 @@
             <div class="detail-grid" style=" padding-left:15px; padding-top:20px; ">
 
                 <div class="detail-grid-item">
-                    <p>รูปภาพ แก้ไข</p>
-                    <div id="circle2" style="margin-bottom:15px;"></div>
-                    <div style="margin-left: 40px; font-size:20px;"><button class="upload-btn">อัพโหลด</button></div>
+                     <p>รูปภาพ แก้ไข</p>
+                     <img id="output"/>
+                     <div class="inputfilediv">
+                        <input type="file" name="image_url" id="file"  onchange="loadFile(event)"/>
+                    </div>
+                    <!-- <div id="circle2" style="margin-bottom:15px;"></div>
+                    <div style="margin-left: 40px; font-size:20px;"><button class="upload-btn" onchange="loadFile(event)">อัพโหลด</button></div>
+                    <input type="file"  accept="image/*" onchange="loadFile(event)">
+                     -->
+
                 </div>
 
                 <div class="detail-grid-item">
@@ -158,7 +165,7 @@
               <input type="checkbox">
               <span class="slider round"></span>
             </label></td>';
-            echo '<td><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>';
+            echo '<td onclick="delete_data('.$row['uid'].')"><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>';
             echo '</tr>';
           }
         
@@ -183,6 +190,16 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
+        function delete_data(id){
+            if(confirm("คุณต้องการลบข้อมูลนี้หรือไม่?")){
+                // window.location.href = "delete_data.php?id="+id;
+                let emp_form = document.getElementById("emp_form");
+                    emp_form.action = `emp_profile_form/delete/${id}`;
+                    emp_form.method = "POST";
+                    emp_form.submit();
+            }
+
+        }
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("main").style.marginLeft = "250px";
@@ -243,6 +260,18 @@
         emp_form.action = `emp_profile_form/update/${id}`;
         emp_form.method = "post";
     }
+
+
+
+
+    var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output');
+      output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
 
     </script>
 

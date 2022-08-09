@@ -20,6 +20,12 @@ use CodeIgniter\Model;
          {
                 $this->update($uid, $data);
          }
+
+        //  delete data
+        public function deleteData($uid)
+        {
+            $this->delete($uid);
+        }
   
       }
 
