@@ -3,6 +3,8 @@ include_once APPPATH . 'Views/header.php';
 ?>
 
 
+
+
 <div class="row " style="padding-left:250px; margin-bottom:15px; margin-top:100px; font-size:25px;">
     <div class="col-9"><a style="font-size:25px;font-weight: 500;color: #2A2A2A;">ข้อมูลพนักงาน</a></div>
     <div class="col-1" style="margin-right:30px;margin-left:30px;"><button type="button" class="btnchxcan" style="width:150px;">ยกเลิก</button></div>
@@ -22,7 +24,7 @@ include_once APPPATH . 'Views/header.php';
                 <div align="center" class="popuphr"></div>
                 <div class="row" align="center" style="margin-top:18px;">
                     <div class="col-6" align="right"><button type="button" class="popupbtncancle" data-bs-dismiss="modal">ยกเลิก</button></div>
-                    <div class="col-6" align="left"><button type="submit" class="popupbtnsave">บันทึก</button></div>
+                    <div class="col-6" align="left"><button type="submit" value="submit" name="submit" class="popupbtnsave">บันทึก</button></div>
                 </div>
             </div>
         </div>
@@ -34,52 +36,66 @@ include_once APPPATH . 'Views/header.php';
 
         <div class="detail-grid" style=" padding-left:15px; padding-top:20px; ">
 
+            
+
+
+
             <div class="detail-grid-item">
                 <p>รูปภาพ</p>
                 <img id="output" />
                 <div class="inputfilediv">
-                    <input type="file" name="filename_image" id="filename_image" onchange="loadFile(event)" />
+                    <!-- <input type="file" id="filename_image" name="filename_image" onchange="loadFile(event)" /> -->
+                    <!-- input file -->
+                    <input type="file" id="filename_image" name="filename_image" onchange="loadFile(event)" />
+                    <!-- hiden input -->
+                    <input type="hidden" id="filename_image_url" name="filename_image_url" />
+                    <?php
+
+            
+            
+            ?>
                 </div>
-           
-            <!-- <div id="circle2" style="margin-bottom:15px;"></div>
+
+
+                <!-- <div id="circle2" style="margin-bottom:15px;"></div>
                     <div style="margin-left: 40px; font-size:20px;"><button class="upload-btn" onchange="loadFile(event)">อัพโหลด</button></div>
                     <input type="file"  accept="image/*" onchange="loadFile(event)">
                      -->
 
-        </div>
-
-        <div class="detail-grid-item">
-            <p>ข้อมูลทั่วไป</p>
-            <label>ชื่อ<a style="color:red;"> *</a></label></br>
-            <input type="text" id="fullname" name="fullname" class="form-control " placeholder="ชื่อ-นามสกุล">
-            <label>เบอร์โทรศัพท์</label></br>
-            <input type="text" id="tel" name="tel" class="form-control " placeholder="เบอร์โทรศัพท์">
-            <label>ชื่อสำหรับใช้งานระบบ</label></br>
-            <input type="text" id="system_name" name="system_name" class="form-control " placeholder="ชื่อสำหรับใช้งานระบบ">
-            <div class="row">
-                <div class="col-6" style="max-width: 47%; ">
-                    <label>อีเมล</label>
-                    <input type="text" id="email" name="email" class="form-control " placeholder="อีเมล">
-                </div>
-                <div class="col-6">
-                    <label>รหัสผ่าน</label>
-                    <input type="password" id="password" name="password" class="form-control " placeholder="รหัสผ่าน">
-                </div>
             </div>
 
+            <div class="detail-grid-item">
+                <p>ข้อมูลทั่วไป</p>
+                <label>ชื่อ<a style="color:red;"> *</a></label></br>
+                <input type="text" id="fullname" name="fullname" class="form-control " placeholder="ชื่อ-นามสกุล">
+                <label>เบอร์โทรศัพท์</label></br>
+                <input type="text" id="tel" name="tel" class="form-control " placeholder="เบอร์โทรศัพท์">
+                <label>ชื่อสำหรับใช้งานระบบ</label></br>
+                <input type="text" id="system_name" name="system_name" class="form-control " placeholder="ชื่อสำหรับใช้งานระบบ">
+                <div class="row">
+                    <div class="col-6" style="max-width: 47%; ">
+                        <label>อีเมล</label>
+                        <input type="text" id="email" name="email" class="form-control " placeholder="อีเมล">
+                    </div>
+                    <div class="col-6">
+                        <label>รหัสผ่าน</label>
+                        <input type="password" id="password" name="password" class="form-control " placeholder="รหัสผ่าน">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="detail-grid-item" style="padding-left:50px;">
+                <p>สิทธิการเข้าถึงระบบ</p>
+                <label>สิทธิการเข้าถึงระบบ</label></br>
+                <select class="form-select" id="role_id" name="role_id">
+                    <option value="" disabled selected>สิทธิการเข้าถึงระบบ</option>
+                    <option value="1">Employee</option>
+                    <option value="2">Admin</option>
+                </select>
+            </div>
 
         </div>
-        <div class="detail-grid-item" style="padding-left:50px;">
-            <p>สิทธิการเข้าถึงระบบ</p>
-            <label>สิทธิการเข้าถึงระบบ</label></br>
-            <select class="form-select" id="role_id" name="role_id">
-                <option value="" disabled selected>สิทธิการเข้าถึงระบบ</option>
-                <option value="1">Employee</option>
-                <option value="2">Admin</option>
-            </select>
-        </div>
-
-    </div>
 
     </div>
 </form>
@@ -268,6 +284,8 @@ include_once APPPATH . 'Views/header.php';
 
 
     var loadFile = function(event) {
+        var filename_image_url = document.getElementById("filename_image_url");
+        filename_image_url.value = event.target.files[0].name;
         var reader = new FileReader();
         reader.onload = function() {
             var output = document.getElementById('output');
