@@ -58,9 +58,13 @@ $routes->get('logout', 'UserController::logout');
 
 $routes->get('/', 'Home::index');
 $routes->get('/profile', 'ProfileController::index');
-$routes->get('/cusprofile', 'Home::cusprofile');
+
+$routes->get('/cusprofile', 'CompanyCustomerController::index');
+$routes->post('/cusprofile/update/(:num)', 'CompanyCustomerController::update/$1');
+$routes->post('/cusprofile/delete/(:num)', 'CompanyCustomerController::delete/$1');
 $routes->post('/cusprofile/insert', 'CompanyCustomerController::insert');
-$routes->get('/partprofile', 'Home::partprofile');
+
+$routes->get('/partprofile', 'CompanyPartnerController::index');
 
 
 

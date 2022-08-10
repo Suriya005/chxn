@@ -1,7 +1,7 @@
 <?php
 namespace App\Services;
 use CodeIgniter\Model;
-    class CompanyCustomerService extends Model {
+    class CompanyPartnerService extends Model {
 
 
        
@@ -41,7 +41,7 @@ use CodeIgniter\Model;
 
        public function getData_company_customer()
        {
-        $sql = "SELECT * FROM `company_customer` ";
+        $sql = "SELECT * FROM `company_partner` ";
         $db = db_connect();
         $db->query($sql);
         $result = $db->query($sql)->getResult();

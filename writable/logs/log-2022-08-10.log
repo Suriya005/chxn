@@ -134,3 +134,232 @@ CRITICAL - 2022-08-10 07:23:07 --> Undefined index: distric_delivery
 #5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
 #7 {main}
+CRITICAL - 2022-08-10 07:48:05 --> Cannot use object of type stdClass as array
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include()
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('cus_profile', Array, true)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(14): view('cus_profile', Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->index()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-10 07:59:22 --> Array to string conversion
+#0 E:\xampp\htdocs\chxn_git\app\Views\cus_profile.php(413): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'E:\\xampp\\htdocs...', 413, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('cus_profile', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(14): view('cus_profile', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->index()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-08-10 09:44:11 --> Undefined index: address
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 11, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(25): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 10:49:51 --> Undefined index: distric
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 11, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(25): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 10:52:30 --> Undefined index: distric
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 11, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(25): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 10:59:01 --> Undefined index: fullname_nomal
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 10:59:56 --> Undefined index: email_nomal
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 11:00:24 --> Undefined index: tel_nomal
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 11:00:36 --> Undefined index: distric_nomal
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 11:01:06 --> Undefined index: distric
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 11:02:13 --> Undefined index: distric
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 11:02:23 --> Undefined index: distric
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 11:03:12 --> Undefined index: distric
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 11:04:05 --> Undefined index: distric
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 11:06:54 --> Undefined index: posnum
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 65, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+ERROR - 2022-08-10 11:10:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0011 `company_customer` SET `fullname`='testname1', `birthday`='0111-11-11', ...' at line 1
+CRITICAL - 2022-08-10 11:10:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0011 `company_customer` SET `fullname`='testname1', `birthday`='0111-11-11', ...' at line 1
+#0 E:\xampp\htdocs\chxn_git\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `custome...', 0)
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `custome...')
+#2 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `custome...')
+#3 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(67): CodeIgniter\Database\BaseConnection->query('UPDATE `custome...')
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-08-10 11:10:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''0011' `company_customer` SET `fullname`='testname1', `birthday`='0111-11-11'...' at line 1
+CRITICAL - 2022-08-10 11:10:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''0011' `company_customer` SET `fullname`='testname1', `birthday`='0111-11-11'...' at line 1
+#0 E:\xampp\htdocs\chxn_git\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `custome...', 0)
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `custome...')
+#2 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `custome...')
+#3 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(67): CodeIgniter\Database\BaseConnection->query('UPDATE `custome...')
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-08-10 11:12:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '', `fullname`='testname1', `birthday`='0111-11-11', `email`='test@gmail.com',...' at line 1
+CRITICAL - 2022-08-10 11:12:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '', `fullname`='testname1', `birthday`='0111-11-11', `email`='test@gmail.com',...' at line 1
+#0 E:\xampp\htdocs\chxn_git\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `company...', 0)
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `company...')
+#2 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `company...')
+#3 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(67): CodeIgniter\Database\BaseConnection->query('UPDATE `company...')
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '3')
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('3')
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-08-10 11:16:24 --> Undefined index: age
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 11, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(25): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 11:17:18 --> You must set the database table to be used with your query.
+#0 E:\xampp\htdocs\chxn_git\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 E:\xampp\htdocs\chxn_git\system\Model.php(333): CodeIgniter\Model->builder()
+#2 E:\xampp\htdocs\chxn_git\system\BaseModel.php(963): CodeIgniter\Model->doDelete(Array, false)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(52): CodeIgniter\BaseModel->delete(Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->delete('8')
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-10 11:17:28 --> You must set the database table to be used with your query.
+#0 E:\xampp\htdocs\chxn_git\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 E:\xampp\htdocs\chxn_git\system\Model.php(333): CodeIgniter\Model->builder()
+#2 E:\xampp\htdocs\chxn_git\system\BaseModel.php(963): CodeIgniter\Model->doDelete(Array, false)
+#3 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(52): CodeIgniter\BaseModel->delete(Array)
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->delete('8')
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-08-10 11:19:32 --> Undefined index: posnum_niti
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 53, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(40): App\Services\CompanyCustomerService->updateNiti(Array, '4')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('4')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 11:54:00 --> Invalid file: partprofile.php
+#0 E:\xampp\htdocs\chxn_git\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partprofile.php')
+#1 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('partprofile', Array, true)
+#2 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyPartnerController.php(14): view('partprofile', Array)
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyPartnerController->index()
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyPartnerController))
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#8 {main}
