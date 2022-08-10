@@ -1,0 +1,34 @@
+CRITICAL - 2022-08-10 02:29:48 --> Undefined variable $company_info
+#0 C:\Users\theso\Documents\GitHub\chxn\app\Views\profile.php(365): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\theso\\...', 365)
+#1 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(210): include('C:\\Users\\theso\\...')
+#2 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\theso\Documents\GitHub\chxn\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\Users\theso\Documents\GitHub\chxn\app\Controllers\Home.php(13): view('profile')
+#5 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\Home->profile()
+#6 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#10 {main}
+CRITICAL - 2022-08-10 02:53:55 --> Undefined variable $company_info
+#0 C:\Users\theso\Documents\GitHub\chxn\app\Views\profile.php(365): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'C:\\Users\\theso\\...', 365)
+#1 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(210): include('C:\\Users\\theso\\...')
+#2 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\Users\theso\Documents\GitHub\chxn\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#4 C:\Users\theso\Documents\GitHub\chxn\app\Controllers\Home.php(13): view('profile')
+#5 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\Home->profile()
+#6 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#10 {main}
+CRITICAL - 2022-08-10 02:58:22 --> Unclosed '{' on line 337
+#0 C:\Users\theso\Documents\GitHub\chxn\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\Users\theso\Documents\GitHub\chxn\system\Common.php(1089): CodeIgniter\View\View->render('profile', Array, true)
+#2 C:\Users\theso\Documents\GitHub\chxn\app\Controllers\ProfileController.php(21): view('profile', Array)
+#3 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(832): App\Controllers\ProfileController->index()
+#4 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#5 C:\Users\theso\Documents\GitHub\chxn\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
+#8 {main}

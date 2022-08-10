@@ -50,7 +50,7 @@
             </div>
 
             <div class="headdropdown">
-            <div class="headdropbtn"><a href="#"><img src="assets/image/icon/Dropdown.png" alt="" style="width:80%;margin-top: 7px;"></a></div>
+            <div class="headdropbtn"><a href="#"><img src="assets/image/icon/Dropdown.png" alt="" style="width: 50%;margin-top: 30px;margin-left: 16px;"></a></div>
                 <div class="headdropdown-content">
                      <a href="#">Log Out</a>
                   

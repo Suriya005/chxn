@@ -17,27 +17,53 @@ class EmpProfileController extends BaseController
     }
     public function insert()
     {
-        $getPost = $this->request->getPost();
-        print_r($getPost);
-        // $data = [
-        //     'fullname' => $this->request->getPost('fullname'),
-        //     'tel' => $this->request->getPost('tel'),
-        //     'system_name' => $this->request->getPost('system_name'),
-        //     'email' => $this->request->getPost('email'),
-        //     'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
-        //     'role_id' => $this->request->getPost('role_id'),
-        //     'status' => '1',
-        //     'last_update' => date('Y-m-d H:i:s'),
-        //     'image_url' => $this->request->getPost('image_url'),
-        // ];
-        // $empProfileService = new EmpProfileService();
-        // $empProfileService->insertData($data);
-        // return redirect()->to(base_url('/empprofile'));
+        //getpost file
+        $file = $this->request->getFile('fileToUpload');
+             
+        //check valiadtion image
+        if($file->getName() != ""){
+            if($file->getExtension() == "jpg" || $file->getExtension() == "png" || $file->getExtension() == "jpeg"){
+                $file->move('./uploads/empprofile');
+                $filename = $file->getName();
+            }else{
+                echo "File is not an image";
+            }
+        }else{
+            echo "File is not an image";
+        }     
+         $data = [
+             'fullname' => $this->request->getPost('fullname'),
+             'tel' => $this->request->getPost('tel'),
+             'system_name' => $this->request->getPost('system_name'),
+             'email' => $this->request->getPost('email'),
+             'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+             'role_id' => $this->request->getPost('role_id'),
+             'status' => '1',
+             'last_update' => date('Y-m-d H:i:s'),
+             'image_url' => $filename,
+         ];
+         $empProfileService = new EmpProfileService();
+         $empProfileService->insertData($data);
+         return redirect()->to(base_url('/empprofile'));
       
     }
 
     public function update($id = 0)
     {
+         //getpost file
+         $file = $this->request->getFile('fileToUpload');
+             
+         //check valiadtion image
+         if($file->getName() != ""){
+             if($file->getExtension() == "jpg" || $file->getExtension() == "png" || $file->getExtension() == "jpeg"){
+                 $file->move('./uploads/empprofile');
+                 $filename = $file->getName();
+             }else{
+                 echo "File is not an image";
+             }
+         }else{
+             echo "File is not an image";
+         }     
         $uid = $id;
         $data = [
             'fullname' => $this->request->getPost('fullname'),
@@ -48,7 +74,7 @@ class EmpProfileController extends BaseController
             'role_id' => $this->request->getPost('role_id'),
             'status' => '1',
             'last_update' => date('Y-m-d H:i:s'),
-            'image_url' => $this->request->getPost('image_url'),
+            'image_url' => $filename,
         ];
         $empProfileService = new EmpProfileService();
         $empProfileService->updateData($uid, $data);

@@ -44,11 +44,11 @@ include_once APPPATH . 'Views/header.php';
                 <p>รูปภาพ</p>
                 <img id="output" />
                 <div class="inputfilediv">
-                    <!-- <input type="file" id="filename_image" name="filename_image" onchange="loadFile(event)" /> -->
+                    <input type="file" name="fileToUpload" id="fileToUpload" onchange="loadFile(event)" /> 
                     <!-- input file -->
-                    <input type="file" id="filename_image" name="filename_image" onchange="loadFile(event)" />
+                  
                     <!-- hiden input -->
-                    <input type="hidden" id="filename_image_url" name="filename_image_url" />
+                    <!-- <input type="hidden" id="filename_image_url" name="filename_image_url" /> -->
                     <?php
 
             
@@ -157,14 +157,14 @@ include_once APPPATH . 'Views/header.php';
 
             <?php if ($employee != null) {
                 foreach ($employee as $row) {
-                    echo '<tr onclick="update_form(' . $row['uid'] . ',`' . $row['fullname'] . '`,`' . $row['system_name'] . '`,`' . $row['email'] . '`,' . $row['role_id'] . ',`' . $row['tel'] . '`)">';
+                    echo '<tr onclick="update_form(' . $row['uid'] . ',`' . $row['fullname'] . '`,`' . $row['system_name'] . '`,`' . $row['email'] . '`,' . $row['role_id'] . ',`' . $row['tel'] . '`,`' . $row['image_url'] . '`)">';
                     echo '<td scope="row">';
                     echo '<label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">' . $row['uid'] . '
               <input type="checkbox">
               <span class="checkmarks"></span>
             </label>';
                     echo '</td>';
-                    echo '<td><img src="assets/image/plus.png" style="width:40.54px; width:40px;"></td>';
+                    echo '<td><img src="uploads/empprofile/'. $row['image_url'] . '" style="width:40.54px; width:40px;"></td>';
                     echo '<td>' . $row['fullname'] . '</td>';
                     echo '<td>' . $row['system_name'] . '</td>';
                     echo '<td>' . $row['email'] . '</td>';
@@ -259,7 +259,7 @@ include_once APPPATH . 'Views/header.php';
         emp_form.method = "post";
     }
 
-    function update_form(uid, fullname, system_name, email, role_id, tel) {
+    function update_form(uid, fullname, system_name, email, role_id, tel,image_url) {
         let fullname_input = document.getElementById("fullname");
         let tel_input = document.getElementById("tel");
         let system_name_input = document.getElementById("system_name");
@@ -268,8 +268,10 @@ include_once APPPATH . 'Views/header.php';
         fullname_input.value = fullname;
         tel_input.value = tel;
         system_name_input.value = system_name;
-        email_input.value = email;
+        email_input.value = image_url;
         role_id_input.value = role_id;
+        let image = document.getElementById("output");
+        image.src = "uploads/empprofile/" + image_url + "";
         let form_action = document.getElementById("form_action");
         form_action.setAttribute("onclick", `update_action(${uid})`);
     }
@@ -282,10 +284,7 @@ include_once APPPATH . 'Views/header.php';
 
 
 
-
     var loadFile = function(event) {
-        var filename_image_url = document.getElementById("filename_image_url");
-        filename_image_url.value = event.target.files[0].name;
         var reader = new FileReader();
         reader.onload = function() {
             var output = document.getElementById('output');

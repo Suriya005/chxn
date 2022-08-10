@@ -18,9 +18,9 @@ class CompanyController extends Controller
         if ($checktap == "bank") {
 
             if($action == "insert"){
-                $slotData = ((count($_POST) - 4) / 5) - 1;
+                $slotData = ((count($_POST) - 4) / 5) - 2;
             }elseif($action == "update"){
-                $slotData = ((count($_POST) - 6) / 5) - 1;
+                $slotData = ((count($_POST) - 6) / 5) - 2;
             }
             
             $data = [];

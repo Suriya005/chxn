@@ -334,7 +334,13 @@
               <button type="button" onclick="insert_action()" id="submit-action" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal">บันทึก</button>
               </div>
               <div class="col-2">
-              <button type="button" onclick="update_unlock()" id="update_unlock" class="btnchxnext" style="width:150px;">แก้ไข</button>
+              <?php if($company_info != null){
+                  ?>
+                 <button type="button" onclick="update_unlock()" id="update_unlock" class="btnchxnext" style="width:150px;">แก้ไข</button>
+                  <?php
+                }
+                  ?>
+              
               </div>
             </div>
           </div>
