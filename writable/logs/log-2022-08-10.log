@@ -32,3 +32,105 @@ CRITICAL - 2022-08-10 02:58:22 --> Unclosed '{' on line 337
 #6 C:\Users\theso\Documents\GitHub\chxn\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #7 C:\Users\theso\Documents\GitHub\chxn\system\Commands\Server\rewrite.php(43): require_once('C:\\Users\\theso\\...')
 #8 {main}
+ERROR - 2022-08-10 06:30:08 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-08-10 06:30:08 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 E:\xampp\htdocs\chxn_git\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 E:\xampp\htdocs\chxn_git\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(20): CodeIgniter\BaseModel->first()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-08-10 06:30:19 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-08-10 06:30:19 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 E:\xampp\htdocs\chxn_git\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 E:\xampp\htdocs\chxn_git\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\UserController.php(20): CodeIgniter\BaseModel->first()
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\UserController->login()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-08-10 06:30:31 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-08-10 06:30:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 E:\xampp\htdocs\chxn_git\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 E:\xampp\htdocs\chxn_git\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 E:\xampp\htdocs\chxn_git\app\Services\EmpProfileService.php(16): CodeIgniter\BaseModel->findAll()
+#5 E:\xampp\htdocs\chxn_git\app\Controllers\EmpProfileController.php(14): App\Services\EmpProfileService->getData()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->index()
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#8 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2022-08-10 06:38:08 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-08-10 06:38:08 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+#0 E:\xampp\htdocs\chxn_git\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 E:\xampp\htdocs\chxn_git\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 E:\xampp\htdocs\chxn_git\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 E:\xampp\htdocs\chxn_git\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 E:\xampp\htdocs\chxn_git\app\Services\EmpProfileService.php(16): CodeIgniter\BaseModel->findAll()
+#5 E:\xampp\htdocs\chxn_git\app\Controllers\EmpProfileController.php(14): App\Services\EmpProfileService->getData()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\EmpProfileController->index()
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmpProfileController))
+#8 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-08-10 06:45:18 --> Undefined index: age
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 18, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(26): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 07:19:57 --> Undefined index: district_delivery
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 18, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(26): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 07:22:15 --> Undefined index: distric_delivery
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 18, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(26): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-10 07:23:07 --> Undefined index: distric_delivery
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 18, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(26): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}

@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CompanyCustomer extends Migration
+class Companycustomer extends Migration
 {
     public function up()
     {
@@ -113,6 +113,21 @@ class CompanyCustomer extends Migration
             'address_deliver_product' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '200',
+            ],  
+            'deliver_district' => [
+                'type'       => 'INT',
+                'constraint'     => 5,
+            ], 
+            'deliver_sub_district' => [
+                'type'       => 'INT',
+                'constraint'     => 5,
+            ], 
+            'deliver_province' => [
+                'type'       => 'text',
+            ],    
+            'deliver_poscode' => [
+                'type'       => 'INT',
+                'constraint'     => 5,
             ],  
                
         ]);

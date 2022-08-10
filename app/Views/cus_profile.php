@@ -162,16 +162,16 @@
                   <div class="col-10"><label class="form-check-label" for="flexCheckChecked" style="margin-bottom:60px;">ใช้ที่อยู่เดียวกับที่อยู่สำหรับออกใบกำกับภาษี</label></br></div>
             </div> -->
             <label class="containerv2" style="padding-left: 40px; color: #2CBAB5;">ใช้ที่อยู่เดียวกับที่อยู่สำหรับออกใบกำกับภาษี
-              <input type="checkbox" name="check_tex_address" id="check" >
+              <input type="checkbox" name="check_tex_address" id="check" checked>
                 <span class="checkmarks"></span>
             </label>
             <div class="additionalcheck" id="additionalcheck" style="display:none;">
             <label>ที่อยู่</label></br>
             <textarea class="form-control" id="address_delivery" placeholder="ที่อยู่" name="address_delivery" style="width:477px;"></textarea>
-            <!-- <div class="row">
+            <div class="row">
               <div class="col-6" style="max-width: 43%; ">
               <label >จังหวัด</label></br>
-                    <select  class="form-select" name="province" id="small-inputv2">
+                    <select  class="form-select" name="province_deliver" id="small-inputv2">
                         <option value="" disabled selected>เลือกจังหวัด</option>
                         <option value="ชลบุรี">ชลบุรี</option>
                         <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
@@ -180,7 +180,7 @@
                     </select>
 
                     <label >อำเภอ/เขต</label></br>
-                    <select  class="form-select" name="district" id="small-inputv2">
+                    <select  class="form-select" name="distric_deliver" id="small-inputv2">
                         <option value="" disabled selected>เลือกอำเภอ/เขต</option>
                         <option value="บึง">บึง</option>
                         <option value="ศรีราชา">ศรีราชา</option>
@@ -190,7 +190,7 @@
               </div>
               <div class="col-6">
               <label>ตำบล/แขวง</label></br>
-                    <select  class="form-select" name="sub_district" id="small-inputv2">
+                    <select  class="form-select" name="sub_distric_deliver" id="small-inputv2">
                         <option value="" disabled selected>เลือกตำบล/แขวง</option>
                         <option value="บึง">บึง</option>
                         <option value="ศรีราชา">ศรีราชา</option>
@@ -198,14 +198,14 @@
                         
                     </select>
                     <label>รหัสไปรษณีย์</label></br>
-                    <select  class="form-select" name="posnum" id="small-inputv2">
+                    <select  class="form-select" name="posnum_deliver" id="small-inputv2">
                         <option value="" disabled selected>เลือกรหัสไปรษณีย์</option>
                         <option value="20230">20230</option>
                         <option value="20110">20110</option>
                         
                     </select>
               </div>
-            </div> -->
+            </div>
             </div>
             <label>อื่นๆ</label></br>
             <input type="text" id="large-inputv2" name="additional" class="form-control " placeholder="กรอกรายละเอียด">
@@ -226,9 +226,9 @@
               <label>ชื่อบริษัท<a style="color:red;">*</a></label></br>
               <input type="text" id="large-inputv2" class="form-control " name="company_name" placeholder="ชื่อบริษัท" >
               <label>อีเมล</label></br>
-              <input type="email" id="large-inputv2" class="form-control " name="email" placeholder="อีเมล" >
+              <input type="email" id="large-inputv2 email_niti" class="form-control " name="email_niti" placeholder="อีเมล" >
               <label>ชื่อผู้ติดต่อ</label></br>
-              <input type="text" id="large-inputv2" class="form-control " name="fullname" placeholder="ชื่อผู้ติดต่อ" >
+              <input type="text" id="large-inputv2" class="form-control " name="fullname_niti" placeholder="ชื่อผู้ติดต่อ" >
 
             <label>เบอร์โทรศัพท์<a style="color:red;">*</a></label></br>
             <input type="text" id="large-inputv2" class="form-control " name="tel" placeholder="เบอร์โทรศัพท์">
@@ -291,16 +291,16 @@
                   <div class="col-10"><label class="form-check-label" for="flexCheckChecked" style="margin-bottom:60px;">ใช้ที่อยู่เดียวกับที่อยู่สำหรับออกใบกำกับภาษี</label></br></div>
             </div> -->
             <label class="containerv2" style="padding-left: 40px; color: #2CBAB5;">ใช้ที่อยู่เดียวกับที่อยู่สำหรับออกใบกำกับภาษี
-              <input type="checkbox" name="check2" id="check2" >
+              <input type="checkbox" name="check2" id="check2" checked>
                 <span class="checkmarks"></span>
             </label>
             <div class="additionalcheck2" id="additionalcheck2" style="display:none;">
             <label>ที่อยู่</label></br>
-            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="ที่อยู่" name="address" style="width:477px;"></textarea>
-            <!-- <div class="row">
+            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="ที่อยู่" name="address_delivery_niti" style="width:477px;"></textarea>
+            <div class="row">
               <div class="col-6" style="max-width: 43%; ">
               <label >จังหวัด</label></br>
-                    <select  class="form-select" name="province" id="small-inputv2">
+                    <select  class="form-select" name="province_deliver_niit" id="small-inputv2">
                         <option value="" disabled selected>เลือกจังหวัด</option>
                         <option value="ชลบุรี">ชลบุรี</option>
                         <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
@@ -309,7 +309,7 @@
                     </select>
 
                     <label >อำเภอ/เขต</label></br>
-                    <select  class="form-select" name="distric" id="small-inputv2">
+                    <select  class="form-select" name="distric_deliver_niit" id="small-inputv2">
                         <option value="" disabled selected>เลือกอำเภอ/เขต</option>
                         <option value="บึง">บึง</option>
                         <option value="ศรีราชา">ศรีราชา</option>
@@ -319,7 +319,7 @@
               </div>
               <div class="col-6">
               <label>ตำบล/แขวง</label></br>
-                    <select  class="form-select" name="sub_distric" id="small-inputv2">
+                    <select  class="form-select" name="sub_distric_deliver_niit" id="small-inputv2">
                         <option value="" disabled selected>เลือกตำบล/แขวง</option>
                         <option value="บึง">บึง</option>
                         <option value="ศรีราชา">ศรีราชา</option>
@@ -327,14 +327,14 @@
                         
                     </select>
                     <label>รหัสไปรษณีย์</label></br>
-                    <select  class="form-select" name="posnum" id="small-inputv2">
+                    <select  class="form-select" name="posnum_deliver_niit" id="small-inputv2">
                         <option value="" disabled selected>เลือกรหัสไปรษณีย์</option>
                         <option value="20230">20230</option>
                         <option value="20110">20110</option>
                         
                     </select>
               </div>
-            </div> -->
+            </div>
             </div>
             <label>อื่นๆ</label></br>
             <input type="text" id="large-inputv2" class="form-control " placeholder="กรอกรายละเอียด">
@@ -573,11 +573,11 @@ $(document).ready(function(){
   $("#check").click(function(){
     if($(this).is(":checked")){
       var additionalcheck = document.getElementById("additionalcheck");
-      additionalcheck.style.display = "block";
+      additionalcheck.style.display = "none";
     }
     else{
       var additionalcheck = document.getElementById("additionalcheck");
-      additionalcheck.style.display = "none";
+      additionalcheck.style.display = "block";
     }
   });
 });
@@ -585,11 +585,11 @@ $(document).ready(function(){
   $("#check2").click(function(){
     if($(this).is(":checked")){
       var additionalcheck = document.getElementById("additionalcheck2");
-      additionalcheck.style.display = "block";
+      additionalcheck.style.display = "none";
     }
     else{
       var additionalcheck = document.getElementById("additionalcheck2");
-      additionalcheck.style.display = "none";
+      additionalcheck.style.display = "block";
     }
   });
 });
