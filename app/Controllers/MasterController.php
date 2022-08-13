@@ -143,20 +143,11 @@ class MasterController extends BaseController
             'master_name' => $getPost['name'],
             'master_detail' => $getPost['detail'],
         ];
-        if (isset($getPost['earring']) && $getPost['earring'] == "on") {
-            $data['type']['earring'] = "earring";
-        }
-        if (isset($getPost['necklace']) && $getPost['necklace'] == "on") {
-            $data['type']['necklace'] = "necklace";
-        }
-        if (isset($getPost['ring']) && $getPost['ring'] == "on") {
-            $data['type']['ring'] = "ring";
-        }
-        if (isset($getPost['bangle']) && $getPost['bangle'] == "on") {
-            $data['type']['bangle'] = "bangle";
-        }
-        if (isset($getPost['anklet']) && $getPost['anklet'] == "on") {
-            $data['type']['anklet'] = "anklet";
+        for($i = 0; $i < $getPost['group_lenght']; $i++) {
+            if(isset($getPost['checkbox' . $i])){
+                $data['product_type'][$getPost['checkbox' . $i]] = $getPost['checkbox' . $i];
+            }
+            
         }
         $masterService->edit_itemProductSize($data);
         return redirect()->to(base_url('/mastersize'));
@@ -227,6 +218,7 @@ class MasterController extends BaseController
             'master_code' => $getPost['code'],
             'master_name' => $getPost['name'],
             'master_detail' => $getPost['detail'],
+            'price' => $getPost['price'],
         ];
         $masterService->insert_metalName($data);
         return redirect()->to(base_url('/mastermetalname'));
@@ -240,6 +232,7 @@ class MasterController extends BaseController
             'master_code' => $getPost['code'],
             'master_name' => $getPost['name'],
             'master_detail' => $getPost['detail'],
+            'price' => $getPost['price'],
         ];
         $masterService->edit_metalName($data);
         return redirect()->to(base_url('/mastermetalname'));
@@ -544,21 +537,30 @@ class MasterController extends BaseController
     {
         $masterService = new MasterService();
         $data = [
-            'getData' => $masterService->get_gemSize()
+            'getData' => $masterService->get_gemSize(),
+            'gem_group' => $masterService->get_gem_group_type(),
         ];
-        return view('gemsize', $data);
+        return view('mastergemsize', $data);
     }
     public function insert_gemSize()
     {
+        print_r($this->request->getPost());
         $masterService = new MasterService();
         $getPost = $this->request->getPost();
         $data = [
             'master_code' => $getPost['code'],
             'master_name' => $getPost['name'],
             'master_detail' => $getPost['detail'],
+            
         ];
+        for($i = 0; $i < $getPost['group_lenght']; $i++) {
+            if(isset($getPost['checkbox' . $i])){
+                $data['product_type'][$getPost['checkbox' . $i]] = $getPost['checkbox' . $i];
+            }
+            
+        }
         $masterService->insert_gemSize($data);
-        return redirect()->to(base_url('/gemsize'));
+        return redirect()->to(base_url('/mastergemsize'));
     }
     public function edit_gemSize($uid)
     {
@@ -570,14 +572,20 @@ class MasterController extends BaseController
             'master_name' => $getPost['name'],
             'master_detail' => $getPost['detail'],
         ];
+        for($i = 0; $i < $getPost['group_lenght']; $i++) {
+            if(isset($getPost['checkbox' . $i])){
+                $data['product_type'][$getPost['checkbox' . $i]] = $getPost['checkbox' . $i];
+            }
+            
+        }
         $masterService->edit_gemSize($data);
-        return redirect()->to(base_url('/gemsize'));
+        return redirect()->to(base_url('/mastergemsize'));
     }
     public function delete_gemSize($uid)
     {
         $masterService = new MasterService();
         $masterService->delete_gemSize($uid);
-        return redirect()->to(base_url('/gemsize'));
+        return redirect()->to(base_url('/mastergemsize'));
     }
 
     // other_inventory

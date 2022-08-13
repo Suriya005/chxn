@@ -8,7 +8,7 @@ include_once APPPATH . 'Views/header.php';
 <div class="row " style="padding-left:250px; margin-bottom:15px; margin-top:100px; font-size:25px;">
   <div class="col-9"><a style="font-size:25px;font-weight: 500;color: #2A2A2A;">มาสเตอร์ ขนาดสินค้า</a></div>
   <div class="col-3"><button type="button" class="btnchxcan" style="margin-right:20px; width:150px; ">ยกเลิก</button>
-    <button type="button" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="insert_form()" disabled>บันทึก</button>
+    <button type="button" class="btnchxsave" style="width:150px;" data-bs-toggle="modal" data-bs-target="#exampleModal" id="submit_btn" onclick="insert_form()" disabled>บันทึก</button>
 
   </div>
 </div>
@@ -38,7 +38,7 @@ include_once APPPATH . 'Views/header.php';
         <p>ข้อมูลทั่วไป</p>
         <form method="post" id="form_item_product_size">
           <lebel>รหัส Code <a style="color:red;">*</a></lebel></br>
-          <input type="text" id="code" name="code" class="form-control "  style="width: 477px;height: 45px;"placeholder="รหัส Code">
+          <input type="text" id="code" name="code" class="form-control " style="width: 477px;height: 45px;" placeholder="รหัส Code">
           <lebel>ชื่อ</lebel></br>
           <input type="text" id="name" name="name" class="form-control " style="width: 477px;height: 45px;" placeholder="ชื่อ">
           <lebel>รายละเอียด</lebel></br>
@@ -60,20 +60,18 @@ include_once APPPATH . 'Views/header.php';
           <!-- input hiden -->
 
           <?php
-
           foreach ($data_group as $key => $item) {
           ?>
             <div class="form-check">
               <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 150px;">
 
-                <input type="checkbox" id="checkbox<?= $key ?>" name="checkbox<?= $key ?>" value="<?php echo $item->master_name; ?>">
+                <input type="checkbox" class="checkbox_type" id="checkbox<?= $key ?>" name="checkbox<?= $key ?>" value="<?php echo $item->master_name; ?>">
                 <span class="checkmarks"></span>
                 <?php echo $item->master_name; ?>
               </label>
             </div>
           <?php
           }
-
           ?>
 
 
@@ -143,12 +141,16 @@ include_once APPPATH . 'Views/header.php';
       </tr>
 
       <?php
-      
+
       foreach ($getData as $row) {
-        
-        $parameter = '`' . $row->master_code . '`' . ',' . '`' . $row->master_name . '`' . ',' . '`' . $row->master_detail . '`' .  ',' . $row->uid . ',[`test`, `test2`]';
+        $js_json = json_encode($row, JSON_UNESCAPED_UNICODE);
+        $js_parameter = str_replace('"', "'", $js_json);
+        $js_parameter = str_replace('\\', '', $js_parameter);
+        $js_parameter = str_replace("'{", '{', $js_parameter);
+        $js_parameter = str_replace("}'", '}', $js_parameter);
+
       ?>
-        <tr onclick="edit_data(<?php echo $parameter; ?> )">
+        <tr onclick="edit_data(<?php echo $js_parameter; ?> )">
           <td scope="row">
             <label class="containerv2" style=" padding-left:40px; margin-top:-11px; width: 30px;">
               <input type="checkbox" name="checkbox[]" value="<?= $row->uid ?>">
@@ -158,7 +160,7 @@ include_once APPPATH . 'Views/header.php';
           <td><?php echo $row->master_code; ?></td>
           <td><?php echo $row->master_name; ?></td>
           <td><?php echo $row->master_detail; ?></td>
-                 
+
           <td><label class="switch" style="margin-top:0;">
               <input type="checkbox">
               <span class="slider round"></span>
@@ -198,34 +200,41 @@ include_once APPPATH . 'Views/header.php';
 
 
 <script>
-  function edit_data(code, name, detail, uid, parent_id) {
+  function edit_data(data) {
+    let checkbox_count = document.getElementsByClassName('checkbox_type').length
+    for (let c in data.parent_id) {
+      for (let i = 0; i < checkbox_count; i++) {
+        if (data.parent_id[c] == document.getElementsByClassName('checkbox_type')[i].value) {
+          document.getElementsByClassName('checkbox_type')[i].checked = true;
+        }
+      }
+    }
+    $('#code').val(data.master_code);
+    $('#name').val(data.master_name);
+    $('#detail').val(data.master_detail);
 
-    document.getElementById('code').value = code;
-    document.getElementById('name').value = name;
-    document.getElementById('detail').value = detail;
-   
-    
-    let form_item_product_size = document.getElementById('form_item_product_size');
-    form_item_product_size.action = `master/itemproductsize/edit/${uid}`;
+    let submit = document.getElementById('submit_btn');
+    submit.setAttribute('onclick', `edit_form(${data.uid})`);
+
+
+
   }
 
   function all_btn() {
     const select_all = document.getElementById('select_all')
-    if (document.getElementById('select_all').checked) {
-      document.getElementById('earring').checked = true;
-      document.getElementById('necklace').checked = true;
-      document.getElementById('bangle').checked = true;
-      document.getElementById('ring').checked = true;
-      document.getElementById('anklet').checked = true;
-
-    } else {
-      document.getElementById('earring').checked = false;
-      document.getElementById('necklace').checked = false;
-      document.getElementById('bangle').checked = false;
-      document.getElementById('ring').checked = false;
-      document.getElementById('anklet').checked = false;
+    let checkbox_count = document.getElementsByClassName('checkbox_type').length
+    if (select_all.checked == true) {
+      for (let i = 0; i < checkbox_count; i++) {
+        document.getElementsByClassName('checkbox_type')[i].checked = true;
+      } 
+    }else{
+        for (let i = 0; i < checkbox_count; i++) {
+          document.getElementsByClassName('checkbox_type')[i].checked = false;
+        }
+      }
     }
-  }
+
+  
 
   function delect_item(uid) {
     if (confirm('ต้องการลบข้อมูลหรือไม่ ?')) {
@@ -242,8 +251,9 @@ include_once APPPATH . 'Views/header.php';
     form_item_product_size.action = "<?= base_url('master/itemproductsize/insert') ?>";
   }
 
-  function edit_form() {
-
+  function edit_form(uid) {
+    let form_item_product_size = document.getElementById('form_item_product_size');
+    form_item_product_size.action = `master/itemproductsize/edit/${uid}`;
   }
 
 

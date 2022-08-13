@@ -45,7 +45,7 @@ include_once APPPATH . 'Views/header.php';
       <div class="col-4">
     <p>ข้อมูลราคา</p>
         <label>ราคา</label></br>
-        <input type="text" id="large-inputv2" class="form-control " placeholder="ราคา">
+        <input type="text" id="price" name="price" class="form-control " placeholder="ราคา">
     </div>
     </form>
     </div>
@@ -107,7 +107,10 @@ include_once APPPATH . 'Views/header.php';
 
       <?php
       foreach ($getData as $item) {
-        $parameter = '`' . $item->master_code . '`' . ',' . '`' . $item->master_name . '`' . ',' . '`' . $item->master_detail . '`' . ',' . $item->uid;
+        $price = $item->parent_id;
+        // replace '
+        $price = str_replace('"', "`", $price);
+        $parameter = '`' . $item->master_code . '`' . ',' . '`' . $item->master_name . '`' . ',' . '`' . $item->master_detail . '`' . ',' . $item->uid. ',' . $price;
       ?>
         <tr onclick="edit_form(<?= $parameter ?>)">
           <td><label class="containerv2" style=" padding-left:40px; margin-top:-11px; width: 30px;">
@@ -150,11 +153,12 @@ include_once APPPATH . 'Views/header.php';
     form.action = "master/metal_name/insert";
   }
 
-  function edit_form(code, name, detail, uid) {
+  function edit_form(code, name, detail, uid, price) {
 
     document.getElementById('code').value = code;
     document.getElementById('name').value = name;
     document.getElementById('detail').value = detail;
+    document.getElementById('price').value = price;
     let form = document.getElementById('main_form');
     form.action = "master/metal_name/edit/" + uid;
     let submit = document.getElementById('submit_form');

@@ -10,7 +10,7 @@ class CompanyPartnerController extends BaseController
     public function index()
     {
         $data = [];
-        $data['customer'] = (new CompanyPartnerService())->getData_company_customer();
+        $data['customer'] = (new CompanyPartnerService())->getData_company_partner();
         return view('part_profile', $data);
     }
     public function insert()

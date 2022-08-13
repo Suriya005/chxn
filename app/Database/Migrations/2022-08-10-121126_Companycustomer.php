@@ -100,7 +100,8 @@ class Companycustomer extends Migration
                 'constraint'     => 5,
             ], 
             'province' => [
-                'type'       => 'text',
+                'type'       => 'INT',
+                'constraint'     => 5,
             ],    
             'poscode' => [
                 'type'       => 'INT',
@@ -123,7 +124,8 @@ class Companycustomer extends Migration
                 'constraint'     => 5,
             ], 
             'deliver_province' => [
-                'type'       => 'text',
+                'type'       => 'INT',
+                'constraint'     => 5,
             ],    
             'deliver_poscode' => [
                 'type'       => 'INT',

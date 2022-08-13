@@ -122,17 +122,13 @@ class MasterService extends Model
         } catch (\Exception $e) {
             return false;
         }
-        // $parent_id = json_encode($data['product_type']);
-        // print_r($parent_id);
-        // $db = db_connect();
-        // $sql = "INSERT INTO master_product (master_code, master_name, master_detail, master_type, parent_id) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]', 'item_product_size', '$parent_id')";
-        // $db->query($sql);
+ 
     }
 
     public function edit_itemProductSize($data)
     {
         try {
-            $parent_id = json_encode($data['type']);
+            $parent_id = json_encode($data['product_type'], JSON_UNESCAPED_UNICODE);
             $db = db_connect();
             $sql = "UPDATE master_product SET master_code = '$data[master_code]', master_name = '$data[master_name]', master_detail = '$data[master_detail]', parent_id = '$parent_id' WHERE uid = '$data[uid]'";
             $db->query($sql);
@@ -208,8 +204,9 @@ class MasterService extends Model
     public function insert_metalName($data)
     {
         try {
+            $data_obj = json_encode($data['price'], JSON_UNESCAPED_UNICODE);
             $db = db_connect();
-            $sql = "INSERT INTO master_product (master_code, master_name, master_detail, master_type, parent_id) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]', 'metal_name', '0')";
+            $sql = "INSERT INTO master_product (master_code, master_name, master_detail, master_type, parent_id) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]', 'metal_name', '$data_obj')";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -219,8 +216,9 @@ class MasterService extends Model
     public function edit_metalName($data)
     {
         try {
+            $data_obj = json_encode($data['price'], JSON_UNESCAPED_UNICODE);
             $db = db_connect();
-            $sql = "UPDATE master_product SET master_code = '$data[master_code]', master_name = '$data[master_name]', master_detail = '$data[master_detail]' WHERE uid = '$data[uid]'";
+            $sql = "UPDATE master_product SET master_code = '$data[master_code]', master_name = '$data[master_name]', master_detail = '$data[master_detail]', parent_id = '$data_obj' WHERE uid = '$data[uid]'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -546,8 +544,9 @@ class MasterService extends Model
     public function insert_gemSize($data)
     {
         try {
+            $parent_id = json_encode($data['product_type'], JSON_UNESCAPED_UNICODE);
             $db = db_connect();
-            $sql = "INSERT INTO master_product (master_code, master_name, master_detail, master_type, parent_id) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]', 'gem_size', '0')";
+            $sql = "INSERT INTO master_product (master_code, master_name, master_detail, master_type, parent_id) VALUES ('$data[master_code]', '$data[master_name]', '$data[master_detail]', 'gem_size', '$parent_id')";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -557,8 +556,9 @@ class MasterService extends Model
     public function edit_gemSize($data)
     {
         try {
+            $parent_id = json_encode($data['product_type'], JSON_UNESCAPED_UNICODE);
             $db = db_connect();
-            $sql = "UPDATE master_product SET master_code = '$data[master_code]', master_name = '$data[master_name]', master_detail = '$data[master_detail]' WHERE uid = '$data[uid]'";
+            $sql = "UPDATE master_product SET master_code = '$data[master_code]', master_name = '$data[master_name]', master_detail = '$data[master_detail]', parent_id = '$parent_id' WHERE uid = '$data[uid]'";
             $db->query($sql);
             return true;
         } catch (\Exception $e) {
@@ -665,6 +665,13 @@ class MasterService extends Model
     public function get_product_type_by_group(){
         $db = db_connect();
         $sql = "SELECT * FROM `master_product` WHERE master_type = 'item_product_type' GROUP by master_name";
+        $query = $db->query($sql);
+        return $query->getResult();
+    }
+
+    public function get_gem_group_type(){
+        $db = db_connect();
+        $sql = "SELECT * FROM `master_product` WHERE master_type = 'gem_group' GROUP by master_name";
         $query = $db->query($sql);
         return $query->getResult();
     }

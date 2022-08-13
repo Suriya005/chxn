@@ -65,6 +65,9 @@ $routes->post('/cusprofile/delete/(:num)', 'CompanyCustomerController::delete/$1
 $routes->post('/cusprofile/insert', 'CompanyCustomerController::insert');
 
 $routes->get('/partprofile', 'CompanyPartnerController::index');
+$routes->post('/partprofile/update/(:num)', 'CompanyPartnerController::update/$1');
+$routes->post('/partprofile/delete/(:num)', 'CompanyPartnerController::delete/$1');
+$routes->post('/partprofile/insert', 'CompanyPartnerController::insert');
 
 
 
@@ -142,10 +145,10 @@ $routes->post('/master/gem_quality/edit/(:num)', 'MasterController::edit_gemQual
 $routes->post('/master/gem_quality/delete/(:num)', 'MasterController::delete_gemQuality/$1');
 
 // gem_size
-$routes->post('/master/gem_size/insert', 'MasterController::insert_gem_size');
-$routes->get('/master/gem_size/get', 'MasterController::get_gem_size');
-$routes->post('/master/gem_size/edit/(:num)', 'MasterController::edit_gem_size/$1');
-$routes->post('/master/gem_size/delete/(:num)', 'MasterController::delete_gem_size/$1');
+$routes->post('/master/gem_size/insert', 'MasterController::insert_gemSize');
+$routes->get('/mastergemsize', 'MasterController::get_gemSize');
+$routes->post('/master/gem_size/edit/(:num)', 'MasterController::edit_gemSize/$1');
+$routes->post('/master/gem_size/delete/(:num)', 'MasterController::delete_gemSize/$1');
 
 //other_inventory
 $routes->post('/master/other_inventory/insert', 'MasterController::insert_other_inventory');
@@ -177,7 +180,7 @@ $routes->get('/masterproduct', 'Home::masterproduct');
 
 
 
-$routes->get('/mastergemsize', 'Home::mastergemsize');
+// $routes->get('/mastergemsize', 'Home::mastergemsize');
 $routes->get('/productstone', 'Home::productstone');
 $routes->get('/productjewelry', 'Home::productjewelry');
 $routes->get('/saleorder/saleorderstone', 'Home::saleorderstone');

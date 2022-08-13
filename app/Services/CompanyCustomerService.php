@@ -50,31 +50,31 @@ use CodeIgniter\Model;
 
        public function updateNiti($data, $uid){
         if(isset($data['check2']) && $data['check2'] == 'on'){
-            $sql = "UPDATE `company_customer` SET `customer_id`='$data[company_id]', `fullname`='$data[fullname_niti]', `birthday`='$data[birthday]', `email`='$data[email_niti]', `tel`='$data[tel_niti]', `line_id`='$data[line_id]', `id_card_number`='$data[id_card_number]', `company_name`='$data[company_name]', `company_registation_id`='$data[company_registation_id]', `company_branch_id`='$data[company_branch_id]', `address`='$data[address_niti]', `province`='$data[province_niti]', `poscode`='$data[posnum_niti]', `additional`='$data[additional_niti]', `address_deliver_product`='same_address' WHERE `uid`='$uid'";
+            $sql = "UPDATE `company_customer` SET `customer_id`='$data[company_id]', `fullname`='$data[fullname_niti]', `birthday`='$data[birthday]', `email`='$data[email_niti]', `tel`='$data[tel_niti]', `line_id`='$data[line_id]', `id_card_number`='$data[id_card_number]', `company_name`='$data[company_name]', `company_registation_id`='$data[company_registation_id]', `district`='$data[distric_niti]', `sub_district`='$data[sub_distric_niti]', `company_branch_id`='$data[company_branch_id]', `address`='$data[address_niti]', `province`='$data[province_niti]', `poscode`='$data[posnum_niti]', `additional`='$data[additional_niti]', `address_deliver_product`='same_address' WHERE `uid`='$uid'";
             $db = db_connect();
             $db->query($sql);
         }else{
-            $sql = "UPDATE `company_customer` SET `customer_id`='$data[company_id]', `fullname`='$data[fullname_niti]', `birthday`='$data[birthday]', `email`='$data[email_niti]', `tel`='$data[tel_niti]', `line_id`='$data[line_id]', `id_card_number`='$data[id_card_number]', `company_name`='$data[company_name]', `company_registation_id`='$data[company_registation_id]', `company_branch_id`='$data[company_branch_id]', `address`='$data[address_niti]', `province`='$data[province_niti]', `poscode`='$data[posnum_niti]', `additional`='$data[additional_niti]', `address_deliver_product`='$data[address_delivery_niti]', `deliver_district`='$data[distric_deliver_niti]', `deliver_sub_district`='$data[sub_distric_deliver_niti]', `deliver_province`='$data[province_deliver_niti]', `deliver_poscode`='$data[posnum_deliver_niti]' WHERE `uid`='$uid'";
+            $sql = "UPDATE `company_customer` SET `customer_id`='$data[company_id]', `fullname`='$data[fullname_niti]', `birthday`='$data[birthday]', `email`='$data[email_niti]', `tel`='$data[tel_niti]', `line_id`='$data[line_id]', `id_card_number`='$data[id_card_number]', `company_name`='$data[company_name]', `company_registation_id`='$data[company_registation_id]', `district`='$data[distric_niti]', `sub_district`='$data[sub_distric_niti]', `company_branch_id`='$data[company_branch_id]', `address`='$data[address_niti]', `province`='$data[province_niti]', `poscode`='$data[posnum_niti]', `additional`='$data[additional_niti]', `address_deliver_product`='$data[address_delivery_niti]', `deliver_district`='$data[distric_deliver_niti]', `deliver_sub_district`='$data[sub_distric_deliver_niti]', `deliver_province`='$data[province_deliver_niti]', `deliver_poscode`='$data[posnum_deliver_niti]' WHERE `uid`='$uid'";
             $db = db_connect();
             $db->query($sql);
         }
-        // , `district`='$data[distric_niti]', `sub_district`='$data[sub_distric_niti]'
+        // 
 
        }
 
        public function update_nomal($data, $uid){
         if(isset($data['check_tex_address']) && $data['check_tex_address'] == 'on'){
-            $sql = "UPDATE `company_customer` SET `customer_id`='$data[customer_id]', `fullname`='$data[fullname]', `birthday`='$data[birthday]', `email`='$data[email]', `tel`='$data[tel]', `line_id`='$data[line_id]', `id_card_number`='$data[id_card_number]', `company_name`='$data[company_name]', `company_registation_id`='$data[company_registation_id]', `company_branch_id`='$data[company_branch_id]', `address`='$data[address_nomal]', `province`='$data[province]', `poscode`='$data[posnum]', `additional`='$data[additional]', `address_deliver_product`='same_address' WHERE `uid`='$uid'";
+            $sql = "UPDATE `company_customer` SET `customer_id`='$data[customer_id]', `fullname`='$data[fullname]', `birthday`='$data[birthday]', `email`='$data[email]', `tel`='$data[tel]', `line_id`='$data[line_id]', `id_card_number`='$data[id_card_number]', `company_name`='$data[company_name]', `company_registation_id`='$data[company_registation_id]', `company_branch_id`='$data[company_branch_id]', `address`='$data[address_nomal]',`district`='$data[distric]', `sub_district`='$data[sub_distric]', `province`='$data[province]', `poscode`='$data[posnum]', `additional`='$data[additional]', `address_deliver_product`='same_address' WHERE `uid`='$uid'";
             $db = db_connect();
             $db->query($sql);
         }else{
-            $sql = "UPDATE `company_customer` SET `fullname`='$data[fullname]', `birthday`='$data[birthday]', `email`='$data[email]', `tel`='$data[tel]', `line_id`='$data[line_id]', `id_card_number`='$data[id_card_number]', `company_name`='$data[company_name]', `company_registation_id`='$data[company_registation_id]', `company_branch_id`='$data[company_branch_id]', `address`='$data[address]', `province`='$data[province]', `poscode`='$data[posnum]', `additional`='$data[additional]', `address_deliver_product`='$data[address_delivery]', `deliver_district`='$data[distric_deliver]', `deliver_sub_district`='$data[sub_distric_deliver]', `deliver_province`='$data[province_deliver]', `deliver_poscode`='$data[posnum_deliver]' WHERE `uid`='$uid'";
+            $sql = "UPDATE `company_customer` SET `customer_id`='$data[customer_id]',`fullname`='$data[fullname]', `birthday`='$data[birthday]', `email`='$data[email]', `tel`='$data[tel]', `line_id`='$data[line_id]', `id_card_number`='$data[id_card_number]', `company_name`='$data[company_name]', `company_registation_id`='$data[company_registation_id]', `company_branch_id`='$data[company_branch_id]', `address`='$data[address_nomal]',`district`='$data[distric]', `sub_district`='$data[sub_distric]', `province`='$data[province]', `poscode`='$data[posnum]', `additional`='$data[additional]', `address_deliver_product`='$data[address_delivery]', `deliver_district`='$data[distric_deliver]', `deliver_sub_district`='$data[sub_distric_deliver]', `deliver_province`='$data[province_deliver]', `deliver_poscode`='$data[posnum_deliver]' WHERE `uid`='$uid'";
             $db = db_connect();
             $db->query($sql);
         }
        }
 
-    //    `district`='$data[distric]', `sub_district`='$data[sub_distric]',
+    //  
 
     // delete customer
     public function delete_customer($uid){

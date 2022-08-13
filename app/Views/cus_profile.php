@@ -125,37 +125,29 @@ include_once APPPATH . 'Views/header.php';
           <div class="row">
             <div class="col-6" style="max-width: 43%; ">
               <label>จังหวัด</label></br>
-              <select class="form-select" name="province" id="province">
+              <select class="form-select" name="province" id="province" onchange="select_amphures()">
                 <option value="" disabled selected>เลือกจังหวัด</option>
-                <option value="ชลบุรี">ชลบุรี</option>
-                <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-                <option value="นครสวรรค์">นครสวรรค์</option>
-                <option value="นครปฐม">นครปฐม</option>
+
               </select>
 
               <label>อำเภอ/เขต</label></br>
-              <select class="form-select" name="distric" id="distric">
+              <select class="form-select" name="distric" id="distric" onchange="select_tambons()">
                 <option value="" disabled selected>เลือกอำเภอ/เขต</option>
-                <option value="บึง">บึง</option>
-                <option value="ศรีราชา">ศรีราชา</option>
-                <option value="บ่อวิน">บ่อวิน</option>
+
 
               </select>
             </div>
             <div class="col-6">
               <label>ตำบล/แขวง</label></br>
-              <select class="form-select" name="sub_distric" id="sub_distric">
+              <select class="form-select" name="sub_distric" id="sub_distric" onchange="select_poscode()">
                 <option value="" disabled selected>เลือกตำบล/แขวง</option>
-                <option value="บึง">บึง</option>
-                <option value="ศรีราชา">ศรีราชา</option>
-                <option value="บ่อวิน">บ่อวิน</option>
+
 
               </select>
               <label>รหัสไปรษณีย์</label></br>
               <select class="form-select" name="posnum" id="posnum">
                 <option value="" disabled selected>เลือกรหัสไปรษณีย์</option>
-                <option value="20230">20230</option>
-                <option value="20110">20110</option>
+
 
               </select>
             </div>
@@ -176,37 +168,29 @@ include_once APPPATH . 'Views/header.php';
             <div class="row">
               <div class="col-6" style="max-width: 43%; ">
                 <label>จังหวัด</label></br>
-                <select class="form-select" name="province_deliver" id="small-inputv2">
+                <select class="form-select" name="province_deliver" id="province_deliver" onchange="select_amphures_deliver()">
                   <option value="" disabled selected>เลือกจังหวัด</option>
-                  <option value="ชลบุรี">ชลบุรี</option>
-                  <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-                  <option value="นครสวรรค์">นครสวรรค์</option>
-                  <option value="นครปฐม">นครปฐม</option>
+
                 </select>
 
                 <label>อำเภอ/เขต</label></br>
-                <select class="form-select" name="distric_deliver" id="small-inputv2">
+                <select class="form-select" name="distric_deliver" id="distric_deliver" onchange="select_tambons_deliver()">
                   <option value="" disabled selected>เลือกอำเภอ/เขต</option>
-                  <option value="บึง">บึง</option>
-                  <option value="ศรีราชา">ศรีราชา</option>
-                  <option value="บ่อวิน">บ่อวิน</option>
+
 
                 </select>
               </div>
               <div class="col-6">
                 <label>ตำบล/แขวง</label></br>
-                <select class="form-select" name="sub_distric_deliver" id="small-inputv2">
+                <select class="form-select" name="sub_distric_deliver" id="sub_distric_deliver" onchange="select_poscode_deliver()">
                   <option value="" disabled selected>เลือกตำบล/แขวง</option>
-                  <option value="บึง">บึง</option>
-                  <option value="ศรีราชา">ศรีราชา</option>
-                  <option value="บ่อวิน">บ่อวิน</option>
+
 
                 </select>
                 <label>รหัสไปรษณีย์</label></br>
-                <select class="form-select" name="posnum_deliver" id="small-inputv2">
+                <select class="form-select" name="posnum_deliver" id="posnum_deliver">
                   <option value="" disabled selected>เลือกรหัสไปรษณีย์</option>
-                  <option value="20230">20230</option>
-                  <option value="20110">20110</option>
+
 
                 </select>
               </div>
@@ -254,37 +238,29 @@ include_once APPPATH . 'Views/header.php';
           <div class="row">
             <div class="col-6" style="max-width: 43%; ">
               <label>จังหวัด</label></br>
-              <select class="form-select" name="province_niti" id="province_niti">
+              <select class="form-select" name="province_niti" id="province_niti" onchange="select_amphures_niti()">
                 <option value="" disabled selected>เลือกจังหวัด</option>
-                <option value="ชลบุรี">ชลบุรี</option>
-                <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-                <option value="นครสวรรค์">นครสวรรค์</option>
-                <option value="นครปฐม">นครปฐม</option>
+
               </select>
 
               <label>อำเภอ/เขต</label></br>
-              <select class="form-select" name="distric_niti" id="distric_niti">
+              <select class="form-select" name="distric_niti" id="distric_niti" onchange="select_tambons_niti()">
                 <option value="" disabled selected>เลือกอำเภอ/เขต</option>
-                <option value="บึง">บึง</option>
-                <option value="ศรีราชา">ศรีราชา</option>
-                <option value="บ่อวิน">บ่อวิน</option>
+
 
               </select>
             </div>
             <div class="col-6">
               <label>ตำบล/แขวง</label></br>
-              <select class="form-select" name="sub_distric_niti" id="sub_distric_niti">
+              <select class="form-select" name="sub_distric_niti" id="sub_distric_niti" onchange="select_poscode_niti()">
                 <option value="" disabled selected>เลือกตำบล/แขวง</option>
-                <option value="บึง">บึง</option>
-                <option value="ศรีราชา">ศรีราชา</option>
-                <option value="บ่อวิน">บ่อวิน</option>
+
 
               </select>
               <label>รหัสไปรษณีย์</label></br>
               <select class="form-select" name="posnum_niti" id="posnum_niti">
                 <option value="" disabled selected>เลือกรหัสไปรษณีย์</option>
-                <option value="20230">20230</option>
-                <option value="20110">20110</option>
+
 
               </select>
             </div>
@@ -305,37 +281,29 @@ include_once APPPATH . 'Views/header.php';
             <div class="row">
               <div class="col-6" style="max-width: 43%; ">
                 <label>จังหวัด</label></br>
-                <select class="form-select" name="province_deliver_niti" id="province_deliver_niti">
+                <select class="form-select" name="province_deliver_niti" id="province_deliver_niti" onchange="select_amphures_niti_deliver()">
                   <option value="" disabled selected>เลือกจังหวัด</option>
-                  <option value="ชลบุรี">ชลบุรี</option>
-                  <option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option>
-                  <option value="นครสวรรค์">นครสวรรค์</option>
-                  <option value="นครปฐม">นครปฐม</option>
+
                 </select>
 
                 <label>อำเภอ/เขต</label></br>
-                <select class="form-select" name="distric_deliver_niti" id="distric_deliver_niti">
+                <select class="form-select" name="distric_deliver_niti" id="distric_deliver_niti" onchange="select_tambons_niti_deliver()">
                   <option value="" disabled selected>เลือกอำเภอ/เขต</option>
-                  <option value="บึง">บึง</option>
-                  <option value="ศรีราชา">ศรีราชา</option>
-                  <option value="บ่อวิน">บ่อวิน</option>
+
 
                 </select>
               </div>
               <div class="col-6">
                 <label>ตำบล/แขวง</label></br>
-                <select class="form-select" name="sub_distric_deliver_niti" id="sub_distric_deliver_niti">
+                <select class="form-select" name="sub_distric_deliver_niti" id="sub_distric_deliver_niti" onchange="select_poscode_niti_deliver()">
                   <option value="" disabled selected>เลือกตำบล/แขวง</option>
-                  <option value="บึง">บึง</option>
-                  <option value="ศรีราชา">ศรีราชา</option>
-                  <option value="บ่อวิน">บ่อวิน</option>
+
 
                 </select>
                 <label>รหัสไปรษณีย์</label></br>
                 <select class="form-select" name="posnum_deliver_niti" id="posnum_deliver_niti">
                   <option value="" disabled selected>เลือกรหัสไปรษณีย์</option>
-                  <option value="20230">20230</option>
-                  <option value="20110">20110</option>
+
 
                 </select>
               </div>
@@ -487,7 +455,171 @@ include_once APPPATH . 'Views/header.php';
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 <script>
+  window.onload = function() {
+
+    // จังหวัด json file
+    // path json public/assets/json/province.json
+    $.getJSON("<?= base_url('assets/json/thai_provinces.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        $("#province").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        $("#province_deliver").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        $("#province_niti").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        $("#province_deliver_niti").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+      });
+    });
+  }
+
+  function select_amphures() {
+    var province_id = $("#province").val();
+    $("#distric").empty();
+    $.getJSON("<?= base_url('assets/json/thai_amphures.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.province_id == province_id) {
+          $("#distric").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_amphures_deliver() {
+    var province_id = $("#province_deliver").val();
+    $("#distric_deliver").empty();
+    $.getJSON("<?= base_url('assets/json/thai_amphures.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.province_id == province_id) {
+          $("#distric_deliver").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_amphures_niti() {
+    var province_id = $("#province_niti").val();
+    $("#distric_niti").empty();
+    $.getJSON("<?= base_url('assets/json/thai_amphures.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.province_id == province_id) {
+          $("#distric_niti").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_amphures_niti_deliver() {
+    var province_id = $("#province_deliver_niti").val();
+    $("#distric_deliver_niti").empty();
+    $.getJSON("<?= base_url('assets/json/thai_amphures.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.province_id == province_id) {
+          $("#distric_deliver_niti").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_tambons() {
+    var distric_id = $("#distric").val();
+    $("#sub_distric").empty();
+    $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.amphure_id == distric_id) {
+          $("#sub_distric").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_tambons_deliver() {
+    var distric_id = $("#distric_deliver").val();
+    $("#sub_distric_deliver").empty();
+    $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.amphure_id == distric_id) {
+          $("#sub_distric_deliver").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_tambons_niti() {
+    var distric_id = $("#distric_niti").val();
+    $("#sub_distric_niti").empty();
+    $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.amphure_id == distric_id) {
+          $("#sub_distric_niti").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_tambons_niti_deliver() {
+    var distric_id = $("#distric_deliver_niti").val();
+    $("#sub_distric_deliver_niti").empty();
+    $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.amphure_id == distric_id) {
+          $("#sub_distric_deliver_niti").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_poscode() {
+    var sub_distric_id = $("#sub_distric").val();
+    $("#posnum").empty();
+    $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.id == sub_distric_id) {
+          $("#posnum").append("<option value='" + value.zip_code + "'>" + value.zip_code + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_poscode_deliver() {
+    var sub_distric_id = $("#sub_distric_deliver").val();
+    $("#posnum_deliver").empty();
+    $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.id == sub_distric_id) {
+          $("#posnum_deliver").append("<option value='" + value.zip_code + "'>" + value.zip_code + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_poscode_niti() {
+    var sub_distric_id = $("#sub_distric_niti").val();
+    $("#posnum_niti").empty();
+    $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.id == sub_distric_id) {
+          $("#posnum_niti").append("<option value='" + value.zip_code + "'>" + value.zip_code + "</option>");
+        }
+      });
+    });
+  }
+
+  function select_poscode_niti_deliver() {
+    var sub_distric_id = $("#sub_distric_deliver_niti").val();
+    $("#posnum_deliver_niti").empty();
+    $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+      $.each(data.RECORDS, function(key, value) {
+        if (value.id == sub_distric_id) {
+          $("#posnum_deliver_niti").append("<option value='" + value.zip_code + "'>" + value.zip_code + "</option>");
+        }
+      });
+    });
+  }
+
+
+
+
   function edit_data(data) {
+    let povince = data[0].province;
+    let distric = data[0].district;
+    let sub_distric = data[0].sub_district;
     let submit = document.getElementById('submit_btn');
     submit.setAttribute('onclick', `update_form(${data[0].uid})`);
 
@@ -499,10 +631,37 @@ include_once APPPATH . 'Views/header.php';
       $('#line_id').val(data[0].line_id);
       $('#tel').val(data[0].tel);
       $('#address').val(data[0].address);
+
       $('#province').val(data[0].province);
+
+
+      $.getJSON("<?= base_url('assets/json/thai_amphures.json') ?>", function(data) {
+        $("#distric").empty();
+        $.each(data.RECORDS, function(key, value) {
+          if (value.province_id == povince) {
+            $("#distric").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+          }
+        });
+      });
       $('#distric').val(data[0].district);
+
+      $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+        $("#sub_distric").empty();
+        $.each(data.RECORDS, function(key, value) {
+          if (value.amphure_id == distric) {
+            $("#sub_distric").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+          }
+        });
+      });
       $('#sub_distric').val(data[0].sub_district);
-      $('#postcode').val(data[0].postcode);
+      $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+        $("#posnum").empty();
+        $.each(data.RECORDS, function(key, value) {
+          if (value.id == sub_distric) {
+            $("#posnum").append("<option value='" + value.zip_code + "'>" + value.zip_code + "</option>");
+          }
+        });
+      });
       $('#birthday').val(data[0].birthday);
       $('#posnum').val(data[0].poscode);
       $('#age').val(data[0].age);
@@ -521,10 +680,37 @@ include_once APPPATH . 'Views/header.php';
       if (data[0].address_deliver_product != "same_address") {
         $('#check').prop('checked', false);
         document.getElementById('additionalcheck').style.display = 'block';
+
+        $.getJSON("<?= base_url('assets/json/thai_amphures.json') ?>", function(data) {
+          $("#distric_deliver").empty();
+          $.each(data.RECORDS, function(key, value) {
+            if (value.province_id == povince) {
+              $("#distric_deliver").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+            }
+          });
+        });
+        $('#distric_deliver').val(data[0].district);
+
+        $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+          $("#sub_distric_deliver").empty();
+          $.each(data.RECORDS, function(key, value) {
+            if (value.amphure_id == distric) {
+              $("#sub_distric_deliver").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+            }
+          });
+        });
+        $('#sub_distric_deliver').val(data[0].sub_district);
+        $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+          $("#posnum_deliver").empty();
+          $.each(data.RECORDS, function(key, value) {
+            if (value.id == sub_distric) {
+              $("#posnum_deliver").append("<option value='" + value.zip_code + "'>" + value.zip_code + "</option>");
+            }
+          });
+        });
+
         $('#address_delivery').val(data[0].address_deliver_product);
         $('#province_deliver').val(data[0].deliver_province);
-        $('#distric_deliver').val(data[0].deliver_district);
-        $('#sub_distric_deliver').val(data[0].deliver_sub_district);
         $('#posnum_deliver').val(data[0].deliver_poscode);
 
       }
@@ -539,18 +725,74 @@ include_once APPPATH . 'Views/header.php';
       $('#company_registation_id').val(data[0].company_registation_id);
       $('#company_branch_id').val(data[0].company_branch_id);
       $('#address_niti').val(data[0].address);
-      $('#posnum_niti').val(data[0].poscode);
       $('#province_niti').val(data[0].province);
+
+      $.getJSON("<?= base_url('assets/json/thai_amphures.json') ?>", function(data) {
+        $("#distric_niti").empty();
+        $.each(data.RECORDS, function(key, value) {
+          if (value.province_id == povince) {
+            $("#distric_niti").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+          }
+        });
+      });
       $('#distric_niti').val(data[0].district);
+
+      $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+        $("#sub_distric_niti").empty();
+        $.each(data.RECORDS, function(key, value) {
+          if (value.amphure_id == distric) {
+            $("#sub_distric_niti").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+          }
+        });
+      });
       $('#sub_distric_niti').val(data[0].sub_district);
+      $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+        $("#posnum_niti").empty();
+        $.each(data.RECORDS, function(key, value) {
+          if (value.id == sub_distric) {
+            $("#posnum_niti").append("<option value='" + value.zip_code + "'>" + value.zip_code + "</option>");
+          }
+        });
+      });
+      $('#posnum_niti').val(data[0].postcode);
+
+
       if (data[0].address_deliver_product != "same_address") {
         $('#check2').prop('checked', false);
         document.getElementById('additionalcheck2').style.display = 'block';
+
+        $.getJSON("<?= base_url('assets/json/thai_amphures.json') ?>", function(data) {
+          $("#distric_deliver_niti").empty();
+          $.each(data.RECORDS, function(key, value) {
+            if (value.province_id == povince) {
+              $("#distric_deliver_niti").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+            }
+          });
+        });
+        $('#distric_deliver_niti').val(data[0].district);
+
+        $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+          $("#sub_distric_deliver_niti").empty();
+          $.each(data.RECORDS, function(key, value) {
+            if (value.amphure_id == distric) {
+              $("#sub_distric_deliver_niti").append("<option value='" + value.id + "'>" + value.name_th + "</option>");
+            }
+          });
+        });
+        $('#sub_distric_deliver_niti').val(data[0].sub_district);
+        $.getJSON("<?= base_url('assets/json/thai_tambons.json') ?>", function(data) {
+          $("#posnum_deliver_niti").empty();
+          $.each(data.RECORDS, function(key, value) {
+            if (value.id == sub_distric) {
+              $("#posnum_deliver_niti").append("<option value='" + value.zip_code + "'>" + value.zip_code + "</option>");
+            }
+          });
+        });
+
         $('#address_delivery_niti').val(data[0].address_deliver_product);
         $('#province_deliver_niti').val(data[0].deliver_province);
-        $('#distric_deliver_niti').val(data[0].deliver_district);
-        $('#sub_distric_deliver_niti').val(data[0].deliver_sub_district);
         $('#posnum_deliver_niti').val(data[0].deliver_poscode);
+        $('#additional_niti').val(data[0].additional);
       }
     }
   }

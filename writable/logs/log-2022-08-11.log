@@ -1,0 +1,56 @@
+CRITICAL - 2022-08-11 09:17:51 --> Undefined index: address
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 71, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '9')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('9')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-11 09:19:33 --> Undefined index: address
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 71, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(42): App\Services\CompanyCustomerService->update_nomal(Array, '9')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->update('9')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-11 09:52:02 --> Undefined index: line_id
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyCustomerService.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 11, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyCustomerController.php(25): App\Services\CompanyCustomerService->insert_nomal(Array)
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyCustomerController->insert()
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyCustomerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-11 09:56:30 --> Undefined index: address
+#0 E:\xampp\htdocs\chxn_git\app\Services\CompanyPartnerService.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 71, Array)
+#1 E:\xampp\htdocs\chxn_git\app\Controllers\CompanyPartnerController.php(40): App\Services\CompanyPartnerService->update_nomal(Array, '1')
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\CompanyPartnerController->update('1')
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CompanyPartnerController))
+#4 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-08-11 10:05:41 --> Undefined variable: js_array
+#0 E:\xampp\htdocs\chxn_git\app\Views\mastersize.php(149): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'E:\\xampp\\htdocs...', 149, Array)
+#1 E:\xampp\htdocs\chxn_git\system\View\View.php(210): include('E:\\xampp\\htdocs...')
+#2 E:\xampp\htdocs\chxn_git\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 E:\xampp\htdocs\chxn_git\system\Common.php(1089): CodeIgniter\View\View->render('mastersize', Array, true)
+#4 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(108): view('mastersize', Array)
+#5 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->get_itemProductSize()
+#6 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#7 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-08-11 11:06:29 --> Undefined index: price
+#0 E:\xampp\htdocs\chxn_git\app\Controllers\MasterController.php(221): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 221, Array)
+#1 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\MasterController->insert_metalName()
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MasterController))
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#6 {main}
