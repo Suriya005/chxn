@@ -186,10 +186,13 @@ $routes->post('/productstone/insert', 'ProductStoneController::insert');
 // delete
 $routes->post('/productstone/delete/(:num)', 'ProductStoneController::delete/$1');
 
+$routes->get('/productjewelry', 'ProductJewelryController::index');
+$routes->post('/productjewelry/insert', 'ProductJewelryController::insert');
+// delete
+$routes->post('/productjewelry/delete/(:num)', 'ProductJewelryController::delete/$1');
 
 
 
-$routes->get('/productjewelry', 'Home::productjewelry');
 $routes->get('/saleorder/saleorderstone', 'Home::saleorderstone');
 $routes->get('/saleorder/saleorderjewelry', 'Home::saleorderjewelry');
 $routes->get('/purchase/purchasestone', 'Home::purchasestone');

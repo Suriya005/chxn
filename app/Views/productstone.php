@@ -305,8 +305,8 @@ include_once APPPATH . 'Views/header.php';
   // on window load function pure javascript
   window.onload = function() {
     let data = <?php echo json_encode($data); ?>;
-    let product_group = document.getElementById('product_group');
     // add option to product_group
+    let product_group = document.getElementById('product_group');
     for (let i = 0; i < data.gem_group.length; i++) {
       let option = document.createElement('option');
       option.value = data.gem_group[i].uid;

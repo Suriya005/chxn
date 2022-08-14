@@ -258,3 +258,19 @@ CRITICAL - 2022-08-14 06:45:54 --> Undefined index: check
 #4 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2022-08-14 08:31:47 --> Undefined index: count_type
+#0 E:\xampp\htdocs\chxn_git\app\Controllers\ProductJewelryController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 28, Array)
+#1 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\ProductJewelryController->insert()
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductJewelryController))
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-08-14 08:31:47 --> Undefined index: count_type
+#0 E:\xampp\htdocs\chxn_git\app\Controllers\ProductJewelryController.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'E:\\xampp\\htdocs...', 28, Array)
+#1 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(832): App\Controllers\ProductJewelryController->insert()
+#2 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductJewelryController))
+#3 E:\xampp\htdocs\chxn_git\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 E:\xampp\htdocs\chxn_git\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 E:\xampp\htdocs\chxn_git\system\Commands\Server\rewrite.php(43): require_once('E:\\xampp\\htdocs...')
+#6 {main}
