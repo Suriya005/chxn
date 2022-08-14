@@ -181,7 +181,14 @@ $routes->get('/masterproduct', 'Home::masterproduct');
 
 
 // $routes->get('/mastergemsize', 'Home::mastergemsize');
-$routes->get('/productstone', 'Home::productstone');
+$routes->get('/productstone', 'ProductStoneController::index');
+$routes->post('/productstone/insert', 'ProductStoneController::insert');
+// delete
+$routes->post('/productstone/delete/(:num)', 'ProductStoneController::delete/$1');
+
+
+
+
 $routes->get('/productjewelry', 'Home::productjewelry');
 $routes->get('/saleorder/saleorderstone', 'Home::saleorderstone');
 $routes->get('/saleorder/saleorderjewelry', 'Home::saleorderjewelry');

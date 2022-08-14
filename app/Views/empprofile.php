@@ -90,8 +90,8 @@ include_once APPPATH . 'Views/header.php';
                 <label>สิทธิการเข้าถึงระบบ</label></br>
                 <select class="form-select" id="role_id" name="role_id">
                     <option value="" disabled selected>สิทธิการเข้าถึงระบบ</option>
-                    <option value="1">Employee</option>
-                    <option value="2">Admin</option>
+                    <option value="employee">Employee</option>
+                    <option value="admin">Admin</option>
                 </select>
             </div>
 

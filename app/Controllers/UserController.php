@@ -13,47 +13,40 @@ class UserController extends BaseController
         $data = [];
 
         if ($this->request->getMethod() == 'post') {
-
+            $model = new UserModel();
+            $user = $model->where('system_name', $this->request->getVar('username'))->first();
             
-                $model = new UserModel();
-                $user = $model->where('system_name', $this->request->getVar('username'))
-                    ->first();
-                if ($user) {
-                    if($user['role_id'] == 1){
-                        $user_status = 'employee';
-                    }elseif($user['role_id'] == 2){
-                        $user_status = 'admin';
-                    }else{
-                        $user_status = 'none';
-                    }
+            if ($user && password_verify($this->request->getVar('password'), $user['password'])) {
+                if ($user['role_id'] == 'employee') {
+                    $user_status = 'employee';
+                } elseif ($user['role_id'] == 'admin') {
+                    $user_status = 'admin';
+                } else {
+                    $user_status = 'none';
+                }
                 $permission_tb = new Permission();
                 // get all permission 
                 $permission = $permission_tb->where('user_status', $user_status)->findAll();
-
                 $this->setUserSession($user, $permission);
-                if($user['role_id'] == "2"){
+                if ($user['role_id'] == "admin") {
 
                     return redirect()->to(base_url('admin'));
-
-                }elseif($user['role_id'] == "1"){
+                } elseif ($user['role_id'] == "employee") {
 
                     return redirect()->to(base_url('employee'));
                 }
-                } else {
-                    $data['error'] = 'Username not found';
-                    return view('login', $data);
-                }
-
-                
-            
+            } else {
+                $data['error'] = 'Username not found';
+                return view('login', $data);
+            }
         }
-        if(session()->get('role') == "1"){
-            return view("employee/index");
-        }else if(session()->get('role') == "2"){
-            return view("admin/index");
-        }else{
-            return view("login");
-        }
+        // if (session()->get('role') == "employee") {
+        //     return view("employee/index");
+        // } else if (session()->get('role') == "admin") {
+        //     return view("admin/index");
+        // } else {
+        //     return view("login");
+        // }
     }
 
     private function setUserSession($user, $permission)
@@ -70,10 +63,10 @@ class UserController extends BaseController
             "role" => $user['role_id'],
         ];
 
-        foreach($permission as $permission){
+        foreach ($permission as $permission) {
             $data[$permission['menu']] = $permission['menu_status'];
         }
-        
+
 
         session()->set($data);
         return true;

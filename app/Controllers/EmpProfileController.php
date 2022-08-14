@@ -40,7 +40,7 @@ class EmpProfileController extends BaseController
              'role_id' => $this->request->getPost('role_id'),
              'status' => '1',
              'last_update' => date('Y-m-d H:i:s'),
-             'image_url' => $filename,
+            //  'image_url' => $filename,
          ];
          $empProfileService = new EmpProfileService();
          $empProfileService->insertData($data);
