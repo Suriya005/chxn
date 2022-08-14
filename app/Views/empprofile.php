@@ -157,7 +157,7 @@ include_once APPPATH . 'Views/header.php';
 
             <?php if ($employee != null) {
                 foreach ($employee as $row) {
-                    echo '<tr onclick="update_form(' . $row['uid'] . ',`' . $row['fullname'] . '`,`' . $row['system_name'] . '`,`' . $row['email'] . '`,' . $row['role_id'] . ',`' . $row['tel'] . '`,`' . $row['image_url'] . '`)">';
+                    echo '<tr onclick="update_form(' . $row['uid'] . ',`' . $row['fullname'] . '`,`' . $row['system_name'] . '`,`' . $row['email'] . '`,`' . $row['role_id'] . '`,`' . $row['tel'] . '`,`' . $row['image_url'] . '`)">';
                     echo '<td scope="row">';
                     echo '<label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">' . $row['uid'] . '
               <input type="checkbox">
@@ -169,9 +169,9 @@ include_once APPPATH . 'Views/header.php';
                     echo '<td>' . $row['system_name'] . '</td>';
                     echo '<td>' . $row['email'] . '</td>';
                     $emp_status = "";
-                    if ($row['role_id'] == 1) {
+                    if ($row['role_id'] == "employee") {
                         $emp_status = "employee";
-                    } elseif ($row['role_id'] == 2) {
+                    } elseif ($row['role_id'] == "admin") {
                         $emp_status = "admin";
                     } else {
                         $emp_status = "ไม่ทราบสถานะ";

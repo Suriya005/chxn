@@ -24,7 +24,7 @@ class ProductJewelryController extends BaseController
     {
         $service = new ProductJewelryService();
         $data = $this->request->getPost();
-        // print_r($data);
+        print_r($data);
         // for($i = 0; $i < $data['count_type']; $i++){
         //     $data['size'][$data['check'.$i]] = $data['check'.$i];
         // }

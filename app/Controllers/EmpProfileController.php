@@ -70,7 +70,7 @@ class EmpProfileController extends BaseController
             'tel' => $this->request->getPost('tel'),
             'system_name' => $this->request->getPost('system_name'),
             'email' => $this->request->getPost('email'),
-            'password' => $this->request->getPost('password'),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
             'role_id' => $this->request->getPost('role_id'),
             'status' => '1',
             'last_update' => date('Y-m-d H:i:s'),

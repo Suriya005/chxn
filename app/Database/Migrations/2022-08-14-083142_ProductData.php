@@ -73,6 +73,36 @@ class ProductData extends Migration
                 'type'       => 'JSON',
                 'null' => true,
             ], 
+            'weight' => [
+                'type'       => 'INT',
+                'constraint' => '5',
+                'null' => true,
+            ],
+            'net_weight' => [
+                'type'       => 'INT',
+                'constraint' => '5',
+                'null' => true,
+            ],
+            'per_unit' => [
+                'type'       => 'INT',
+                'constraint' => '10',
+                'null' => true,
+            ],
+            'nwt_price' => [
+                'type'       => 'INT',
+                'constraint' => '15',
+                'null' => true,
+            ],
+            'gwt_price' => [
+                'type'       => 'INT',
+                'constraint' => '15',
+                'null' => true,
+            ],
+            'totail_price' => [
+                'type'       => 'INT',
+                'constraint' => '15',
+                'null' => true,
+            ],
           
             
             

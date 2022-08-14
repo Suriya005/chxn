@@ -349,6 +349,9 @@
     </div>
 
     <form id="main_form">
+      <!-- hiden input -->
+      <input type="hidden" name="nwt_price" id="nwt_price" value="0">
+      <input type="hidden" name="gwt_price" id="gwt_price" value="0">
       <div class="detail-grid" style=" padding-left:15px; padding-top:20px; ">
         <div class="detail-grid-item">
           <p>รูปภาพ</p>
@@ -407,7 +410,7 @@
           <div class="row">
             <div class="col-6" style="max-width: 47%;">
               <label>โลหะ <a style="color:red;">*</a></label></br>
-              <select class="form-select" id="metal_name" name="metal_name">
+              <select class="form-select" id="metal_name" name="metal_name" onchange="show_price()">
                 <option value="" disabled selected>เลือกโลหะ </option>
 
               </select>
@@ -429,14 +432,14 @@
             <div class="col-6" style="max-width: 48%;">
               <label>น้ำหนักตัวเรือน ( Nwt )</label></br>
               <div class="custom-formcontrol" id="small-input">
-                <input type="text" style="outline: 0; border: 0; width: 235px; height: 30px; " placeholder="รูปร่าง">
+                <input type="text" id="weight" name="weight" style="outline: 0; border: 0; width: 235px; height: 30px; " placeholder="รูปร่าง">
                 <span>กรัม</span>
               </div>
             </div>
             <div class="col-6">
               <label>น้ำสุทธิ ( Gwt )</label></br>
               <div class="custom-formcontrol" id="small-input">
-                <input type="text" style="outline: 0; border: 0; width: 235px; height: 30px; " placeholder="0.00">
+                <input type="text" id="net_weight" name="net_weight" style="outline: 0; border: 0; width: 235px; height: 30px; " placeholder="0.00">
                 <span>กรัม</span>
               </div>
             </div>
@@ -444,29 +447,30 @@
 
           <div class="row">
             <div class="col-4" style="max-width: 28.333333%;">
-              <label>น้ำสุทธิ ( Gwt )</label></br>
+              <label>ราคาต่อกรัม ( Gwt )</label></br>
               <div class="custom-formcontrol" style="width:173px;">
-                <input type="text" style="outline: 0; border: 0; width: 110px; height: 30px; " placeholder="@0.00">
-                <span>กรัม</span>
+                <input type="text" id="price_per_unit" name="price_per_unit" style="outline: 0; border: 0; width: 110px; height: 30px; " placeholder="@0.00">
+                <span>บาท</span>
               </div>
             </div>
             <div class="col-3" style="margin-top:42px; max-width: 19%;">
-              <select class="form-select" style="width:117px; height: 45px;">
-                <option>Nwt </option>
-                <option>Gwt</option>
+              <select class="form-select" style="width:117px; height: 45px;" id="nwt_gwt" name="nwt_gwt" onchange="cal_price()">
+              <option value="" disabled selected>คำนวณ</option>
+                <option value="nwt">Nwt </option>
+                <option value="gwt">Gwt</option>
               </select>
             </div>
             <div class="col-5">
               <label>รวมราคาโลหะ</label></br>
               <div class="custom-formcontrol" id="small-input">
-                <input type="text" style="outline: 0; border: 0; width: 235px; height: 30px; " placeholder="0.00">
+                <input type="text" id="total_price" name="total_price" style="outline: 0; border: 0; width: 235px; height: 30px; " placeholder="0.00">
                 <span>บาท</span>
               </div>
             </div>
           </div>
 
           <label>รายละเอียด</label></br>
-          <textarea class="form-control" id="large-inputv3" placeholder="รายละเอียด"></textarea>
+          <textarea class="form-control" id="detail" name="detail" placeholder="รายละเอียด"></textarea>
 
 
         </div>
@@ -482,7 +486,7 @@
                 <p>ราคาโลหะ</p>
               </div>
               <div class="col-6" align="right">
-                <p>15,620.00 บาท</p>
+                <p id="metal_price">15,620.00 บาท</p>
               </div>
             </div>
             <hr>
@@ -524,7 +528,7 @@
           </div>
         </div>
         <div id="detailup" align="center"><img src="assets/image/icon/up.png" class="totalimg"></div>
-        <div class="detail"><a>ราคารวมทั้งสิ้น</a><a>0.00 บาท</a></div>
+        <div class="detail"><a>ราคารวมทั้งสิ้น</a><a  id="metal_total_price">0.00 บาท</a></div>
       </div>
   </div>
 
@@ -597,82 +601,75 @@
               <span class="checkmarks" style="left:8px;"></span>
             </label></th>
           <th scope="col">รูปภาพ</th>
-          <th scope="col">กลุ่มอัญมณี</th>
-          <th scope="col">รหัสอัญมณี</th>
-          <th scope="col">ชื่ออัญมณี</th>
-          <th scope="col">รูปทรง</th>
-          <th scope="col">สีอัญมณี</th>
-          <th scope="col">ขนาดอัญมณี</th>
+          <th scope="col">ประเภทสินค้า</th>
+          <th scope="col">รหัสสินค้า</th>
+          <th scope="col">คอลเลคชัน</th>
+          <th scope="col">ขนาด</th>
+          <th scope="col">โลหะ</th>
+          <th scope="col">ราคา(บาท)</th>
+          <th scope="col">รายละเอียด</th>
           <th scope="col">วันที่แก้ไขล่าสุด</th>
-          <th scope="col">สถานะ</th>
-          <th scope="col">คำสั่ง</th>
+
         </tr>
+
+        <?php 
+        foreach($table_data as $key => $value){
+
+        ?>
         <tr>
           <td scope="row">
-            <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">1
+            <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">
+            <?php $key ?>
               <input type="checkbox">
               <span class="checkmarks"></span>
             </label>
           </td>
-
           <td><img src="assets/image/plus.png" style="width:40.54px; width:40px;"></td>
-          <td>เเพชร</td>
-          <td>DAI-FBWD-lessvs2</td>
-          <td>DIA 20</td>
-          <td>หยดน้ำ</td>
-          <td>-</td>
-          <td>20 ตัง</td>
-          <td>24/04/2565</td>
-          <td><label class="switch" style="margin-top:0;">
-              <input type="checkbox">
-              <span class="slider round"></span>
-            </label></td>
-          <td><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>
-        </tr>
-        <tr>
-          <td scope="row">
-            <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">1
-              <input type="checkbox">
-              <span class="checkmarks"></span>
-            </label>
+          <td>
+          <?php
+            foreach ($data['item_product_type'] as $item) {
+              if ($value->product_group == $item->uid) {
+                echo $item->master_name;
+              }
+            }
+            ?>
           </td>
-
-          <td><img src="assets/image/plus.png" style="width:40.54px; width:40px;"></td>
-          <td>เเพชร</td>
-          <td>DAI-FBWD-lessvs2</td>
-          <td>DIA 20</td>
-          <td>หยดน้ำ</td>
-          <td>-</td>
-          <td>20 ตัง</td>
-          <td>24/04/2565</td>
-          <td><label class="switch" style="margin-top:0;">
-              <input type="checkbox">
-              <span class="slider round"></span>
-            </label></td>
-          <td><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>
-        </tr>
-        <tr>
-          <td scope="row">
-            <label class="containerv2" style="  padding-left:40px; margin-top:0px; width: 30px;">1
-              <input type="checkbox">
-              <span class="checkmarks"></span>
-            </label>
+          <td><?php echo $value ->stone_code; ?></td>
+          <td>
+          <?php
+            foreach ($data['item_collection'] as $item) {
+              if ($value->item_collection == $item->uid) {
+                echo $item->master_name;
+              }
+            }
+            ?>
           </td>
-
-          <td><img src="assets/image/plus.png" style="width:40.54px; width:40px;"></td>
-          <td>เเพชร</td>
-          <td>DAI-FBWD-lessvs2</td>
-          <td>DIA 20</td>
-          <td>หยดน้ำ</td>
-          <td>-</td>
-          <td>20 ตัง</td>
+          <td>
+          <?php
+            foreach ($data['item_product_size'] as $item) {
+              if ($value->product_size == $item->uid) {
+                echo $item->master_name;
+              }
+            }
+            ?>
+          </td>
+          <td>
+          <?php
+            foreach ($data['metal_name'] as $item) {
+              if ($value->metal_name == $item->uid) {
+                echo $item->master_name;
+              }
+            }
+            ?>
+          </td>
+          <td><?php echo $value ->totail_price; ?></td>
+          <td><?php echo $value ->product_description; ?></td>
           <td>24/04/2565</td>
-          <td><label class="switch" style="margin-top:0;">
-              <input type="checkbox">
-              <span class="slider round"></span>
-            </label></td>
-          <td><img src="assets/image/icon/action.png" style="width:40.54px; width:40px;"></td>
         </tr>
+
+        <?php } ?>
+
+        
 
 
 
@@ -696,7 +693,10 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
   <script>
+    var jewelry_data ;
+    var price_per_unit_global;
     window.onload = function() {
+      jewelry_data = <?php echo json_encode($data); ?>;
       let data = <?php echo json_encode($data); ?>;
       console.log(data);
       let product_group = document.getElementById('item_product_type');
@@ -754,6 +754,50 @@
       main_form.method = 'post';
       main_form.submit();
     }
+
+
+    const show_price = ()=>{
+      let metal_name = document.getElementById('metal_name').value;
+      let price_per_unit = document.getElementById('price_per_unit');
+      console.log(jewelry_data);
+      console.log((jewelry_data.metal_name[1].parent_id).replaceAll('"',''));
+      console.log(metal_name);
+      // map jewelry_data.metal_name
+      let price = jewelry_data.metal_name.map((item)=>{
+        if(item.uid == metal_name){
+          let price_form = item.parent_id.replaceAll('"','')
+          parseInt(price_form);
+          price_per_unit.value = price_form.replace(/\d(?=(\d{3})+\.)/g, '$&,');
+          price_per_unit_global = parseInt(item.parent_id.replaceAll('"',''));
+        }
+
+      })
+    }
+
+    const cal_price = ()=>{
+      let nwt_gwt = document.getElementById('nwt_gwt').value;
+      let total_price = document.getElementById('total_price');
+      let weight = parseInt(document.getElementById('weight').value);
+      let net_weight = parseInt(document.getElementById('net_weight').value);
+      let nwt_price = document.getElementById('nwt_price');
+      let gwt_price = document.getElementById('gwt_price');
+      let metal_price = document.getElementById('metal_price');
+      let metal_total_price = document.getElementById('metal_total_price');
+      if(nwt_gwt == 'nwt'){
+        total_price.value = (price_per_unit_global * weight).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+        metal_price.innerHTML = (price_per_unit_global * weight).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + ' บาท';
+        metal_total_price.innerHTML = (price_per_unit_global * weight).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + ' บาท';
+      }else if(nwt_gwt == 'gwt'){
+        total_price.value = (price_per_unit_global * net_weight).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+        metal_price.innerHTML = (price_per_unit_global * net_weight).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + ' บาท';
+        metal_total_price.innerHTML = (price_per_unit_global * net_weight).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') + ' บาท';
+      }
+      nwt_price.value = (price_per_unit_global * weight);
+      gwt_price.value = (price_per_unit_global * net_weight).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+
+    }
+
+
 
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";

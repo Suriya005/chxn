@@ -42,11 +42,16 @@ use CodeIgniter\Model;
                 'product_size' => $data['item_product_size'],
                 'metal_name' => $data['metal_name'],
                 'product_color' => $data['metal_color'],
-
-
+                'weight' => $data['weight'],
+                'net_weight' => $data['net_weight'],
+                'per_unit' => $data['price_per_unit'],
+                'nwt_price' => $data['nwt_price'],
+                'gwt_price' => $data['gwt_price'],
+                'totail_price' => $data['total_price'],
+                'product_description' => $data['detail'],
             ];
             $db = db_connect();
-            $sql = "INSERT INTO product_data (stone_code, product_group, product_name, item_collection, product_size, metal_name, product_color, product_type) VALUES ('$raw[stone_code]' , '$raw[product_group]' , '$raw[product_name]' , '$raw[item_collection]' , '$raw[product_size]' , '$raw[metal_name]' , '$raw[product_color]', 'jewelry')";
+            $sql = "INSERT INTO product_data (stone_code, product_group, product_name, item_collection, product_size, metal_name, product_color, product_type, weight, net_weight, per_unit, nwt_price, gwt_price, totail_price, product_description) VALUES ('$raw[stone_code]' , '$raw[product_group]' , '$raw[product_name]' , '$raw[item_collection]' , '$raw[product_size]' , '$raw[metal_name]' , '$raw[product_color]', 'jewelry', '$raw[weight]' , '$raw[net_weight]' , '$raw[per_unit]' , '$raw[nwt_price]' , '$raw[gwt_price]' , '$raw[totail_price]' , '$raw[product_description]')";
             $db->query($sql);
             return true;
         }

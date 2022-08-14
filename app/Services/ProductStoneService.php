@@ -37,7 +37,7 @@ use CodeIgniter\Model;
 
       public function table_data(){
         $db = db_connect();
-        $sql = "SELECT * FROM product_data";
+        $sql = "SELECT * FROM product_data where product_type = 'stone'" ;
         $query = $db->query($sql);
         $data = $query->getResult();
         return $data;
